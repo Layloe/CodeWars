@@ -10,10 +10,10 @@
 //     assert.strictEqual(solution('hello'), 'olleh');
 //     assert.strictEqual(solution(''), '');
 //     assert.strictEqual(solution('h'), 'h');
-// Psudocode: toArray, forloop,
+// Psudocode: First need to split string then reverse, finally join it all back. Then call
 
 function solution(str) {
-console.log(str.split('').reverse().join(''))
+return (str.split('').reverse().join(''))
   
 }
 
