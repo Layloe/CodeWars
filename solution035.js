@@ -9,7 +9,7 @@
 //     assert.strictEqual(removeChar('person'), 'erso');
 //     assert.strictEqual(removeChar('place'), 'lac');
 //     assert.strictEqual(removeChar('ooopsss'), 'oopss');
-// Psudocode: Slice at 1 and -1
+// Psudocode: Slice postions at 1 and -1
 
 
 function removeChar(str){
