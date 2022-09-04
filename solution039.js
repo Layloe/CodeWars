@@ -22,6 +22,7 @@
 
 
 function sumTwoSmallestNumbers(numbers) { 
+<<<<<<< HEAD
     let firstNum = Math.min(...numbers)
     numbers.splice(numbers.indexOf(firstNum), 1)
     let secondNum = Math.min(...numbers)
@@ -31,3 +32,10 @@ function sumTwoSmallestNumbers(numbers) {
   }
 
   sumTwoSmallestNumbers([52, 76, 14, 12, 4])
+=======
+    let arr = numbers.sort( (a, b) => a - b )
+    console.log(arr[0] + arr[1])
+  }
+
+  sumTwoSmallestNumbers([15, 28, 4, 2, 43])
+>>>>>>> cd70e44b2a227e9c7a7aac21c750990158087c05
