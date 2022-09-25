@@ -12,7 +12,7 @@
 // PsudoCode: Use reapeat function to get results
 
 function repeatStr (n, s) {
-    return (s.repeat(n))
+    console.log (s.repeat(n))
   }
 
   repeatStr(4,'1')
