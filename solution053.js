@@ -8,15 +8,27 @@
 // assert.strictEqual(removeExclamationMarks("Hello World!"), "Hello World");
 // Testing for s = "xWtWxEYtoJ!bwRLgbBjZo NppkBkolQB!PADFnkAevj": expected 'xWtWxEYtoJ bwRLgbBjZo NppkBkolQB!PADFnkAevj' to equal 'xWtWxEYtoJbwRLgbBjZo NppkBkolQBPADFnkAevj'
 
-//Psuedocode: One way is to use string method replaceAll('!','')
+//Psuedocode: One way to solve this, use string method replaceAll('!','')
 
-function removeExclamationMarks(s) {
+// function removeExclamationMarks(s) {
 
     // let str = []
 
-    console.log(s.replaceAll('!',''))
+    // console.log(s.replaceAll('!',''))
+    const assert = require ('assert')
+
+    function removeExclamationMarks(s) {
+      const split = s.split('!')
+      console.log(split)
+      return s.split('!').join('');
+      console.log()
+
+    }
    
 
-  }
+  
 
   removeExclamationMarks("xWtWxEYtoJ!bwRLgbBjZo NppkBkolQB!PADFnkAevj")
+
+  assert.strictEqual(removeExclamationMarks("Hello World!"), "Hello World");
+  assert.strictEqual(removeExclamationMarks("xWtWxEYtoJ!bwRLgbBjZo NppkBkolQB!PADFnkAevj"), 'xWtWxEYtoJbwRLgbBjZo NppkBkolQBPADFnkAevj'); 
