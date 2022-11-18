@@ -61,6 +61,8 @@
 //   isUpperCase('Hello world')
 // const assert = require('assert') 
 
+//? Used the wrong methods, need to review
+
  String.prototype.isUpperCase = function() {
   return this.toUpperCase() === this.toString();
 }
