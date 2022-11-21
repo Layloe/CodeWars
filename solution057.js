@@ -25,7 +25,7 @@ function nameShuffler(str){
   }
 
   nameShuffler('John doe')
-  //!  I need to understand why the assert worked for some of the names but threw an error for others.
+  //!  I need to understand why the assert worked for some of the names but threw an error for others. Wait I may have been console loggin instead of returning
 
     assert.strictEqual(nameShuffler('john McClane'),'McClane john');
     assert.strictEqual(nameShuffler('Mary jeggins'),'jeggins Mary')
