@@ -22,15 +22,15 @@ const assert = require('assert')
 
 const greet = (name,owner) => {
 
-    name && owner === 'Daniel' ? console.log('Hello boss') : console.log ('Hello guest')
+   return name && owner === 'Daniel' ? 'Hello boss' : 'Hello guest'
 
 }
 
 // function greet (name, owner) {
-//     if (name == 'Daniel' && owner == `Daniel`) {
-//         console.log (`Hello boss`)
+//     if (name && owner === `Daniel`) {
+//         return (`Hello boss`)
 //     }else{
-//         console.log (`Hello guest`)
+//         return (`Hello guest`)
 //     }
 //   }
 
