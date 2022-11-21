@@ -20,7 +20,7 @@ const assert = require('assert')
 
 function nameShuffler(str){
      
-    console.log(str.split(' ').reverse().join(' '))
+    return(str.split(' ').reverse().join(' '))
   
   }
 
