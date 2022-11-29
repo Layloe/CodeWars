@@ -46,28 +46,37 @@
 
 //Psuedocode: Create an if else statement that will loop through the string and check if it includes upper or lower case and return a boolean with the string 'is upper case' if true and 'is not upper case' if false.
 
-// function isUpperCase(str) {
+
+function isUpperCase(str) {
+
+
 //     let arr = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]
 //     // let str = '' 
-//     for (let i = 0; i < str.length; i++ ) {
-//         str.includes(0,'abcdefghijklmnopqrstuvwxyz') {
+    for (let i = 0; i < str.length; i++ ) {
+      let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+      // console.log(alphabet.includes('a'))
+      // console.log(alphabet.includes('b'))
+      console.log(includes('abcdefghijklmnopqrstuvwxyz'))
+//         str.includes(0,'abcdefghijklmnopqrstuvwxyz') ==  {
 //             console.log(`${str} is not upper case`)
-//         }
 
-//      }
+
+      }
+
+      isUpperCase("hello I AM DONALD")
 
 
 //   }
 //   isUpperCase('Hello world')
 // const assert = require('assert') 
 
-//? Used the wrong methods, need to review
+// //? Used the wrong methods, need to review
 
- String.prototype.isUpperCase = function() {
-  return this.toUpperCase() === this.toString();
-}
+//  String.prototype.isUpperCase = function() {
+//   return this.toUpperCase() === this.toString();
+// }
 
-isUpperCase('Testing')
+// isUpperCase('Testing')
 
 
 
