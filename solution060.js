@@ -27,8 +27,9 @@ function whoIsPaying(name){
 
     }else {
         return [name, name.slice(0,2)] //Calling the name twice was throwing me off at first
-    }
+    } 
+    // console.log(name.slice(0,2))
 
   }
 
-  whoIsPaying('Donnie')
+ console.log (whoIsPaying('Donnie'))
