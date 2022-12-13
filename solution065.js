@@ -17,7 +17,7 @@
 //   Test.assertEquals(joinStrings('testing', 'testing'), 'testing testing');
 //   Test.assertEquals(joinStrings(134, 234), '134 234');
 
-//Psuedocode: Use temprete literals to combine the strings
+//Psuedocode: Use template literals to combine the strings
 
 const assert = require('assert')
 
