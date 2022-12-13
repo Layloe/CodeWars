@@ -23,7 +23,7 @@
 function getNumberFromString(s) {
 //    let nums = "1234567890"
     
-    return (s.split('').filter(s => '1234567890' .includes(s)).join('')) 
+    return parseInt(s.split('').filter(s => '1234567890' .includes(s)).join('')) 
 
   }
 
