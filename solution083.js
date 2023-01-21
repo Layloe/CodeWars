@@ -23,14 +23,44 @@
 // const assert = require("assert");
 
 function getDayOfWeek(dateString) {
+      //  const weekday= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+       const today = new Date()
 
+       let day = weekday[today.getUTCDay()];
+
+       let weekday=new Array(7);
+weekday[0]="Sunday";
+weekday[1]="Monday";
+weekday[2]="Tuesday";
+weekday[3]="Wednesday";
+weekday[4]="Thursday";
+weekday[5]="Friday";
+weekday[6]="Saturday";
+
+console.log("Today is " + weekday[3]);
+
+
+      //  weekday.forEach((day) => {
+      //   if (getUTCDay() == today) {
+      //     console.log(``)
+      //   } else {
+          
+      //   }
+      //  })
+     
+
+    // if (today == getUTCDay() ) {
+    //     console.log('sunday')
+    //   } else {
+        
+    //   }
 
   
-       const weekday= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-       const today = new Date()
+       
         
+      // let user = users.find(item => item.id == 1)
 
-       return dateString[today.getUTCDay(weekday)]
+      //  return dateString[today.getUTCDay()]
 
 //      weekday[0] { date: "2023-01-15T03:00:00Z" } = "sunday",
 //       { date: "2023-01-16T03:00:00Z" } = "monday",
@@ -44,13 +74,13 @@ function getDayOfWeek(dateString) {
 // var n = weekday[d.getDay()];
 
 
-//       { date: "2023-01-15T03:00:00Z" },
-//       { date: "2023-01-16T03:00:00Z" },
-//       { date: "2023-01-17T03:00:00Z" },
-//       { date: "2023-01-18T03:00:00Z" },
-//       { date: "2023-01-19T03:00:00Z" },
-//       { date: "2023-01-20T03:00:00Z" },
-//       { date: "2023-01-21T03:00:00Z" },
+      // { date: "sunday",   "2023-01-15T03:00:00Z" },
+      // { date: "monday",   "2023-01-16T03:00:00Z" },
+      // { date: "tuesday",  "2023-01-17T03:00:00Z" },
+      // { date: "wednesday","2023-01-18T03:00:00Z" },
+      // { date: "thursday", "2023-01-19T03:00:00Z" },
+      // { date: "friday",   "2023-01-20T03:00:00Z" },
+      // { date: "saturday", "2023-01-21T03:00:00Z" },
 // ]
 // return dateString.getUTCDay()     
     // hint: you can create a Date with "new Date(dateString)"
@@ -59,7 +89,7 @@ function getDayOfWeek(dateString) {
     // TODO
   }
 
-  console.log(getDayOfWeek("2023-01-15T03:00:00Z"))
+  console.log(getDayOfWeek("2023-01-16T03:00:00Z"))
 
   
 //   assert.strictEqual(getDayOfWeek("2023-01-18T03:00:00Z"), "wednesday");
