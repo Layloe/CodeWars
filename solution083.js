@@ -22,22 +22,32 @@
 
 // const assert = require("assert");
 
-function getDayOfWeek(dateString) {
-      //  const weekday= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-       const today = new Date()
+// function getDayOfWeek(dateString) {
+//        const weekday= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 
-       let day = weekday[today.getUTCDay()];
+     
+//        const today = new Date()
+//        let weekday=new Array(7);
 
-       let weekday=new Array(7);
-weekday[0]="Sunday";
-weekday[1]="Monday";
-weekday[2]="Tuesday";
-weekday[3]="Wednesday";
-weekday[4]="Thursday";
-weekday[5]="Friday";
-weekday[6]="Saturday";
+//        if (today == weekday) {
+        
+//        } else {
+        
+//        }
 
-console.log("Today is " + weekday[3]);
+// weekday[0]="Sunday";
+// weekday[1]="Monday";
+// weekday[2]="Tuesday";
+// weekday[3]="Wednesday";
+// weekday[4]="Thursday";
+// weekday[5]="Friday";
+// weekday[6]="Saturday";
+
+
+
+// console.log(weekday[today]);
+
+ //  let day = weekday[today.getUTCDay()];
 
 
       //  weekday.forEach((day) => {
@@ -86,10 +96,10 @@ console.log("Today is " + weekday[3]);
     // hint: you can create a Date with "new Date(dateString)"
     // hint: you can use the `getUTCDay()` method to get a number corresponding to the week day,
     // for example 0 = sunday, 1 = monday, etc
-    // TODO
-  }
+  //   // TODO
+  // }
 
-  console.log(getDayOfWeek("2023-01-16T03:00:00Z"))
+  // // console.log(getDayOfWeek("2023-01-16T03:00:00Z"))
 
   
 //   assert.strictEqual(getDayOfWeek("2023-01-18T03:00:00Z"), "wednesday");
