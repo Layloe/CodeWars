@@ -32,18 +32,18 @@ function getDayOfWeek(dateString) {
 
 // this is our initial data set.
 // we will be modifying this data throughout all our other functions
-// const data0 = [
-//   { date: "2023-01-05T01:01:01Z" },
-//   { date: "2023-01-05T12:03:04Z" },
-//   { date: "2023-01-06T13:01:01Z" },
-//   { date: "2023-01-06T22:03:04Z" },
-//   { date: "2023-01-07T01:01:01Z" },
-//   { date: "2023-01-07T22:03:04Z" },
-//   { date: "2023-01-08T01:01:01Z" },
-//   { date: "2023-01-08T12:03:04Z" },
-//   { date: "2023-01-09T11:01:01Z" },
-//   { date: "2023-01-09T19:03:04Z" },
-// ];
+const data0 = [
+  { date: "2023-01-05T01:01:01Z" },
+  { date: "2023-01-05T12:03:04Z" },
+  { date: "2023-01-06T13:01:01Z" },
+  { date: "2023-01-06T22:03:04Z" },
+  { date: "2023-01-07T01:01:01Z" },
+  { date: "2023-01-07T22:03:04Z" },
+  { date: "2023-01-08T01:01:01Z" },
+  { date: "2023-01-08T12:03:04Z" },
+  { date: "2023-01-09T11:01:01Z" },
+  { date: "2023-01-09T19:03:04Z" },
+];
 // this is what the data should look like after going through our "assignDayOfWeek" function
 // const data1 = [
 //     { date: "2023-01-05T01:01:01Z", dayOfWeek: "thursday" },
@@ -60,14 +60,20 @@ function getDayOfWeek(dateString) {
   
   function assignDayOfWeek(dateString) {
 
-   const dateProp = {
-        date: `${dateString}`,
-        dayOfWeek: getDayOfWeek(dateString)
-    }
+   const dateProp =  data0.map((data0) => ({
+   
+        date: data0.date,
+        dayOftheWeek: data0.getDayOfWeek
+        
+        
+  }))
 
     return dateProp
+}
+    
+    
     // hint: use the "getDayOfWeek" function you already wrote
-  }
-  console.log(assignDayOfWeek("2023-01-06T22:03:04Z"))
+  
+  console.log(assignDayOfWeek(data0))
   
 //   assert.deepStrictEqual(assignDayOfWeek(data0), data1);
