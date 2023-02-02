@@ -10,7 +10,7 @@ function getDayOfWeek(dateString) {
 
     let months  = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-    return weekday[day].toLowerCase()
+    return weekday[day]
     // hint: you can create a Date with "new Date(dateString)"
     // hint: you can use the `getUTCDay()` method to get a number corresponding to the week day,
     // for example 0 = sunday, 1 = monday, etc
@@ -58,18 +58,38 @@ const data0 = [
 //     { date: "2023-01-09T19:03:04Z", dayOfWeek: "monday" },
 //   ];
   
-  function assignDayOfWeek(dateString) {
+ 
+  function assignDayOfWeek(list) {
 
-   const dateProp =  data0.map((data0) => ({
-   
-        date: data0.date,
-        dayOftheWeek: data0.getDayOfWeek
-        
-        
-  }))
+    // let testing = getDayOfWeek()
+    const dateProp =  list.map((value) => ({
+    // { date: "2023-01-05T01:01:01Z" }, Value is going to look like this 
 
-    return dateProp
-}
+         date: value.date,
+         dayOftheWeek: getDayOfWeek([value.date])
+      
+   }))
+ 
+     return dateProp
+ }
+         
+        
+
+  
+
+
+//  date: value.date,
+//  dayOftheWeek: getDayOfWeek([`${dateString}`])
+
+// const dateProp =  {
+  // date: `${dateString}`,
+  // dayOfWeek: getDayOfWeek(dateString)
+
+
+// return dateProp
+  
+
+
     
     
     // hint: use the "getDayOfWeek" function you already wrote
