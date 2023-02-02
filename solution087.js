@@ -88,4 +88,47 @@ const data0 = [
   }
   
   assert.deepStrictEqual(assignDayOfWeek(data0), data1);
+
+  /**
+ * Task 4:
+ * Given "data1",
+ * return a new list where each object has a new "timeOfDay" property,
+ * which corresponds to "morning", "afternoon", or "evening"
+ */
+
+// this is what the data should look like after going through our "assignTimeOfDay" function
+const data2 = [
+  { date: "2023-01-05T01:01:01Z", dayOfWeek: "thursday", timeOfDay: "morning" },
+  { date: "2023-01-05T12:03:04Z", dayOfWeek: "thursday", timeOfDay: "afternoon" },
+  { date: "2023-01-06T13:01:01Z", dayOfWeek: "friday", timeOfDay: "afternoon" },
+  { date: "2023-01-06T22:03:04Z", dayOfWeek: "friday", timeOfDay: "evening" },
+  { date: "2023-01-07T01:01:01Z", dayOfWeek: "saturday", timeOfDay: "morning" },
+  { date: "2023-01-07T22:03:04Z", dayOfWeek: "saturday", timeOfDay: "evening" },
+  { date: "2023-01-08T01:01:01Z", dayOfWeek: "sunday", timeOfDay: "morning" },
+  { date: "2023-01-08T12:03:04Z", dayOfWeek: "sunday", timeOfDay: "afternoon" },
+  { date: "2023-01-09T11:01:01Z", dayOfWeek: "monday", timeOfDay: "morning" },
+  { date: "2023-01-09T19:03:04Z", dayOfWeek: "monday", timeOfDay: "evening" },
+];
+
+function assignTimeOfDay(list) {
+
+  const timeOf =  list.map((value) => ({
+    // { date: "2023-01-05T01:01:01Z" }, Value is going to look like this 
+
+         date: value.date,
+         dayOfWeek: getDayOfWeek([value.date]),
+         timeOfDay: getTimeOfDay([value.date])
+      
+   }))
+ 
+     return timeOf
+ 
+// hint: use the "getDayOfWeek" function you already wrote
+
+  // hint: use the "getTimeOfDay" function you already wrote
+}
+console.log(assignTimeOfDay(data1))
+
+assert.deepStrictEqual(assignTimeOfDay(data1), data2);
+
   

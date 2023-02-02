@@ -8,8 +8,9 @@
  */
 function getPropertyValue(object, property) {
 
-    let myObject = {object}
-    let myProperty = property
+    let myObject = {} 
+    }
+    
 
     
     
