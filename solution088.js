@@ -97,3 +97,17 @@ const data0 = [
   console.log(assignDayOfWeek(data0))
   
 //   assert.deepStrictEqual(assignDayOfWeek(data0), data1);
+
+function groupByDay(list) {
+  
+  const grootByDay = list.map(( value) => {
+      
+      dayOfWeek: getDayOfWeek([value.date])
+       }
+      );
+
+  return grootByDay
+
+  // hint: use the "dayOfWeek" property to group the data
+}
+console.log(groupByDay(data3))

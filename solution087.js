@@ -127,8 +127,70 @@ function assignTimeOfDay(list) {
 
   // hint: use the "getTimeOfDay" function you already wrote
 }
-console.log(assignTimeOfDay(data1))
+// console.log(assignTimeOfDay(data1), data2)
 
 assert.deepStrictEqual(assignTimeOfDay(data1), data2);
+
+
+/**
+ * Task 5:
+ * Group the list elements by day.
+ * Note: you can assume that your list is already sorted chronologically
+ */
+
+// this is what the data should look like after going through our "groupByDay" function
+const data3 = [
+  [
+    { date: "2023-01-05T01:01:01Z", dayOfWeek: "thursday", timeOfDay: "morning" },
+    { date: "2023-01-05T12:03:04Z", dayOfWeek: "thursday", timeOfDay: "afternoon" },
+  ],
+  [
+    { date: "2023-01-06T13:01:01Z", dayOfWeek: "friday", timeOfDay: "afternoon" },
+    { date: "2023-01-06T22:03:04Z", dayOfWeek: "friday", timeOfDay: "evening" },
+  ],
+  [
+    { date: "2023-01-07T01:01:01Z", dayOfWeek: "saturday", timeOfDay: "morning" },
+    { date: "2023-01-07T22:03:04Z", dayOfWeek: "saturday", timeOfDay: "evening" },
+  ],
+  [
+    { date: "2023-01-08T01:01:01Z", dayOfWeek: "sunday", timeOfDay: "morning" },
+    { date: "2023-01-08T12:03:04Z", dayOfWeek: "sunday", timeOfDay: "afternoon" },
+  ],
+  [
+    { date: "2023-01-09T11:01:01Z", dayOfWeek: "monday", timeOfDay: "morning" },
+    { date: "2023-01-09T19:03:04Z", dayOfWeek: "monday", timeOfDay: "evening" },
+  ]
+];
+
+function groupByDay(list) {
+  // [
+  //   { date: "2023-01-05T01:01:01Z", dayOfWeek: "thursday", timeOfDay: "morning" },
+  //   { date: "2023-01-05T12:03:04Z", dayOfWeek: "thursday", timeOfDay: "afternoon" },Value is going to look like this 
+  // ],                                                                                   
+  const dayOf =  list.map((value) => ({
+
+    date: value.date,
+    dayOfWeek: getDayOfWeek([value.date]),
+    timeOfDay: getTimeOfDay([value.date])
+            
+
+
+        //  date: value.day,
+        //  dayOfWeek: getDayOfWeek([value.dayOf]),
+        //  timeOfDay: getTimeOfDay([value.date])
+      
+   }))
+ 
+     return dayOf
+  }
+
+  console.log(groupByDay(data2))
+// assert.deepStrictEqual(groupByDay(data2), data3);
+
+// const testGroup = arr.group()
+
+
+
+
 
   
