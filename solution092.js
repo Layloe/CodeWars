@@ -80,9 +80,21 @@ dayOfWeek: getDayOfWeek(dateString)
   
   // hint: use the "getDayOfWeek" function you already wrote
 
-console.log(assignDayOfWeek("2023-01-09T19:03:04Z"))
+// console.log(assignDayOfWeek("2023-01-09T19:03:04Z"))
 
 //   assert.deepStrictEqual(assignDayOfWeek(data0), data1);
+const data2 = [
+  { date: "2023-01-05T01:01:01Z", dayOfWeek: "thursday", timeOfDay: "morning" },
+  { date: "2023-01-05T12:03:04Z", dayOfWeek: "thursday", timeOfDay: "afternoon" },
+  { date: "2023-01-06T13:01:01Z", dayOfWeek: "friday", timeOfDay: "afternoon" },
+  { date: "2023-01-06T22:03:04Z", dayOfWeek: "friday", timeOfDay: "evening" },
+  { date: "2023-01-07T01:01:01Z", dayOfWeek: "saturday", timeOfDay: "morning" },
+  { date: "2023-01-07T22:03:04Z", dayOfWeek: "saturday", timeOfDay: "evening" },
+  { date: "2023-01-08T01:01:01Z", dayOfWeek: "sunday", timeOfDay: "morning" },
+  { date: "2023-01-08T12:03:04Z", dayOfWeek: "sunday", timeOfDay: "afternoon" },
+  { date: "2023-01-09T11:01:01Z", dayOfWeek: "monday", timeOfDay: "morning" },
+  { date: "2023-01-09T19:03:04Z", dayOfWeek: "monday", timeOfDay: "evening" },
+];
 /**
  * Task 5:
  * Group the list elements by day.
@@ -116,53 +128,36 @@ const data3 = [
   function groupByDay(list) {
   
 
-    let groups = {};
-for (let i = 0; i < list.length; i++) {
-  let dayOfTheWeek = list[i].dayOfWeek;
-  if (!groups[dayOfTheWeek]) {
-    groups[dayOfTheWeek] = [];
-  }
-  groups[dayOfTheWeek].push(list[i].date);
-  // groups[dayOfTheWeek].push(list[i].timeOfDay);
-}
-list = [];
-for (let dayOfTheWeek in groups) {
-  list.push({dayOfWeek: dayOfTheWeek, date: groups[dayOfTheWeek], timeOfDay:[dayOfTheWeek]});
-}
-    // const grouped = []
-    // let group = []
-    // let iterate  =  list.forEach((value) => ({ 
-      
-      // switch (day){
-      //   case 0:
-      //       day = 'sunday'
-      //       break;
-      //   case 1:
-      //       day = 'monday'
-      //       break;
-      //   case 2:
-      //       day = 'tuesday'
-      //       break;
-      //   case 3:
-      //       day = 'wednesday'
-      //       break;
-      //   case 4:
-      //       day = 'thursday'
-      //       break;
-      //   case 5:
-      //       day = 'friday'
-      //       break;
-      //   case 6:
-      //       day = 'saturday'      
-    }
-          //  date: value.date,
-          //  dayOfWeek: getDayOfWeek([value.date]),
-          //  timeOfDay: getTimeOfDay([value.date])
+    
+//       const result = {};
+//       for (let i = 0; i < list.length; i++) {
+//         const date = list[i].date;
+//         const day = new Date(date).toLocaleDateString();
+//         if (!result[day]) {
+//           result[day] = [];
+//         }
+//         result[day].push(list[i]);
+//       }
+//       return result;
+//     }
+//     let groups = {};
+// for (let i = 0; i < list.length; i++) {
+//   let dayOfTheWeek = list[i].dayOfTheWeek;
+//   if (!groups[dayOfTheWeek]) {
+//     groups[dayOfTheWeek] = [];
+//   }
+//   groups[dayOfTheWeek].push(list[i].date);
+//   groups[dayOfTheWeek].push(list[i].timeOfDay);
+// }
+// list = [];
+// for (let dayOfTheWeek in groups) {
+//   list.push({dayOfWeek: dayOfTheWeek, date: groups[dayOfTheWeek], timeOfDay:[dayOfTheWeek]});
+// }      
+    
+}    
         
-  //    }))
-  //   // hint: use the "dayOfWeek" property to group the data
-  // }
-  console.log(groupByDay(data3))
+ 
+//   console.log(groupByDay(data2))
   // assert.deepStrictEqual(groupByDay(data2), data3);
 
 //   list.map((value) => ({
@@ -172,3 +167,69 @@ for (let dayOfTheWeek in groups) {
 //          dayOftheWeek: getDayOfWeek([value.date])
       
 //    }))
+
+
+/**
+ * this function will take an array as input,
+ * and return an array, with every 2 elements grouped together.
+ * 
+ * Example input: [1, 2, 3, 4, 5, 6]
+ * Example output: [[1, 2], [3, 4], [5, 6]]
+ * 
+ * [           // groupsSplit
+ *   [1, 2],   // need a variable for this group
+ *   [3, 4],   // need a variable for this group
+ *   [5, 6]    // need a variable for this group
+ * ]
+ * 
+ * initially, groupsSplit is an empty array []
+ * loop through the list, and every 2 elements get added to an sub-array (a group)
+ * when the sub-array has 2 elements, add it to groupsSplit
+ * 
+ * @param {number[]} list
+ */
+function splitBy2(list) {
+  let groupsSplit = []
+  // initially, group is empty
+  // on the first iteration of the loop, we will add the first element to group
+  // group == [1]
+  // on the second iteration of the loop, we will add the second element to group
+  // group == [1, 2]
+  // when group has 2 elements in it, we can add group to groupsSplit
+  // groupsSplit = [ [1, 2] ]
+  //
+  // group is just a temporary container to hold the elements
+  let group = []
+  for (var i = 0; i < list.length; i += 2) {
+  if (i + 1 < list.length) {
+    groupsSplit.push([list[i], list[i + 1]]);
+  } else {
+    groupsSplit.push([list[i]]);
+  }
+  }
+  // for (let i= 0; i < list.length; i++) {
+  //   //Searching the array for grouping elements
+  //   let num = list[i]
+  //   //If else to categorise arrays in proper locations
+  //   if (group < 2) {
+  //     group.push(num)
+  //     console.log(num)
+  //   } else  {
+  //     group.push(group)
+  //     // console.log(groupsSplit)
+  //   }
+   
+  // }
+  return groupsSplit
+}
+
+// let array = [1, 2, 3]
+// I want the 2nd element
+// how do I do that
+// let secondElement = array[1]
+// let anotherArray = []
+// how do I add secondElement to anotherArray
+
+
+console.log(splitBy2([1, 2, 3, 4, 5, 6]))
+// expect to see this in the terminal: [[1, 2], [3, 4], [5, 6]]

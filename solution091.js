@@ -21,7 +21,7 @@ function getPropertyValue(object, property) {
   // TODO
   // hint: object properties can be accessed with square brackets
   // this syntax `myThing[myProperty]` is the same as `myThing.myProperty`
-}
+
 
 console.log(getPropertyValue({ test: "a" }))
 
