@@ -206,7 +206,7 @@ function groupByDay(list) {
   
   
   // hint: use the "dayOfWeek" property to group the data
-console.log(groupByDay(data2, data3))
+console.log(groupByDay(data2))
 
 assert.deepStrictEqual(groupByDay(data2), data3);
 

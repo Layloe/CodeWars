@@ -199,27 +199,27 @@ function splitBy2(list) {
   // groupsSplit = [ [1, 2] ]
   //
   // group is just a temporary container to hold the elements
-  let group = []
-  for (var i = 0; i < list.length; i += 2) {
-  if (i + 1 < list.length) {
-    groupsSplit.push([list[i], list[i + 1]]);
-  } else {
-    groupsSplit.push([list[i]]);
-  }
-  }
-  // for (let i= 0; i < list.length; i++) {
-  //   //Searching the array for grouping elements
-  //   let num = list[i]
-  //   //If else to categorise arrays in proper locations
-  //   if (group < 2) {
-  //     group.push(num)
-  //     console.log(num)
-  //   } else  {
-  //     group.push(group)
-  //     // console.log(groupsSplit)
-  //   }
+  //? let group = []
+  //?for (var i = 0; i < list.length; i += 2) {
+  //? if (i + 1 < list.length) {
+  //?   groupsSplit.push([list[i], list[i + 1]]);
+  //? } else {
+  //?   groupsSplit.push([list[i]]);
+  //? }
+  //? }
+  for (let i= 0; i < list.length; i++) {
+  // Searching the array for grouping elements
+    let num = list[i]
+  // If else to categorise arrays in proper locations
+    if (group < 2) {
+      group.push(num)
+      console.log(num)
+    } else  {
+      group.push(group)
+  console.log(groupsSplit)
+    }
    
-  // }
+  }
   return groupsSplit
 }
 
