@@ -183,30 +183,37 @@ function groupByDay(list) {
 
 
   let groupsSplit = []
-  // initially, group is empty
-  // on the first iteration of the loop, we will add the first element to group
-  // group == [1]
-  // on the second iteration of the loop, we will add the second element to group
-  // group == [1, 2]
-  // when group has 2 elements in it, we can add group to groupsSplit
-  // groupsSplit = [ [1, 2] ]
-  //
-  // group is just a temporary container to hold the elements
+// Declare variable to hold the group data 
   let group = []
-  for (let i = 0; i < list.length; i += 2) {
-  if (i + 1 < list.length) {
-    groupsSplit.push([list[i], list[i + 1]]);
-  } else {
-    groupsSplit.push([list[i]]);
-  }
-  }
+// loop throught the array
+  for(let i = 0; i < list.length; i++){
+// Get the current item
+    const  item = list[i]
+// If the item matches the group add it to the group otherwise start a new group
+    if (item.dayOfWeek == group[0]?.dayOfWeek || group.length == 0) {
+// Pushing item to to group arr
+      group.push(item)
 
+    
+    }else {
+    
+      groupsSplit.push(group)
+//Item inside the group in this case the dayOfTheWeek group/arr
+      group = [item]
+    }
+    
+  }
+  // Once a group has an item push to groupSplit arr   
+  if (group.length > 0) {
+    groupsSplit.push(group)
+  }
   return groupsSplit
+
 }
-  
+  console.log(groupByDay(data2))
   
   // hint: use the "dayOfWeek" property to group the data
-console.log(groupByDay(data2))
+// console.log(groupByDay(data2))
 
 assert.deepStrictEqual(groupByDay(data2), data3);
 
@@ -246,11 +253,11 @@ const data4 = [
   ],
 ];
 
-function groupByWeek(list) {
-  // TODO
-}
+// function groupByWeek(list) {
+//   // TODO
+// }
 
-assert.deepStrictEqual(groupByWeek(data3), data4);
+// assert.deepStrictEqual(groupByWeek(data3), data4);
 
 /**
  * Task 6: Put it all together!

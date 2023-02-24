@@ -167,6 +167,24 @@ function groupByDay(list) {
   //   { date: "2023-01-05T01:01:01Z", dayOfWeek: "thursday", timeOfDay: "morning" },
   //   { date: "2023-01-05T12:03:04Z", dayOfWeek: "thursday", timeOfDay: "afternoon" },Value is going to look like this 
   // ], 
+  let groupsSplit = []
+
+   let group = []
+    for (var i = 0; i < list.length; i += 2) {
+
+      if (i + 1 < list.length) {
+
+        groupsSplit.push([list[i], list[i + 1]]);
+
+   } else {
+
+     groupsSplit.push([list[i]]);
+
+   }
+
+   return groupsSplit
+   
+   }
   
 //     const result = {};
 //     for (let i = 0; i < list.length; i++) {
@@ -180,19 +198,19 @@ function groupByDay(list) {
 //     return result;
 //   }
                                                                   
-  let groups = {};
-  for (let i = 0; i < list.length; i++) {
-    let dayOfTheWeek = list[i].dayOfTheWeek;
-    if (!groups[dayOfTheWeek]) {
-      groups[dayOfTheWeek] = [];
-    }
-    groups[dayOfTheWeek].push(list[i].date);
-    groups[dayOfTheWeek].push(list[i].timeOfDay);
-  }
-  list = [];
-  for (let dayOfTheWeek in groups) {
-    list.push({dayOfWeek: dayOfTheWeek, date: groups[dayOfTheWeek], timeOfDay:[dayOfTheWeek]});
-  }      
+  // let groups = {};
+  // for (let i = 0; i < list.length; i++) {
+  //   let dayOfTheWeek = list[i].dayOfTheWeek;
+  //   if (!groups[dayOfTheWeek]) {
+  //     groups[dayOfTheWeek] = [];
+  //   }
+  //   groups[dayOfTheWeek].push(list[i].date);
+  //   groups[dayOfTheWeek].push(list[i].timeOfDay);
+  // }
+  // list = [];
+  // for (let dayOfTheWeek in groups) {
+  //   list.push({dayOfWeek: dayOfTheWeek, date: groups[dayOfTheWeek], timeOfDay:[dayOfTheWeek]});
+  // }      
 
 }
   console.log(groupByDay(data2))
