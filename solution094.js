@@ -196,7 +196,7 @@ function groupByDay(list) {
 
     
     }else {
-    
+//Push item to groupSplit arr    
       groupsSplit.push(group)
 //Item inside the group in this case the dayOfTheWeek group/arr
       group = [item]
@@ -210,7 +210,7 @@ function groupByDay(list) {
   return groupsSplit
 
 }
-  console.log(groupByDay(data2))
+  // console.log(groupByDay(data2))
   
   // hint: use the "dayOfWeek" property to group the data
 // console.log(groupByDay(data2))
@@ -253,11 +253,11 @@ const data4 = [
   ],
 ];
 
-// function groupByWeek(list) {
-//   // TODO
-// }
+function groupByWeek(list) {
+  // TODO
+}
 
-// assert.deepStrictEqual(groupByWeek(data3), data4);
+assert.deepStrictEqual(groupByWeek(data3), data4);
 
 /**
  * Task 6: Put it all together!
