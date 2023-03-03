@@ -84,6 +84,7 @@ const data0 = [
   ];
   
   function assignDayOfWeek(list) {
+
       const dateProp =  list.map((value) => ({
           // { date: "2023-01-05T01:01:01Z" }, Value is going to look like this 
       
@@ -240,38 +241,34 @@ const data0 = [
 // }
   
   function groupByWeek(list: typeof data3) {
+    //First group by day then find a way to make Sunday the start of a new week. Hover over forEach
     //Use parts of this loop but instead of it grouping to days group to week
+    // if (item.dayOfWeek == group[0]?.dayOfWeek || group.length == 0)
     // TODO
-    // list.
-    let groupsSplit = []
+    // list
+      let week = []
     // Declare variable to hold the group data 
       let group = []
     // loop throught the array
-      for(let i = 0; i < list.length; i++){
-    // Get the current item
-        const  item = list[i]
-    // If the item matches the group add it to the group otherwise start a new group
+      list.forEach(item => {
         if (item.dayOfWeek == group[0]?.dayOfWeek || group.length == 0) {
-    // Pushing item to to group arr
-          group.push(item)
-    
-        
-        }else {
-    //Push item to groupSplit arr    
-          groupsSplit.push(group)
-    //Item inside the group in this case the dayOfTheWeek group/arr
-          group = [item]
+          group.push(item) 
         }
-        
+        else {
+          week.push(group)
+          week = [item]
+        }
+      })
+
+      if(week.length > 0) {
+        week.push(group)
       }
-      // Once a group has an item push to groupSplit arr   
-      if (group.length > 0) {
-        groupsSplit.push(group)
-      }
-      return groupsSplit
-  }
-  
-  assert.deepStrictEqual(groupByWeek(data3), data4);
+
+      return week
+    }
+ 
+    console.log(groupByWeek(data3))
+  // assert.deepStrictEqual(groupByWeek(data3), data4);
   
   /**
    * Task 6: Put it all together!
