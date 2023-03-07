@@ -247,31 +247,30 @@ const data0 = [
     // TODO
     // Sort the dates by date string
     const weeks = [];
-  let currentWeek = { weekNumber: 1, days: [] };
-
-  // Loop through each date and group them into weeks
-  for (let i = 0; i < list.length; i++) {
-    const date = list[i];
-    const dayOfWeek = date.dayOfWeek
-
-    // If this date is in a different week than the previous one, start a new week
-    if (dayOfWeek === 'Monday' && currentWeek.days.length > 0) {
-      weeks.push(currentWeek);
-      currentWeek = { weekNumber: currentWeek.weekNumber + 1, days: [] };
+    let currentWeek = [];
+  
+    for (let i = 0; i < list.length; i++) {
+      const date = list[i];
+      const dayOfWeek = date.getUTCDay();
+      const isSaturday = dayOfWeek === 6;
+      const isSunday = dayOfWeek === 0;
+  
+      currentWeek.push({
+        date: list[i],
+        dayOfWeek: getDayOfWeek(dayOfWeek),
+        timeOfDay: getTimeOfDay(date.getUTCHours())
+      });
+  
+      if (isSaturday || i === list.length - 1) {
+        weeks.push(currentWeek);
+        currentWeek = [];
+      } else if (isSunday) {
+        currentWeek.push([]);
+      }
     }
-
-    // Add this date to the current week
-    currentWeek.days.push(date);
-  }
-
-  // Add the final week to the list
-  if (currentWeek.days.length > 0) {
-    weeks.push(currentWeek);
-  }
-
-  return weeks;
+  
+    return weeks;
 }
- 
     console.log(groupByWeek(data3))
   assert.deepStrictEqual(groupByWeek(data3), data4);
   

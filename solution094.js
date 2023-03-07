@@ -255,8 +255,8 @@ const data4 = [
 
 function groupByWeek(list) {
   // TODO
-}
 
+}
 assert.deepStrictEqual(groupByWeek(data3), data4);
 
 /**
