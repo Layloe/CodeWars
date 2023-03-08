@@ -13,22 +13,16 @@ const assert = require("assert");
  */
 
 function getDayOfWeek(dateString) {
-
-    const myDate = new Date(dateString),
-      month = myDate.getMonth(),
-      date = myDate.getUTCDate(),
-      day = myDate.getUTCDay()
-
-  let weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-
-  let months  = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-  return weekday[day].toLowerCase()
+  const daysOfWeek = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+  const date = new Date(dateString);
+  const dayOfWeekIndex = date.getUTCDay();
+  return daysOfWeek[dayOfWeekIndex]
+}
   // hint: you can create a Date with "new Date(dateString)"
   // hint: you can use the `getUTCDay()` method to get a number corresponding to the week day,
   // for example 0 = sunday, 1 = monday, etc
   // TODO
-}
+
 
 assert.strictEqual(getDayOfWeek("2023-01-18T03:00:00Z"), "wednesday");
 assert.strictEqual(getDayOfWeek("2023-01-17T03:00:00Z"), "tuesday");
@@ -239,39 +233,46 @@ const data0 = [
 //     dayOfTheWeek = "sunday" && timeOfDay =  "morning" | "afternoon" | 'evening'
 
 // }
+// function groupByDayOfWeek(list) {
+//   return list.reduce((acc, curr) => {
+//     const dayOfWeek = curr.dayOfWeek;
+//     if (!acc[dayOfWeek]) {
+//       acc[dayOfWeek] = [];
+//     }
+//     acc[dayOfWeek].push(curr);
+//     return acc;
+//   }, {});
+// }
   
   function groupByWeek(list: typeof data3) {
     //First group by day then find a way to make Sunday the start of a new week. Hover over forEach
     //Use parts of this loop but instead of it grouping to days group to week
     // if (item.dayOfWeek == group[0]?.dayOfWeek || group.length == 0)
     // TODO
-    // Sort the dates by date string
-    const weeks = [];
-    let currentWeek = [];
-  
-    for (let i = 0; i < list.length; i++) {
-      const date = list[i];
-      const dayOfWeek = date.getUTCDay();
-      const isSaturday = dayOfWeek === 6;
-      const isSunday = dayOfWeek === 0;
-  
-      currentWeek.push({
-        date: list[i],
-        dayOfWeek: getDayOfWeek(dayOfWeek),
-        timeOfDay: getTimeOfDay(date.getUTCHours())
-      });
-  
-      if (isSaturday || i === list.length - 1) {
-        weeks.push(currentWeek);
-        currentWeek = [];
-      } else if (isSunday) {
-        currentWeek.push([]);
-      }
+    const groupedByDay = groupByDay(list);
+  const firstDayOfWeek = 0; // Sunday
+  const lastDayOfWeek = 6; // Saturday
+  const groupedByWeek = [];
+
+  let currentWeek = [];
+  groupedByDay.forEach((day) => {
+    const date = new Date(day[0].date);
+    const dayOfWeek = date.getUTCDay();
+    if (dayOfWeek === firstDayOfWeek && currentWeek.length > 0) {
+      groupedByWeek.push(currentWeek);
+      currentWeek = [];
     }
-  
-    return weeks;
+    if (dayOfWeek <= lastDayOfWeek) {
+      currentWeek.push(day);
+    }
+  });
+  if (currentWeek.length > 0) {
+    groupedByWeek.push(currentWeek);
+  }
+  return groupedByWeek;
 }
     console.log(groupByWeek(data3))
+
   assert.deepStrictEqual(groupByWeek(data3), data4);
   
   /**
