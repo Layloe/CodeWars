@@ -249,29 +249,35 @@ const data0 = [
     //Use parts of this loop but instead of it grouping to days group to week
     // if (item.dayOfWeek == group[0]?.dayOfWeek || group.length == 0)
     // TODO
-    const groupedByDay = groupByDay(list);
-  const firstDayOfWeek = 0; // Sunday
-  const lastDayOfWeek = 6; // Saturday
-  const groupedByWeek = [];
+    const weeks = [];
 
   let currentWeek = [];
-  groupedByDay.forEach((day) => {
-    const date = new Date(day[0].date);
-    const dayOfWeek = date.getUTCDay();
-    if (dayOfWeek === firstDayOfWeek && currentWeek.length > 0) {
-      groupedByWeek.push(currentWeek);
+
+  for (let i = 0; i < list.length; i++) {
+    const currentDate = new Date(list[i][0].date); //! Make note before and after
+    // The function was reading each separate day as an individual array, and Eric helped me zero in on the fact that I needed to access the index[0] in order to get to the date property inside the array.
+    // To locate where the error was coming from, we changed the argument inside the function to 'list: typeof data3'
+    // Once TS flagged the problem, we were able to fix it by accessing the property inside the array.
+    // Ran the assert and BOOM! it worked.
+    const dayOfWeek = currentDate.getUTCDay();
+
+    if (dayOfWeek === 0 && currentWeek.length > 0 ) {
+      // End of the week
+      weeks.push(currentWeek);
       currentWeek = [];
     }
-    if (dayOfWeek <= lastDayOfWeek) {
-      currentWeek.push(day);
+
+    currentWeek.push(list[i]);
+
+    if (dayOfWeek === 6 || i === list.length - 1) {
+      // Saturday or last element of the list
+      weeks.push(currentWeek);
+      currentWeek = [];
     }
-  });
-  if (currentWeek.length > 0) {
-    groupedByWeek.push(currentWeek);
   }
-  return groupedByWeek;
+  return weeks;
 }
-    console.log(groupByWeek(data3))
+    console.log(JSON.stringify(groupByWeek(data3), null, 2))
 
   assert.deepStrictEqual(groupByWeek(data3), data4);
   
