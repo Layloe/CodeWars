@@ -1,4 +1,4 @@
-function groupByWeek(list: typeof data3) {
+function groupByWeek(list) {
     //First group by day then find a way to make Sunday the start of a new week. Hover over forEach
     //Use parts of this loop but instead of it grouping to days group to week
     // if (item.dayOfWeek == group[0]?.dayOfWeek || group.length == 0)
