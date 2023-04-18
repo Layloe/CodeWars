@@ -3,7 +3,7 @@
 
 // The websites array has already been defined for you using the following code:
 
-// Instructions unclear for a codewars challenge; websites.push("codewars")
+//? Instructions unclear for a codewars challenge; websites.push("codewars")
 
 function addArr(param) {
     let websites = [param] 
