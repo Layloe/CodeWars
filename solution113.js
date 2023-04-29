@@ -22,7 +22,7 @@
 
 //Psuedocode: Simplify function by using arrow function and using sort method
 
-
+//!Went the hard route again by using map to access the age property in a ordered fashion. Went a to higher level kyu since I finished all useful array challenges on level 8
 
 // function OrderPeople(people) {
 //     let test = people.sort((a, b) => a.age - b.age)
