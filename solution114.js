@@ -20,6 +20,8 @@
 
 //Psuedocode: Use method slice but set (n)um to index 1
 
+//! Need to find more discriptive challenges with better examples
+
 function first(arr, n=1) {
 
    return arr.splice(0,n)
