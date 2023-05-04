@@ -19,10 +19,14 @@
 
 //Psuedocode: Remove duplicates, methods filter and Math.min
 
+//! Called time was close!
+
 
 function removeSmallest(numbers) {
-    let num = numbers.filter((value, index) => numbers.indexOf(value) === index)
-    return num
+    // let num = numbers.filter((value, index) => numbers.indexOf(value) < Math.min(index) )
+    // return num
+    const min = Math.min.apply(this, numbers);
+  return numbers.filter((num, idx, arr) => idx !== arr.indexOf(min))
   }
 
-  console.log(removeSmallest([1,2,3,4,5]))
+  console.log(removeSmallest([2,2,2,1]))
