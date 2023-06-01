@@ -15,7 +15,10 @@
 // assert.deepEqual(duplicates(['1', 2, 3, 3, '2', 1]), [3], "arr = ['1', 2, 3, 3, '2', 1]");
 // assert.deepEqual(duplicates(['zut', 'alors', 1, 2, 4, 4, 3, 3, '1', 5, 3, 'zut']), [4, 3, 'zut'], "arr = ['zut', 'alors', 1, 2, 4, 4, 3, 3, '1', 5, 3, 'zut']");
 
-// Psuedocode: Take the first num in the arr and iterate though the rest of the array to see(compare) if there is a match or duplicate.--Use methods filter and indexOf then compare, return the filtered items
+// Psuedocode: Take the first num in the arr and iterate though the rest of the array to see(compare) if there is a match or duplicate.--Use methods filter and indexOf then compare, return the filtered items. 
+
+//? Still needs a bit more work but got the basic solution working, still need to fix the outliers..cont tommarrow morning
+
 const assert = require('assert')
 
 function duplicates(arr) {
