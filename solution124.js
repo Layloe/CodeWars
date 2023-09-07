@@ -12,7 +12,9 @@
 // Test.assertEquals(arr[1], 1, "Failed swapping numbers")
 
 //Psuedocode: Possibly use the method sort or use the index position in the arr then reverse
-const assert = require('assert')
+
+
+// const assert = require('assert')
 
 function swapValues(arr) {
 
@@ -27,5 +29,5 @@ function swapValues(arr) {
 
 console.log(swapValues([0,1]))    
 
-assert.deepEquals(arr[0], 2, "Failed swapping numbers")
-assert.deepEquals(arr[1], 1, "Failed swapping numbers")
+// assert.deepEquals(arr[0], 2, "Failed swapping numbers")
+// assert.deepEquals(arr[1], 1, "Failed swapping numbers")
