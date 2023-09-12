@@ -35,7 +35,9 @@ function gimme (triplet) {
     // const mid = triplet.sort((a, b) => a - b )
     // const index = triplet.indexOf( mid[1])
     const tripletCopy = triplet.slice()
+
     tripletCopy.sort((a, b) => a - b)
+    
     const middleIndex = triplet.indexOf(tripletCopy[1])
 
     return middleIndex 
