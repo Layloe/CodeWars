@@ -17,13 +17,9 @@
 // Psuedocode: loop through the arr, use condtionals or subtract number by it's self
 
 function invert(array) {
-    const emptyArr = []
+    // const emptyArr = []
     const test = array.map(element =>  -element ) 
         
-    
-            
-    
-
     
     return test
  }
