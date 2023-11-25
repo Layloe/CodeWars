@@ -19,11 +19,24 @@ function greaterThanThree(arr) {
     const testFilter = arr.filter(item => item > 3)
     return testFilter
 }
-Array.prototype.filter = function ( func, arr = [] ) {
+Array.prototype.filter = function ( func, arr = [] ) { 
     for ( let i = 0; i < this.length; i++ ) {
         if ( func(this[i]) ) { arr.push(this[i]) }
     }
     return arr
 }
+// This filter function return an array with values that meet 
+// the conditions set in the ruleCondition callback function.
+
+Array.prototype.filter = function( ruleCondition ) {           //? for reviewing  
+    // Create an empty array to store the values that satisfy the ruleCondition
+      var arr = [];
+      
+      this.forEach( function( currentValue ) {
+      // Evaluate each element and push the value when content in array meet condition
+        if( ruleCondition( currentValue ) ) arr.push( currentValue );
+      });
+      return arr;
+    }
 
 console.log(greaterThanThree([1, 2, 3, 4, 5]))
