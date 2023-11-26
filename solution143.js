@@ -23,7 +23,7 @@
 // assert.strictEqual(duckDuckGoose(players, 12), "b");
 // assert.strictEqual(duckDuckGoose(players, 2),  "b");
 // assert.strictEqual(duckDuckGoose(players, 7),  "f");
-//? instructions felt unclear for a 8kyu
+//? instructions felt unclear for a 8kyu, I think I'm going to start with 8 kyu string challenges then move on to 7kyu
 //*Psuedocode: subtract goose from the remainder of players then add the name property
 
 
