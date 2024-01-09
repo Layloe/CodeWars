@@ -25,7 +25,7 @@
 // aliasGen('Larry', 'Brentwood') === 'Logic Bomb'
 // aliasGen('123abc', 'Petrovic') === 'Your name must start with a letter from A - Z.'
 
-//Psuedocode: create two params that will filter out the first and last name .length includes
+//Psuedocode: create two params that will filter out the first and last name .length includes //!instructions unclear called time
 
 function aliasGen(first, last) {
     if('0123456789'.indexOf(first[0]) != -1 || '0123456789'.indexOf(last[0]) != -1) {
@@ -33,7 +33,7 @@ function aliasGen(first, last) {
     }
     first = first.toUpperCase();
     last = last.toUpperCase();
-    return firstName[first[0]] + ' ' + surname[last[0]];
+    return firstName[first[0]] + ' ' + surname[last[0]]
   }
     
 
