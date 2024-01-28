@@ -1,0 +1,1 @@
+str.split('').map((item, index) => item.toUpperCase() + item.toUpperCase())
