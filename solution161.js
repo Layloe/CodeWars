@@ -34,14 +34,22 @@
 //? Psuedocode: loop through objecs and search list then use conditionals to return a num 
 
 function countDevelopers(list) {
-
-   return list.filter(item => item.language == 'JavaScript' && item.continent == 'JavaScript').length
-   
+  let filterList = 0
+    list.filter(item => {
+      if ( item.continent == 'Europe' && item.language == 'JavaScript') {
+        filterList += 1
+      }
+      if (!item.language == 'JavaScript' && !item.continent == 'Europe')
+        filterList += 0
+    })
+    return filterList
+    
+  // return list.filter(item => item.language == 'JavaScript' && item.continent == 'JavaScript').length
+       
+      
   }
 
   console.log(countDevelopers([
-    { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'JavaScript', age: 19, language: 'JavaScript' },
-    { firstName: 'Maia', lastName: 'S.', country: 'Tahiti', continent: 'Oceania', age: 28, language: 'JavaScript' },
-    { firstName: 'Shufen', lastName: 'L.', country: 'Taiwan', continent: 'Asia', age: 35, language: 'HTML' },
-    { firstName: 'Sumayah', lastName: 'M.', country: 'Tajikistan', continent: 'Asia', age: 30, language: 'CSS' }
+    { firstName: 'Oliver', lastName: 'Q.', country: 'Australia', continent: 'Oceania', age: 19, language: 'HTML' },
+    { firstName: 'Lukas', lastName: 'R.', country: 'Austria', continent: 'Europe', age: 89, language: 'HTML' }
   ]))
