@@ -11,7 +11,7 @@
 // assert.strictEqual(divCon(['5', '0', 9, 3, 2, 1, '9', 6, 7]), 14); 
 // assert.strictEqual(divCon(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0']), 13);
 
-//? Psuedocode: loop through arr, filter out strings and use reduce mafs, first time running into typeof
+//? Psuedocode: loop through arr, filter out strings and use reduce mafs, first time running into typeof outside of TypeSript
 
 const assert = require('assert')
 
