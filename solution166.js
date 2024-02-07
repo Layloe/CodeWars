@@ -17,7 +17,7 @@
 
 function getCount(str) {
     const test = str.split('').filter(item => 'aeiou'.indexOf(item))
-    const vowelCount = []
+    // const vowelCount = []
     return test
 }
  console.log(getCount("abracadabra"))
