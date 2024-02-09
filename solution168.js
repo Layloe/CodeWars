@@ -16,9 +16,14 @@
 
 //? Psuedocode: test diffrent data types-- review practice
 
+const assert = require('assert')
+
 function numberToString(num) {
-    return String(num)
+    // return num.toString()
+    return `${num}`
  
   }
 
   console.log(numberToString(67))
+
+  assert.strictEqual(numberToString(67), '67')
