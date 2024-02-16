@@ -13,14 +13,22 @@
 // assert.strictEqual(countSheep(2), "1 sheep...2 sheep...");
 // assert.strictEqual(countSheep(3), "1 sheep...2 sheep...3 sheep...");
 
-//? Psuedocode: return after break
+//? Psuedocode: over engineered answer call this one a wash
+
+const assert = require('assert')
+
 
 var countSheep = function (num){
-        return `1 sheep...`.repeat(num)
-  }
+    let str = ''
+    for(let i = 1; i <= num; i++){
+      str += `${i} sheep...`
+    }
+    return str
+
+}
 console.log(countSheep(2))
 
-//   assert.strictEqual(countSheep(0), "");
-//   assert.strictEqual(countSheep(1), "1 sheep...");
-//   assert.strictEqual(countSheep(2), "1 sheep...2 sheep...");
-//   assert.strictEqual(countSheep(3), "1 sheep...2 sheep...3 sheep...");
+  assert.strictEqual(countSheep(0), "");
+  assert.strictEqual(countSheep(1), "1 sheep...");
+  assert.strictEqual(countSheep(2), "1 sheep...2 sheep...");
+  assert.strictEqual(countSheep(3), "1 sheep...2 sheep...3 sheep...");
