@@ -20,12 +20,12 @@
 
 const assert = require('assert')
 
-const sumMix = x => x.reduce((sum, curr) => sum + Number(curr), 0)
+// const sumMix = x => x.reduce((sum, curr) => sum + Number(curr), 0)
 
-// function sumMix(x){
-//     // const str2nums = x
-//     return x.reduce((sum, curr) => sum + Number(curr), 0)
-// }
+function sumMix(x){
+    // const str2nums = x
+    return x.reduce((sum, curr) => sum + Number(curr), 0)
+}
 console.log(sumMix([9, 3, '7', '3']))
 
 assert.strictEqual(sumMix([9, 3, '7', '3']), 22);
