@@ -26,7 +26,11 @@
 const assert = require('assert')
 
 function shortcut (string) {
-    return string.split('').filter(item => !item.includes('a')  && !item.includes('e') && !item.includes('i') && !item.includes('o') && !item.includes('u')  ).join('')
+    return string
+    .split('')
+    .filter(item => 
+        !item.includes('a')  && !item.includes('e') && !item.includes('i') && !item.includes('o') && !item.includes('u'))
+    .join('')
   }
 console.log(shortcut('hello'))
 
