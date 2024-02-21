@@ -27,7 +27,7 @@
 //? Psuedocode: declare a variable to hold table template
 //? use template litearls to insert number
 //?  use Number()
-//?
+//! ran out of time
 
 
 function multiTable(number) {
