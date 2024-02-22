@@ -18,8 +18,6 @@
 
 const assert = require('assert')
 
-
-
 function well(x){
     const lenghtNum = x.filter(item => item =='good').length
     return lenghtNum < 1 ? 'Fail!' :  
