@@ -21,14 +21,14 @@
 
 const assert = require('assert')
 
-const billboard = (name, price=30) => name.split('').reduce((sum,curr) => sum + price, 0)
+// const billboard = (name, price=30) => name.split('').reduce((sum,curr) => sum + price, 0)
 
-// function billboard(name, price = 30){
+function billboard(name, price = 30){
     
-//     const nameSum = name.split('').reduce((sum, curr) => sum + price, 0)
+    const nameSum = name.split('').reduce((sum, curr) => sum + price, 0)
 
-//     return nameSum
-// } 
+    return nameSum
+} 
 console.log(billboard("Jeong-Ho Aristotelis"))
 
 assert.strictEqual(billboard("Jeong-Ho Aristotelis"), 600);
