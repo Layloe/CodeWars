@@ -32,6 +32,7 @@ const assert = require('assert')
 
 function stringClean(s){
     return s.split('').filter(item => !Number(item) ).join('')
+    // s.split('').filter(s => !'1234567890' .includes(s)).join('')
  }
 console.log(stringClean("(E3at m2e2!!)"))
 

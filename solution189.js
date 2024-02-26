@@ -14,7 +14,7 @@
 // Test.assertEquals(feast("chickadee", "chocolate cake"), true)
 // Test.assertEquals(feast("brown bear", "bear claw"), false)
 
-//? Psuedocode: need to practice this kata again
+//? Psuedocode: need to practice this kata again 
 //? use condtionals if
 //? use methods endWith('') startsWith('') 
 //? return boolean
@@ -33,7 +33,6 @@ function feast(beast, dish) {
         return false
     }
 }
-
 console.log(feast("great blue heron", "garlic naan"))
 
 assert.strictEqual(feast("great blue heron", "garlic naan"), true)

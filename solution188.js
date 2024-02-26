@@ -21,11 +21,13 @@
 
 const assert = require('assert')
 
-const doubleChar = str => str.split('').map(item => item.repeat(2)).join('')
+// const doubleChar = str => str.split('').map(item => item.repeat(2)).join('')
 
-// function doubleChar(str) {
-//     return str.split('').map(item => item.repeat(2)).join('')
-//   }
+function doubleChar(str) {
+
+    return str.split('').map(item => item.repeat(2)).join('')
+  }
+  
 console.log(doubleChar("abcd"))
 
 assert.strictEqual(doubleChar("abcd"), "aabbccdd");

@@ -31,20 +31,20 @@ const assert = require('assert')
 //     ? 'hearts'
 //      ? card.includes('♠')
 
-// function defineSuit(card) {
-//     if (card.includes('♣')) {
-//         return 'clubs'
-//     }
-//     if (card.includes('♦')) {
-//         return 'diamonds'
-//     }
-//     if (card.includes('♥')) {
-//         return 'hearts'
-//     }
-//     if (card.includes('♠')) {
-//         return 'spades'
-//     }
-//   }
+function defineSuit(card) {
+    if (card.includes('♣')) {
+        return 'clubs'
+    }
+    if (card.includes('♦')) {
+        return 'diamonds'
+    }
+    if (card.includes('♥')) {
+        return 'hearts'
+    }
+    if (card.includes('♠')) {
+        return 'spades'
+    }
+  }
 console.log(defineSuit('3♥'))
 
 assert.strictEqual(defineSuit('Q♠'), 'spades')
