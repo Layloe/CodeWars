@@ -29,7 +29,7 @@
 const assert = require('assert')
 
 
-// const contamination = (text, char) => text == "" && char == "" ? "" : char.repeat(text.length)
+// const contamination = (text, char) => text == "" || char == "" ? "" : char.repeat(text.length)
 
 function contamination(text, char){
     const txtLength = text.length
