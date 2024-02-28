@@ -18,6 +18,7 @@
 
 //? Psuedocode: condtionals
 //? includes('tree fiddy') || includes('3.50') || includes('three fifty')
+//? boolean
 
 const assert = require('assert')
 
@@ -26,7 +27,7 @@ const assert = require('assert')
 function isLockNessMonster(s) {
     if (s.includes('tree fiddy') || s.includes('3.50') || s.includes('three fifty') ) {
         return true
-    }else {
+    }else {                          
         return false
     }
   }
