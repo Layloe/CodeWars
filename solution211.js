@@ -34,6 +34,7 @@ assert.strictEqual(whoIsPaying("Melissa"),["Melissa", "Me"]);
 assert.strictEqual(whoIsPaying("Me"),["Me"]);
 assert.strictEqual(whoIsPaying(""), [""]);
 assert.strictEqual(whoIsPaying("I"), ["I"]);  
+
 //         ( •_• )
 // 　　＿ノ ヽ ノ＼ __
 // 　 /　`/ ⌒Ｙ⌒
