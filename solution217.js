@@ -8,22 +8,30 @@
 
 // If one of the arguments is a number your code must coerce it into being a string.
 
-//? Prameters:
+//? Prameters: two params that both take in a string or nums
 
-//? Return:
+//? Return: a concatinated string without using + , .concat() & .join(). If one of the arguments is a number your code must coerce it into being a string
 
 //? Example:
 // assert.strictEqual(joinStrings('string1', 'string2'), 'string1 string2');
 // assert.strictEqual(joinStrings('testing', 'testing'), 'testing testing');
 // assert.strictEqual(joinStrings(134, 234), '134 234');
 
-//? Psuedocode:
+//? Psuedocode: declare two vars
+//? change nums toString
+//? template litterals
+const util = require('util')
+const assert = require('assert')
 
 function joinStrings(string1, string2){
-    // code here
+    const numToStr1 = string1.toString()
+    const numToStr2 = string2.toString()
+    
+    return `${numToStr1} ${numToStr2}`
+   
  }
-console.log(joinStrings('string1', 'string2'))
+console.log(util.inspect(joinStrings(134, 234)))
 
-//  assert.strictEqual(joinStrings('string1', 'string2'), 'string1 string2');
-//  assert.strictEqual(joinStrings('testing', 'testing'), 'testing testing');
-//  assert.strictEqual(joinStrings(134, 234), '134 234');
+ assert.strictEqual(joinStrings('string1', 'string2'), 'string1 string2');
+ assert.strictEqual(joinStrings('testing', 'testing'), 'testing testing');
+ assert.strictEqual(joinStrings(134, 234), '134 234');

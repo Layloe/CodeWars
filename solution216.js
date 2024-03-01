@@ -16,14 +16,15 @@
 //? Psuedocode: first see who is winner from scores with comparison
 //? use templete literals both params depending on winner
 
+const assert = require('assert')
+
 function uefaEuro2016(teams, scores){
-    // const scoresWin = scores[0] > scores[1] 
-    // const teamsWin = teams.
+
     if(scores[0] > scores[1]){
-        return   `At match ${teams[0]} - ${teams[1]} , ${teams[0]}  won!`
+        return   `At match ${teams[0]} - ${teams[1]}, ${teams[0]} won!`
     }
     if(scores[1] > scores[0]){
-        return   `At match ${teams[0]} - ${teams[1]} , ${teams[1]}  won!`
+        return   `At match ${teams[0]} - ${teams[1]}, ${teams[1]} won!`
     }
     if(scores[0] == scores[1]){
         return `At match ${teams[0]} - ${teams[1]}, teams played draw.`           
@@ -32,6 +33,6 @@ function uefaEuro2016(teams, scores){
   }
   console.log(uefaEuro2016(['Portugal', 'Iceland'], [1, 1]))
 
-//   assert.strictEqual(uefaEuro2016(['Germany', 'Ukraine'], [2, 0]), "At match Germany - Ukraine, Germany won!");
-//   assert.strictEqual(uefaEuro2016(['Belgium', 'Italy'], [0, 2]), "At match Belgium - Italy, Italy won!");
-//   assert.strictEqual(uefaEuro2016(['Portugal', 'Iceland'], [1, 1]), "At match Portugal - Iceland, teams played draw.");
+  assert.strictEqual(uefaEuro2016(['Germany', 'Ukraine'], [2, 0]), "At match Germany - Ukraine, Germany won!");
+  assert.strictEqual(uefaEuro2016(['Belgium', 'Italy'], [0, 2]), "At match Belgium - Italy, Italy won!");
+  assert.strictEqual(uefaEuro2016(['Portugal', 'Iceland'], [1, 1]), "At match Portugal - Iceland, teams played draw.");
