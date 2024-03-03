@@ -23,6 +23,8 @@
 const util = require('util')
 const assert = require('assert')
 
+// const joinStrings = (a,b) => `${a.toString()} ${b.toString()}`
+
 function joinStrings(string1, string2){
     const numToStr1 = string1.toString()
     const numToStr2 = string2.toString()
