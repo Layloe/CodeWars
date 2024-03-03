@@ -21,44 +21,32 @@
 // & --> &amp;
 // Good luck :D
 
-//? Psuedocode: filter
-//? condtionals if str contains char examples
-//? if true replaceAll()
+//? Psuedocode:  replaceAll()
 
-function htmlspecialchars(formData) {
-       const arr = formData.split('')
-    if (formData.includes('<') || formData.includes('>') || formData.includes('"') || formData.includes('&')) {            //!brb
-        return formData.replaceAll('<', '&lt;')
-    if (formData.includes('<') ) {
-       return formData.replaceAll('<', '&lt;')
-    } else
-    if (formData.includes('>')) {
-       return  formData.replaceAll('>', '&gt;')
-    } else
-    if (formData.includes('"')) {
-        return formData.replaceAll('"', '&quot;')
-    } else
-    if (formData.includes('&')) {
-        return formData.replaceAll('&', '&amp;')
-    }
+const assert = require('assert')
 
-    }
-}
+const htmlspecialchars = formData => formData.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;')
+
+// function htmlspecialchars(formData) {
+
+//     return formData.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;')
+            
+// }
 console.log(htmlspecialchars("<h2>Hello World</h2>"))
 
-//   assert.strictEqual(
-//     htmlspecialchars("<h2>Hello World</h2>"),
-//     "&lt;h2&gt;Hello World&lt;/h2&gt;"
-//   );
-//   assert.strictEqual(
-//     htmlspecialchars("Hello, how would you & I fare?"),
-//     "Hello, how would you &amp; I fare?"
-//   );
-//   assert.strictEqual(
-//     htmlspecialchars('How was "The Matrix"?  Did you like it?'),
-//     'How was &quot;The Matrix&quot;?  Did you like it?'
-//   );
-//   assert.strictEqual(
-//     htmlspecialchars("<script>alert('Website Hacked!');</script>"),
-//     "&lt;script&gt;alert('Website Hacked!');&lt;/script&gt;"
-//   )
+  assert.strictEqual(
+    htmlspecialchars("<h2>Hello World</h2>"),
+    "&lt;h2&gt;Hello World&lt;/h2&gt;"
+  );
+  assert.strictEqual(
+    htmlspecialchars("Hello, how would you & I fare?"),
+    "Hello, how would you &amp; I fare?"
+  );
+  assert.strictEqual(
+    htmlspecialchars('How was "The Matrix"?  Did you like it?'),
+    'How was &quot;The Matrix&quot;?  Did you like it?'
+  );
+  assert.strictEqual(
+    htmlspecialchars("<script>alert('Website Hacked!');</script>"),
+    "&lt;script&gt;alert('Website Hacked!');&lt;/script&gt;"
+  )
