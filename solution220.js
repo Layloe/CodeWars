@@ -30,6 +30,7 @@
 
 const assert = require('assert')
 
+// const correctPolishLetters = string => string.replaceAll...
 
 function correctPolishLetters (string) {
     return string
