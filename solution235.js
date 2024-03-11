@@ -15,11 +15,11 @@
 
 const assert = require('assert')
 
-const grow = x => x.reduce((sum, curr) => sum * curr, 1)
+// const grow = x => x.reduce((sum, curr) => sum * curr, 1)
 
-// function grow(x){
-//     return x.reduce((sum,curr) => sum * curr , 1)
-// }
+function grow(x){
+    return x.reduce((sum,curr) => sum * curr , 1)
+}
 console.log(grow([4, 1, 1, 1, 4]))
 
 assert.strictEqual(grow([1, 2, 3]), 6);
