@@ -27,7 +27,7 @@ const assert = require('assert')
 
 // const defineSuit = card =>   
 //  card.includes('♣')? 'clubs' :
-//     ? card.includes('♦') 'diamonds' : card.includes('♥')   **come back to practice chaining turnaray operators
+//     ? card.includes('♦') 'diamonds' : card.includes('♥')   **come back to practice chaining turnaray operators https://explorer.globe.engineer/
 //     ? 'hearts'
 //      ? card.includes('♠')
 

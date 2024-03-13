@@ -20,6 +20,8 @@
 
 const assert = require('assert')
 
+
+
 function digitize(n) {
     const arr = String(n).split('').reverse()
     return arr.map(item => Number(item))

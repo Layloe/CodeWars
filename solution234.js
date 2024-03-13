@@ -18,7 +18,7 @@
 
 const assert = require('assert')
 
-// const findAverage = arr =>  arr.reduce((sum,curr) => sum + curr, 0) / arr.length 
+// const findAverage = arr =>  arr.length ? arr.reduce((sum,curr) => sum + curr, 0) / arr.length : 0
 
 function findAverage(array) {
     if (array.length == 0){

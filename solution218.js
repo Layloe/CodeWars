@@ -25,13 +25,13 @@
 
 const assert = require('assert')
 
-const htmlspecialchars = formData => formData.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;')
+// const htmlspecialchars = formData => formData.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;')
 
-// function htmlspecialchars(formData) {
+function htmlspecialchars(formData) {
 
-//     return formData.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;')
+    return formData.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;')
             
-// }
+}
 console.log(htmlspecialchars("<h2>Hello World</h2>"))
 
   assert.strictEqual(

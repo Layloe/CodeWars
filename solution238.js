@@ -19,12 +19,12 @@
 
 const assert = require('assert')
 
-const fakeBin = x => x.split('').map(item => item >= 5 ? 1 : 0).join('')
+// const fakeBin = x => x.split('').map(item => item >= 5 ? 1 : 0).join('')
 
-// function fakeBin(x){
+function fakeBin(x){
 
-//     return x.split('').map(item => item >= 5 ? 1 : 0).join('')
-// }
+    return x.split('').map(item => item >= 5 ? 1 : 0).join('')
+}
 console.log(fakeBin('45385593107843568'))
 
 assert.strictEqual(fakeBin('45385593107843568'), '01011110001100111');
