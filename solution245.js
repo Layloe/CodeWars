@@ -23,10 +23,10 @@ const assert = require('assert')
 
 // const removeEveryOther = arr => arr.filter((item,index) => index % 2 === 0)
 
-// function removeEveryOther(arr){
-//     const cutIndexEqual2 = arr.filter((item, index) =>  index % 2  == 0 )
-//     return cutIndexEqual2
-//   }
+function removeEveryOther(arr){
+    const cutIndexEqual2 = arr.filter((item, index) =>  index % 2  == 0 )
+    return cutIndexEqual2
+  }
 console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']))
 
 assert.strictEqual(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']),['Hello', 'Hello Again']);

@@ -35,6 +35,8 @@
 
 const assert = require('assert')
 
+// const points = (games,pointSum) => games.map(item => item[0] > item[2] ? pointSum += 3 : 0 item[0] == item[2] ? pointSum += 1 : 0)
+
 function points(games) {
     let pointSum = 0
     const teamScore3 = games.map(item => item[0] > item[2] ? pointSum += 3 : 0 )

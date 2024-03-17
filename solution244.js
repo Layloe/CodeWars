@@ -17,12 +17,12 @@
 
 const assert = require('assert')
 
-const arrayPlusArray = (arr1, arr2) => arr1.concat(arr2).reduce((sum,curr) => sum + curr, 0)
+// const arrayPlusArray = (arr1, arr2) => arr1.concat(arr2).reduce((sum,curr) => sum + curr, 0)
 
-// function arrayPlusArray(arr1, arr2) {
-//     const conMeow = arr1.concat(arr2)
-//     return conMeow.reduce((sum, curr) => sum + curr, 0)
-//   }
+function arrayPlusArray(arr1, arr2) {
+    const conMeow = arr1.concat(arr2)
+    return conMeow.reduce((sum, curr) => sum + curr, 0)
+  }
 console.log(arrayPlusArray([1, 2, 3], [4, 5, 6]))
 
   assert.strictEqual(arrayPlusArray([1, 2, 3], [4, 5, 6]), 21);
