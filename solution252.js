@@ -32,7 +32,7 @@ const assert = require('assert')
 
 function mergeArrays(arr1, arr2) {
     const sortArr = [...arr1,...arr2].sort((a, b) => a - b)
-    const removeDups = sortArr.filter((item,index )=> sortArr.indexOf(item) === index )
+    const removeDups = [...new Set(sortArr)]  //? learn abiout [...new Set(arr)]
   return   removeDups
 
 }
