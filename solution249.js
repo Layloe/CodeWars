@@ -14,18 +14,22 @@
 // assert.strictEqual(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]), 'b***i***t***c***o***i***n' );
 // assert.strictEqual(twoSort(["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"]), 'a***r***e'); 
 
-//? Psuedocode: declare a var that changes strings in array to the ASCII values of the chars
-//? sort()
-//? slice(-1)
+//? Psuedocode:   "ASCII values of the chars" threw me off into a diffrent direction.Fixed
+//? sort()[0]
+//? split(')
 //? join('***')
 
-function twoSort(s) {
-    const asciiNums = s.map(item => item.charCodeAt()).sort()
-    const asciiToStr = asciiNums.map(item => item.slice(-1))
+const assert =require('assert')
 
-    return asciiToStr
-}
+const twoSort = s => s.sort()[0].split('').join('***')
+
+// function twoSort(s) {
+//     // const asciiNums = s.map(item => item.charCodeAt())
+//     // const asciiToStr = s.map(item => String.fromCharCode())
+
+//     return s.sort()[0].split('').join('***')
+// }
 console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]))
 
-// assert.strictEqual(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]), 'b***i***t***c***o***i***n' );
-// assert.strictEqual(twoSort(["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"]), 'a***r***e'); 
+assert.strictEqual(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]), 'b***i***t***c***o***i***n' );
+assert.strictEqual(twoSort(["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"]), 'a***r***e'); 
