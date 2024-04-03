@@ -20,10 +20,12 @@
 
 //? Psuedocode: filter()
 //? modulus == 0
+ 
+const multipleOfIndex = array => array.filer((item, index)=> item % index == 0 || item == 0)
 
 function multipleOfIndex(array) {
     const testArr = array.filter((item,index) => item % index == 0 || item == 0 )
-    return testArr
+    return testArr 
   }
 console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]))
 
