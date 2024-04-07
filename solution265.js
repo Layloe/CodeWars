@@ -42,7 +42,7 @@ const assert = require('assert')
 
 
 function warnTheSheep(queue) {
-    const findWolf = queue.reverse().indexOf('wolf')
+    const findWolf = queue.reverse().indexOf('wolf')   
     if (findWolf == 0){
         return "Pls go away and stop eating my sheep"
     } else {

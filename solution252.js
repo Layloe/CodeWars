@@ -28,16 +28,16 @@
 
 const assert = require('assert')
 
-// const mergeArrays = (arr1, arr2) => [...arr1,...arr2]
+// const mergeArrays = (arr1, arr2) => [...arr1,...arr2].sort((a, b) => a - b)
 
 function mergeArrays(arr1, arr2) {
     const sortArr = [...arr1,...arr2].sort((a, b) => a - b)
-    const removeDups = [...new Set(sortArr)]  //? learn abiout [...new Set(arr)]
+    const removeDups = sortArr.filter((item,index )=> sortArr.indexOf(item) === index ) //?  [...new Set(arr)] would be the a better choice here
   return   removeDups
 
 }
 console.log(mergeArrays([1,3,5,7,9,11,12], [1,2,3,4,5,10,12]))
 
-// assert.deepEqual(mergeArrays([1,2,3,4], [5,6,7,8]), [1,2,3,4,5,6,7,8], "Basic tests");
-// assert.deepEqual(mergeArrays([1,3,5,7,9], [10,8,6,4,2]), [1,2,3,4,5,6,7,8,9,10], "Basic tests");
-// assert.deepEqual(mergeArrays([1,3,5,7,9,11,12], [1,2,3,4,5,10,12]), [1,2,3,4,5,7,9,10,11,12], "Basic tests");
+assert.deepEqual(mergeArrays([1,2,3,4], [5,6,7,8]), [1,2,3,4,5,6,7,8], "Basic tests");
+assert.deepEqual(mergeArrays([1,3,5,7,9], [10,8,6,4,2]), [1,2,3,4,5,6,7,8,9,10], "Basic tests");
+assert.deepEqual(mergeArrays([1,3,5,7,9,11,12], [1,2,3,4,5,10,12]), [1,2,3,4,5,7,9,10,11,12], "Basic tests");

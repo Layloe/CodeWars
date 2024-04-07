@@ -12,7 +12,9 @@
 
 //? Psuedocode: reverse()
 
-const assert = require('assert')
+// const assert = require('assert')
+
+const swapValues = arr => arr.reverse()
 
 function swapValues(arr) {
     // var args = Array.prototype.slice.call(arguments);
@@ -23,5 +25,5 @@ function swapValues(arr) {
 }
 console.log(swapValues([1,2]))
 
-assert.assertEquals(arr[0], 2, "Failed swapping numbers")
-assert.assertEquals(arr[1], 1, "Failed swapping numbers")
+// assert.assertEquals(arr[0], 2, "Failed swapping numbers")
+// assert.assertEquals(arr[1], 1, "Failed swapping numbers")

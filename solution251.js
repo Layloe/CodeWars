@@ -25,6 +25,8 @@
 
 const assert = require('assert')
 
+// const gooseFilter = birds => birds.filter( item => !geese.includes(item))
+
 function gooseFilter (birds) {
     var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
     const fiterBirbs = birds.filter(item => item !== "African" && item !== "Roman Tufted" && item !== "Toulouse" && item !== "Pilgrim" && item !== "Steinbacher" )

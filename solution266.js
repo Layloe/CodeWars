@@ -21,11 +21,11 @@
 
 const assert = require('assert')
 
-const distinct = a => [...new Set(a)]
+// const distinct = a => [...new Set(a)]
 
-// function distinct(a) {
-//     return [...new Set(a)];
-//   }
+function distinct(a) {
+    return [...new Set(a)];
+  }
 console.log(distinct([1,1,2]))
 
   assert.deepEqual(distinct([1]), [1]);
