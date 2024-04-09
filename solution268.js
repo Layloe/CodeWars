@@ -59,7 +59,7 @@ saturday = [5448, 8041, 6573, 8104, 6208, 5912, 7927, 8909, 7000, 5059, 6412, 63
 function stairsIn20(s){                                                                                      //! added to Anki deck to review
     const sumWeek = [...sunday, ...monday, ...tuesday, ...wednesday, ...thursday, ...friday, ...saturday]
     .reduce((sum,curr) => sum + curr, 0)
-    // let sumWeek = sunday.reduce((sum, curr) => sum + curr, 0)
+
     return sumWeek * 20
   }
 console.log(stairsIn20(sunday))
