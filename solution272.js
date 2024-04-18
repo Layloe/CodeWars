@@ -20,6 +20,8 @@
 
 const assert = require('assert')
 
+// const arrowFunc = arr =>  String.fromCharCode(...arr)
+
 var ArrowFunc = function(arr) {
     return arr.map(item => String.fromCharCode(item)).join(''); //Complete this function
   }
