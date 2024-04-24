@@ -9,15 +9,15 @@
 // all((1, 2, 3, 4, 5), greater_than_9) -> false
 // all((1, 2, 3, 4, 5), less_than_9)    -> True
 
-//? Prameters: An array of numbers
+//? Parameters: An array of numbers
 
-//? Return: a boolean depending on conditons
+//? Return: a boolean depending on conditions
 
 //? Example:
 // Test.assertEquals(all([1,2,3,4,5], function(v){return v<9}), true)
 // Test.assertEquals(all([1,2,3,4,5], function(v){return v>9}), false)
 
-//? Psuedocode: if array meets equals true 
+//? Pseudocode: if array meets equals true 
 
 function all( arr, fun ){                                           //? finish once not sick
     const test = fun(...arr)

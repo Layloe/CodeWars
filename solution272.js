@@ -8,7 +8,7 @@
 // Javascript => String.fromCharCode(97) // a
 // C# => Tools.FromCharCode(97) // a
 
-//? Prameters: an arr of numbers
+//? Parameters: an arr of numbers
 
 //? Return: convert the numbers to a characters
 
@@ -16,7 +16,7 @@
 // Test.assertEquals(ArrowFunc([84,101,115,116]), 'Test', 'Convert those numbers to letters')
 // Test.assertEquals(ArrowFunc([70,85,83,32,82,79,72,32,68,65,72]), 'FUS ROH DAH', 'Keep it up!')
 
-//? Psuedocode: finish the function with String.fromCharCode(item)
+//? Pseudocode: finish the function with String.fromCharCode(item)
 
 const assert = require('assert')
 

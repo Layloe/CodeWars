@@ -1,10 +1,10 @@
-//? Prameters:
+//? Parameters:
 
 //? Return:
 
 //? Example:
 
-//? Psuedocode:
+//? Pseudocode:
 
 //         ( •_• )
 // 　　＿ノ ヽ ノ＼ __

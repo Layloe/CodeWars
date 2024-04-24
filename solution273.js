@@ -28,26 +28,25 @@
 // assert.strictEqual(duckDuckGoose(players, 2),  "b");
 // assert.strictEqual(duckDuckGoose(players, 7),  "f");
 
-//? Psuedocode: create a loop that repeats once it gets to the end of the arr.
-//? delcare a var
+//? Pseudocode: create a loop that repeats once it gets to the end of the arr.
+//? declare a var
 //? possible solution using % == 10
 //? slice()
+const assert = require('assert')
 
-function duckDuckGoose(players, goose) {                                    
-    // let players = ["a", "b", "c", "d", "c", "e", "f", "g", "h", "z"]
-    // let testGoose = ex_names.forEach(item => item.indexOf(goose) % 10 )
-    
-    return players.filter((item,goose) => item.indexOf(goose) )
+function duckDuckGoose(players, goose) {  //Needs codewars to run
+
+  return players[(goose-1)%players.length].name
   }
-console.log(duckDuckGoose(["a", "b", "c", "d", "c", "e", "f", "g", "h", "z"], 1))
+// console.log(duckDuckGoose(players, 20))
 
-// assert.strictEqual(duckDuckGoose(players, 1),  "a");
-// assert.strictEqual(duckDuckGoose(players, 3),  "c");
-// assert.strictEqual(duckDuckGoose(players, 10), "z");
-// assert.strictEqual(duckDuckGoose(players, 20), "z");
-// assert.strictEqual(duckDuckGoose(players, 30), "z");
-// assert.strictEqual(duckDuckGoose(players, 18), "g");
-// assert.strictEqual(duckDuckGoose(players, 28), "g");
-// assert.strictEqual(duckDuckGoose(players, 12), "b");
-// assert.strictEqual(duckDuckGoose(players, 2),  "b");
-// assert.strictEqual(duckDuckGoose(players, 7),  "f");
+assert.strictEqual(duckDuckGoose(players, 1),  "a");
+assert.strictEqual(duckDuckGoose(players, 3),  "c");
+assert.strictEqual(duckDuckGoose(players, 10), "z");
+assert.strictEqual(duckDuckGoose(players, 20), "z");
+assert.strictEqual(duckDuckGoose(players, 30), "z");
+assert.strictEqual(duckDuckGoose(players, 18), "g");
+assert.strictEqual(duckDuckGoose(players, 28), "g");
+assert.strictEqual(duckDuckGoose(players, 12), "b");
+assert.strictEqual(duckDuckGoose(players, 2),  "b");
+assert.strictEqual(duckDuckGoose(players, 7),  "f");
