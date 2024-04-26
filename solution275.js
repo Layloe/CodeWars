@@ -17,7 +17,6 @@ const assert = require('assert')
 function mergeArrays(a, b) {  
     const concat = [...a, ...b].sort((a, b) => a - b)
     return [ ...new Set(concat)]
-    // , ...new Set
     
   }
 console.log(mergeArrays([1, 3, 5], [2, 4, 6]))

@@ -31,7 +31,7 @@
 //? Psuedocode: delcare a var
 //? slice()
 
-function duckDuckGoose(players, goose) {
+function duckDuckGoose(players, goose) {                                    //? finish once not sick
     let ex_names = ["a", "b", "c", "d", "c", "e", "f", "g", "h", "z"]
     
     return players.indexOf(goose)

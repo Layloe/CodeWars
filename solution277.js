@@ -14,7 +14,7 @@
 //? sort()
 //? work on edge cases
 
-// const assert = require('assert')
+const assert = require('assert')
 
 function sorter(textbooks) {
   const schoolBooks = textbooks.sort((a, b) => a.toLowerCase() > b.toLowerCase() ? 1 : -1)  
@@ -24,11 +24,11 @@ function sorter(textbooks) {
   console.log(sorter(['Algebra', 'history', 'Geometry', 'english']))
 
 
-  // assert.deepEqual(sorter(['Algebra', 'History', 'Geometry', 'English']),
-  // ['Algebra', 'English', 'Geometry', 'History']);
+  assert.deepEqual(sorter(['Algebra', 'History', 'Geometry', 'English']),
+  ['Algebra', 'English', 'Geometry', 'History']);
 
-  // assert.deepEqual(sorter(['Algebra', 'history', 'Geometry', 'english']),
-  // ['Algebra', 'english', 'Geometry', 'history']);
+  assert.deepEqual(sorter(['Algebra', 'history', 'Geometry', 'english']),
+  ['Algebra', 'english', 'Geometry', 'history']);
 
-  // assert.deepEqual(sorter(['Alg#bra', '$istory', 'Geom^try', '**english']),
-  // ['$istory', '**english', 'Alg#bra', 'Geom^try']);
+  assert.deepEqual(sorter(['Alg#bra', '$istory', 'Geom^try', '**english']),
+  ['$istory', '**english', 'Alg#bra', 'Geom^try']);

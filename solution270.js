@@ -20,11 +20,11 @@
 
 const assert = require('assert')
 
-const check = (a,x) => a.includes(x)
+// const check = (a,x) => a.includes(x)
 
-// function check(a,x){
-//     return a.includes(x)
-// };
+function check(a,x){
+    return a.includes(x)
+};
 console.log(check([66, 101], 66))
 
 assert.strictEqual(check([66, 101], 66), true);
