@@ -22,17 +22,12 @@
 // assert.strictEqual(arr2bin([null]), "0")
 // assert.strictEqual(arr2bin([true,true,false,15]),"1111")
 
-//? Psuedocode: declare a var
-//? map() all nums
+//? Psuedocode: condtionls with 'typeof'
 //? reduce() get sum
 //? transform sum to binary 
 //? fix edge cases
 
 const assert = require('assert')
-
-// function arr2bin(arr) {
-//   return arr.reduce((sum, cur) => typeof(cur) === 'number' ? sum + cur : sum, 0).toString(2);
-// }
 
 function arr2bin(arr){
 

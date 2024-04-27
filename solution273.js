@@ -12,9 +12,9 @@
 // duck_duck_goose([$a, $b, $c, $d], 5); // => $a["name"]
 // duck_duck_goose([$a, $b, $c, $d], 4); // => $d["name"]
 
-//? Prameters: two params players: an arr of chars and goose: a number 
+//? Prameters: two params players: an arr of ten letters/chars and goose: a number 
 
-//? Return: a char that is a str
+//? Return: a char/letter(string) that index of a string inside the array.
 
 //? Example:
 // assert.strictEqual(duckDuckGoose(players, 1),  "a");
@@ -28,15 +28,18 @@
 // assert.strictEqual(duckDuckGoose(players, 2),  "b");
 // assert.strictEqual(duckDuckGoose(players, 7),  "f");
 
-//? Psuedocode: delcare a var
+//? Psuedocode: create a loop that repeats once it gets to the end of the arr.
+//? delcare a var
+//? possible solution using % == 10
 //? slice()
 
-function duckDuckGoose(players, goose) {                                    //? finish once not sick
-    let ex_names = ["a", "b", "c", "d", "c", "e", "f", "g", "h", "z"]
+function duckDuckGoose(players, goose) {                                    
+    // let players = ["a", "b", "c", "d", "c", "e", "f", "g", "h", "z"]
+    // let testGoose = ex_names.forEach(item => item.indexOf(goose) % 10 )
     
-    return players.indexOf(goose)
+    return players.filter((item,goose) => item.indexOf(goose) )
   }
-console.log(duckDuckGoose([a, b, c, d], 1))
+console.log(duckDuckGoose(["a", "b", "c", "d", "c", "e", "f", "g", "h", "z"], 1))
 
 // assert.strictEqual(duckDuckGoose(players, 1),  "a");
 // assert.strictEqual(duckDuckGoose(players, 3),  "c");
