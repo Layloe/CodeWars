@@ -25,10 +25,14 @@
 
 const assert = require('assert')
 
-function highAndLow(numbers){
-    const max = numbers.split(' ').sort((a, b) => a - b).slice( -1).join('')
-    const min = numbers.split(' ').sort((a, b) => a - b).slice(0, 1).join('')
-    return  `${max} ${min}`
+function highAndLow(numbers){  // need more practice with spread operator ...arr
+  number = numbers.split(' ')
+  return `${Math.max(...number)} ${Math.min(...number)}`
+
+    // const max = numbers.split(' ').sort((a, b) => a - b).slice( -1).join('')
+    // const min = numbers.split(' ').sort((a, b) => a - b).slice(0, 1).join('')
+    // return  `${max} ${min}`
+    
   }
   console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
 
