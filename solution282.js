@@ -22,23 +22,33 @@
 //? Return: the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
 
 //? Example:
-Test.assertEquals(getMiddle("test"),"es");
-Test.assertEquals(getMiddle("testing"),"t");
-Test.assertEquals(getMiddle("middle"),"dd");
-Test.assertEquals(getMiddle("A"),"A");
-
-//? Pseudocode: declare var
-//? solve one conditional at a time
-//? if words length % == 2
-//? conditionals to find the mean
-//? indexOf()
-{{ ⏎ }}
-function getMiddle(s){
-  const oddLength = s.length / ?
-}
-console.log(getMiddle("test"))
-
 // Test.assertEquals(getMiddle("test"),"es");
 // Test.assertEquals(getMiddle("testing"),"t");
 // Test.assertEquals(getMiddle("middle"),"dd");
 // Test.assertEquals(getMiddle("A"),"A");
+
+//? Pseudocode: declare var 
+//? solve one conditional at a time
+//? if words length % == 2
+//? conditionals to find the mid
+
+const assert = require('assert')
+
+function getMiddle(str){
+
+  return str.substr(Math.ceil(str.length / 2 - 1), str.length % 2 === 0 ? 2 : 1)
+
+  // const wordLength = s.split('').length 
+  // const midWord = wordLength / 2
+  
+  // if (wordLength % 2 == 0) {
+  //  midWord 
+  // }
+  // return wordLength
+}
+console.log(getMiddle("testing"))
+
+assert.strictEqual(getMiddle("test"),"es");
+assert.strictEqual(getMiddle("testing"),"t");
+assert.strictEqual(getMiddle("middle"),"dd");
+assert.strictEqual(getMiddle("A"),"A");
