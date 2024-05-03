@@ -34,9 +34,9 @@
 
 const assert = require('assert')
 
-function getMiddle(str){
+function getMiddle(str){ // called time
 
-  return str.substr(Math.ceil(str.length / 2 - 1), str.length % 2 === 0 ? 2 : 1)
+  return str.slice(Math.ceil(str.length / 2 - 1), str.length % 2 === 0 ? 2 : 1)
 
   // const wordLength = s.split('').length 
   // const midWord = wordLength / 2
