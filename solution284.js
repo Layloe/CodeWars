@@ -21,14 +21,13 @@
 //? slice(1)
 //? join()
 
-const assert = require('assert')
+// const assert = require('assert')
 
 function toJadenCase(str) {
-
     const capitalizeEachItem = str.split(' ').map(item => item[0].toUpperCase() + item.slice(1)) 
      
     return capitalizeEachItem.join(' ')
 }
 console.log(toJadenCase("How can mirrors be real if our eyes aren't real"))
-
-    assert.strictEqual(1 + 1, 2)
+//? Deprecated test
+//   assert.strictEquals( toJadenCase("How can mirrors be real if our eyes aren't real"), "How Can Mirrors Be Real If Our Eyes Aren't Real");
