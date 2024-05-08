@@ -25,7 +25,7 @@
 
 const assert = require('assert')
 
-function highAndLow(numbers){  // need more practice with spread operator ...arr
+function highAndLow(numbers){  // need more practice with spread operator ...arr              
   number = numbers.split(' ')
   return `${Math.max(...number)} ${Math.min(...number)}`
 

@@ -5,14 +5,14 @@
 // [1, 2, 3, 4, 5].filter(num => num > 3) == [4, 5]
 // Of course, the existing Array.prototype.filter() function has been undefined for the purposes of this Kata.
 
-//? Prameters: I think they just want me to build a filter function
+//? Parameters: I think they just want me to build a filter function
 
 //? Return: a filter function
 
 //? Example:
 // Test.assertSimilar([1,2,3,4].filter((num)=>{ return num > 3}), [4])
 
-//? Psuedocode: finish the filter function
+//? Pseudocode: finish the filter function
  
   // const assert = require('assert')
   

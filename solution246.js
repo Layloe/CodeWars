@@ -7,7 +7,7 @@
 // 10 --> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 //  1 --> [1]
 
-//? Prameters: A number
+//? Parameters: A number
 
 //? Return: an array of numbers
 
@@ -18,7 +18,7 @@
 // assert.deepEqual((monkeyCount(10)), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 // assert.deepEqual((monkeyCount(20)), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
 
-//? Psuedocode: create a mutible var []
+//? Pseudocode: create a mutable var []
 //? for loop
 //? count push( i *1)
 
@@ -34,7 +34,7 @@ function monkeyCount(n) {                                                       
 }
 console.log(monkeyCount(5))
 
-assert.strictEqual((monkeyCount(5)), [1, 2, 3, 4, 5]);  // works but test needs libary installed to pass.
+assert.strictEqual((monkeyCount(5)), [1, 2, 3, 4, 5]);  // works but test needs library installed to pass.
 assert.strictEqual((monkeyCount(3)), [1, 2, 3]);
 assert.strictEqual((monkeyCount(9)), [1, 2, 3, 4, 5, 6, 7, 8, 9]);
 assert.strictEqual((monkeyCount(10)), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
