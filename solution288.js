@@ -17,7 +17,7 @@
 //? Pseudocode: split(' ')
 //? map().reverse().join('') reverse only works as an arr, need to turn each item into an array then reverse
 
-// const assert = require('assert')
+const assert = require('assert')
 
 function reverseWords(str) {
     const reverseWords = str.split(' ').map(item => 
@@ -28,7 +28,7 @@ function reverseWords(str) {
   }
 console.log(reverseWords('The quick brown fox jumps over the lazy dog.'))
 
-//   assert.strictEqual(reverseWords('The quick brown fox jumps over the lazy dog.'), 'ehT kciuq nworb xof spmuj revo eht yzal .god');
-//   assert.strictEqual(reverseWords('apple'), 'elppa');
-//   assert.strictEqual(reverseWords('a b c d'), 'a b c d');
-//   assert.strictEqual(reverseWords('double  spaced  words'), 'elbuod  decaps  sdrow');
+  assert.strictEqual(reverseWords('The quick brown fox jumps over the lazy dog.'), 'ehT kciuq nworb xof spmuj revo eht yzal .god');
+  assert.strictEqual(reverseWords('apple'), 'elppa');
+  assert.strictEqual(reverseWords('a b c d'), 'a b c d');
+  assert.strictEqual(reverseWords('double  spaced  words'), 'elbuod  decaps  sdrow');
