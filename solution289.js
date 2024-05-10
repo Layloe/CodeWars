@@ -11,7 +11,7 @@
 
 //? Parameters: two paras both strings one is scrambled letters other is a word
 
-//? Return: a boolean if anagram ? (contains all letters) else
+//? Return: a boolean if anagram ? (contains all letters) else map arr.item if includes more on to the next letter
 
 //? Example:
 // assert.strictEqual(isAnagram("foefet", "toffee"), true, 'The word "foefet" is an anagram of "toffee"')
@@ -22,26 +22,27 @@
 // assert.strictEqual(isAnagram("ound", "round"), false, 'Missing characters for test case "ound", "round"')
 // assert.strictEqual(isAnagram("apple", "pale"), false, 'Same letters, but different count')
 
-//? Pseudocode: var 
+//? Pseudocode: declare two vars 
 //? split('')
-//? map()
-//? length
-//? includes()
+//? toLowerCase()
+//? sort()
+//? join()
+
+const assert = require('assert')
 
 // write the function isAnagram
 var isAnagram = function(test, original) {
-    const testCompare = test.split('')
-    const originalMatch = original.split('')
+    const testCompare = test.toLowerCase().split('').sort().join('')
+    const originalMatch = original.toLowerCase().split('').sort().join('')
 
-    return testCompare.filter((item, index) => item.includes()  ) //come back here. Hold original word and see if letter is includes if true continue to the next letter if not included false
-
+    return testCompare == originalMatch
 };
-console.log(isAnagram("foefet", "toffee"))
+console.log(isAnagram("dumble", "bumble"))
 
-// assert.strictEqual(isAnagram("foefet", "toffee"), true, 'The word "foefet" is an anagram of "toffee"')
-// assert.strictEqual(isAnagram("Buckethead", "DeathCubeK"), true, 'The word "Buckethead" is an anagram of "DeathCubeK"')
-// assert.strictEqual(isAnagram("Twoo", "WooT"), true, 'The word "Twoo" is an anagram of "WooT"')
+assert.strictEqual(isAnagram("foefet", "toffee"), true, 'The word "foefet" is an anagram of "toffee"')
+assert.strictEqual(isAnagram("Buckethead", "DeathCubeK"), true, 'The word "Buckethead" is an anagram of "DeathCubeK"')
+assert.strictEqual(isAnagram("Twoo", "WooT"), true, 'The word "Twoo" is an anagram of "WooT"')
 
-// assert.strictEqual(isAnagram("dumble", "bumble"), false, 'Characters do not match for test case "dumble", "bumble"')
-// assert.strictEqual(isAnagram("ound", "round"), false, 'Missing characters for test case "ound", "round"')
-// assert.strictEqual(isAnagram("apple", "pale"), false, 'Same letters, but different count')
+assert.strictEqual(isAnagram("dumble", "bumble"), false, 'Characters do not match for test case "dumble", "bumble"')
+assert.strictEqual(isAnagram("ound", "round"), false, 'Missing characters for test case "ound", "round"')
+assert.strictEqual(isAnagram("apple", "pale"), false, 'Same letters, but different count')
