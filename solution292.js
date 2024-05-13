@@ -25,7 +25,7 @@ const assert = require('assert')
 
 function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
     const codeCompare = enteredCode == correctCode ? true : false
-    const dateCompare = Date.parse(currentDate) < Date.parse(expirationDate) ? true : false
+    const dateCompare = Date.parse(currentDate) <= Date.parse(expirationDate) ? true : false
   return codeCompare && dateCompare
 }
 console.log(checkCoupon('123','123','September 5, 2014','October 1, 2014'))
