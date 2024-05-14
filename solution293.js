@@ -27,7 +27,7 @@ const assert = require('assert') //ran out of time but it's there
 function capitalize(s){      
     const evenUpperCase = s.split('').map((item,index) => index % 2 == 0  ? item.toUpperCase() : item.toLowerCase()).join('')
     const oddUpperCase =  s.split('').map((item,index) => index % 2 !== 0 ? item.toUpperCase() : item.toLowerCase()).join('')
-    return  [`${evenUpperCase}, ${oddUpperCase}`]
+    return  [evenUpperCase, oddUpperCase]
     
     
   }
