@@ -17,7 +17,7 @@
 
 //? Pseudocode: var .join()
 //? length
-//? apparently they want me to use toString() or String(n)
+//? apparently they want me to use toString() or String(n). Not the clearest code challenge
 
 function digits(n) {
     // const numsLength = n.join('').length
