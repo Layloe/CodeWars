@@ -18,8 +18,9 @@
 //? repeat()
 //? join()                          
 
-function explode(s) {  //! RAN OUT OF TIME, start at repeat()
-    const splitStrToNum = s.split('').map((item, index) => Number(item))
+function explode(s) {  //! RAN OUT OF TIME, return and start at repeat()
+    const splitStrToNum = s.split('').map((item, index) =>   item.repeat( Number(item),index))
+    // const repeatChar =    s.split('').map((item, index) => index.repeat(item, splitStrToNum))
  
     return splitStrToNum
 } 
