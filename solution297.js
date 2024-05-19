@@ -6,7 +6,7 @@
 
 //? Parameters: a string made of digits [0-9]
 
-//? Return:a string where each digit is repeated a number of times equals to its value
+//? Return: a string where each digit is repeated a number of times equals to its value
 
 //? Example:
 // "312" should return "333122"
@@ -14,17 +14,19 @@
 
 //? Pseudocode: var split()
 //? map()
-//? Number()
 //? repeat()
-//? join()                          
+//? Number()
+//? join()
+//? edge cases      
 
-function explode(s) {  //! RAN OUT OF TIME, return and start at repeat()
-    const splitStrToNum = s.split('').map((item, index) =>   item.repeat( Number(item),index))
-    // const repeatChar =    s.split('').map((item, index) => index.repeat(item, splitStrToNum))
- 
-    return splitStrToNum
+// const assert = require('assert')
+
+function explode(s) { 
+    const splitStrToNum = s.split('').map((item, index) => item == '0'  ? "" : item.repeat(Number(item), index))
+  
+    return splitStrToNum.join('')
 } 
-  console.log(explode("312"))
+  console.log(explode("102269"))
 
-  // "312" should return "333122"
+//   "312" should return "333122"
 // "102269" should return "12222666666999999999"
