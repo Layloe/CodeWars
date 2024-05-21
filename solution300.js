@@ -1,10 +1,37 @@
-//? Parameters:
+// Given a string s, your task is to return another string such that even-indexed and odd-indexed characters of s are grouped and the groups are space-separated. Even-indexed group comes as first, followed by a space, and then by the odd-indexed part.
 
-//? Return:
+// Examples
+// input:    "CodeWars" => "CdWr oeas"
+//            ||||||||      |||| ||||
+// indices:   01234567      0246 1357
+// Even indices 0, 2, 4, 6, so we have "CdWr" as the first group.
+// Odd indices are 1, 3, 5, 7, so the second group is "oeas".
+// And the final string to return is "Cdwr oeas".
+
+// Notes
+// Tested strings are at least 8 characters long.
+
+//? Parameters: a string
+
+//? Return: a single string bur with odd index chars on one side and odd on the other.
 
 //? Example:
+// assert.strictEqual(sortMyString("CodeWars"), "CdWr oeas");
+// assert.strictEqual(sortMyString("YCOLUE'VREER"), "YOU'RE CLEVER");
 
-//? Pseudocode:
+//? Pseudocode: var split()
+//map
+//sort % 2 === 0
+
+
+function sortMyString(S) { // ran out of time, return on sort 
+    const splitStr = S.split('').map((item, index) => index % 2 == 0 )
+    return splitStr
+}
+console.log(sortMyString("CodeWars"))
+
+// assert.strictEqual(sortMyString("CodeWars"), "CdWr oeas");
+// assert.strictEqual(sortMyString("YCOLUE'VREER"), "YOU'RE CLEVER");
 
 //         ( •_• )
 // 　　＿ノ ヽ ノ＼ __
