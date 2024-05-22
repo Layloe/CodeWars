@@ -20,18 +20,23 @@
 // assert.strictEqual(sortMyString("YCOLUE'VREER"), "YOU'RE CLEVER");
 
 //? Pseudocode: var split()
-//map
-//sort % 2 === 0
+// map
+// index % 2 === 0
+// push
+// template literals 
 
+const assert = require('assert')
 
-function sortMyString(S) { // ran out of time, return on sort 
-    const splitStr = S.split('').map((item, index) => index % 2 == 0 )
-    return splitStr
+function sortMyString(S) { 
+    const arrLeft = []
+    const arrRight = []
+    const splitStr = S.split('').map((item, index) => index % 2 == 0 ? arrLeft.push(item) : arrRight.push(item)  )
+    return `${arrLeft.join('')} ${arrRight.join('')}`
 }
-console.log(sortMyString("CodeWars"))
+console.log(sortMyString("YCOLUE'VREER"))
 
-// assert.strictEqual(sortMyString("CodeWars"), "CdWr oeas");
-// assert.strictEqual(sortMyString("YCOLUE'VREER"), "YOU'RE CLEVER");
+assert.strictEqual(sortMyString("CodeWars"), "CdWr oeas");
+assert.strictEqual(sortMyString("YCOLUE'VREER"), "YOU'RE CLEVER");
 
 //         ( •_• )
 // 　　＿ノ ヽ ノ＼ __
