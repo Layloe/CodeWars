@@ -21,6 +21,8 @@
 
 const assert = require('assert')
 
+// const switcheroo = x => x.split('').map(letter => letter === 'a' ? 'b' : (letter === 'b' ? 'a' : 'c')).join('')
+
 function switcheroo(x){
     
     const strSwapA = x.split('').map(( item,index) => { 
@@ -32,7 +34,7 @@ function switcheroo(x){
         return item
        }
      })
-// const strSwapB = x.split('').map(( item,index) => item.includes('b') ? 'a' : item )
+
     return strSwapA.join('')
 }
 console.log(switcheroo('aaabcccbaaa'))
