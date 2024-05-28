@@ -17,7 +17,7 @@
 //? Pseudocode: 2 vars split
 // map
 // length conditionals
-// concat
+// reverse
 // join
  const assert = require('assert')
  
