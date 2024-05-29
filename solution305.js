@@ -25,16 +25,27 @@
 // assert.strictEqual(calc('jfmgklf8hglbe'), 6);  
 // assert.strictEqual(calc('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'), 96);
 
-//? Pseudocode: var split
+//? Pseudocode: 2 var split
 //map
 //fromCharCodeAt()
 //reduce
 
-function calc(x){ // ran out of time return at reduce
-    const toNum = x.split('').map((item, index) => item.charCodeAt())
-    return toNum
+function calc(x){ // ran out of time again figure out why so many zeros
+    const total1 = x.split('').map((item, index) => item.charCodeAt())
+    .join('')
+    .split('')
+    .reduce((sum, curr) => sum + curr, 0)
+
+    const total2 = x.split('').map((item, index) => item.charCodeAt())
+    .join('')
+    .split('')
+    // .replaceAll('7', '1')
+    .reduce((sum, curr) =>  sum + curr.replaceAll('7', '1'), 0)
+
+
+    return total1 - total2
 }
-console.log(calc('abcdef'))
+console.log(calc('abc'))
 
 // assert.strictEqual(calc('abcdef'), 6);
 // assert.strictEqual(calc('ifkhchlhfd'), 6); 
