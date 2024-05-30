@@ -30,20 +30,27 @@
 //fromCharCodeAt()
 //reduce
 
-function calc(x){ // ran out of time again figure out why so many zeros
-    const total1 = x.split('').map((item, index) => item.charCodeAt())
-    .join('')
-    .split('')
-    .reduce((sum, curr) => sum + curr, 0)
+function calc(x){ // added to anki
 
-    const total2 = x.split('').map((item, index) => item.charCodeAt())
-    .join('')
-    .split('')
-    // .replaceAll('7', '1')
-    .reduce((sum, curr) =>  sum + curr.replaceAll('7', '1'), 0)
+    // const total1 = x.split('').map((item, index) => item.charCodeAt(0))
+    // .join('')
+    // .split('')
+    // .reduce((sum, curr) => sum + curr, 0)
 
-
-    return total1 - total2
+    // const total2 = x.split('').map((item, index) => item.charCodeAt(0))
+    // .join('')
+    // .split('')
+    // .reduce((sum, curr) =>  sum + curr.replaceAll('7', '1'), 0)
+   
+        return x
+          .split('')
+          .map(c => c.charCodeAt(0))
+          .join('')
+          .split('')
+          .map(Number)
+          .filter(x => x === 7)
+          .length * 6
+    
 }
 console.log(calc('abc'))
 
