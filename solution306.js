@@ -33,21 +33,29 @@
 // Test.assertEquals(nicknameGenerator("Melissa"), "Mel");
 // Test.assertEquals(nicknameGenerator("James"), "Jam");
 
-//? Pseudocode: var split()
-// filter
+//? Pseudocode: var vowels = 'aeiou'
+// bracket notation
+// includes
 // conditionals 
+// edge cases
 
-function nicknameGenerator(name){ //mind no work today return at conditionals 
-    const nameSplit =  name.split('').filter((item, index) => 'aeiou'.includes(item))
-        
-        
-    return nameSplit
-  }
-console.log(nicknameGenerator("Jeannie"))
+  const assert = require('assert')
 
-//   Test.assertEquals(nicknameGenerator("Jimmy"), "Jim");
-//   Test.assertEquals(nicknameGenerator("Samantha"), "Sam");
-//   Test.assertEquals(nicknameGenerator("Sam"), "Error: Name too short");
-//   Test.assertEquals(nicknameGenerator("Kayne"), "Kay", "'y' is not a vowel");
-//   Test.assertEquals(nicknameGenerator("Melissa"), "Mel");
-//   Test.assertEquals(nicknameGenerator("James"), "Jam");
+function nicknameGenerator(name){ 
+    if (name.length <= 3){
+      return 'Error: Name too short'
+    }
+      const vowels = 'aeiou'
+      const nameSplit =  name[2].includes(...vowels) ? name.slice(0,4) : name.slice(0,3)        
+       
+      return nameSplit
+
+}
+console.log(nicknameGenerator("Samantha"))
+
+assert.strictEqual(nicknameGenerator("Jimmy"), "Jim");
+assert.strictEqual(nicknameGenerator("Samantha"), "Sam");
+assert.strictEqual(nicknameGenerator("Sam"), "Error: Name too short");
+assert.strictEqual(nicknameGenerator("Kayne"), "Kay", "'y' is not a vowel");
+assert.strictEqual(nicknameGenerator("Melissa"), "Mel");
+assert.strictEqual(nicknameGenerator("James"), "Jam");
