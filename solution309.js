@@ -44,8 +44,12 @@
 // Test.assertEquals(tidyNumber(2335),true);
 
 //? Pseudocode: var isNonDecreasingOrder
-// reduce
-// modules
+// toString
+// .spit()
+// sort()
+// join()
+
+const assert = require('assert')
 
 function tidyNumber(n){
     // const numToArr = n.toString().split('').map(Number)
@@ -56,8 +60,8 @@ function tidyNumber(n){
   }
 console.log(tidyNumber(9672))
 
-//   Test.assertEquals(tidyNumber(12),true);
-//   Test.assertEquals(tidyNumber(102),false);
-//   Test.assertEquals(tidyNumber(9672),false);
-//   Test.assertEquals(tidyNumber(2789),true);
-//   Test.assertEquals(tidyNumber(2335),true);
+assert.strictEqual(tidyNumber(12),true);
+assert.strictEqual(tidyNumber(102),false);
+assert.strictEqual(tidyNumber(9672),false);
+assert.strictEqual(tidyNumber(2789),true);
+assert.strictEqual(tidyNumber(2335),true);
