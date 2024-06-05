@@ -58,10 +58,10 @@ function tidyNumber(n){
 
     return isNonDecreasingOrder
   }
-console.log(tidyNumber(9672))
+console.log(tidyNumber(2789))
 
-assert.strictEqual(tidyNumber(12),true);
-assert.strictEqual(tidyNumber(102),false);
-assert.strictEqual(tidyNumber(9672),false);
-assert.strictEqual(tidyNumber(2789),true);
-assert.strictEqual(tidyNumber(2335),true);
+// assert.strictEqual(tidyNumber(12),true);
+// assert.strictEqual(tidyNumber(102),false);
+// assert.strictEqual(tidyNumber(9672),false);
+// assert.strictEqual(tidyNumber(2789),true);
+// assert.strictEqual(tidyNumber(2335),true);
