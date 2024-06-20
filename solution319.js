@@ -17,11 +17,11 @@
 
 //? Pseudocode: debug split join
 
-const replaceDots = str => str.split('.').join('-')
+// const replaceDots = str => str.split('.').join('-')
 
-// var replaceDots = function(str) {
-//     return str.split('.').join('-')
-//   }
+var replaceDots = function(str) {
+    return str.split('.').join('-')
+  }
   console.log(replaceDots("one.two.three"))
 
 //   Test.assertEquals(replaceDots("one.two.three"), "one-two-three", "Sorry, try again :-(");
