@@ -25,6 +25,8 @@
 
 const assert = require('assert')
 
+// const capitalizeWord = word => word[0].toUpperCase() + word.toLowerCase().slice(1)
+
 function capitalizeWord(word) {
    const capitalize = word[0].toUpperCase() + word.toLowerCase().slice(1)
     return capitalize;
