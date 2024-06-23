@@ -25,6 +25,6 @@ function greet(name){
   }
   console.log(greet("Johnny5"))
 
-  assert.strictEqual(greet("Jim"), "Hello, Jim!");
+ assert.strictEqual (greet("Jim"), "Hello, Jim!");
   assert.strictEqual(greet("Jane"), "Hello, Jane!");
   assert.strictEqual(greet("Simon"), "Hello, Simon!");
