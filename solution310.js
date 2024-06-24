@@ -39,7 +39,7 @@
 // conditionals 
 
 
-function isRubyComing(list) {
+function isRubyComing(list) { //added some(to anki)
     const isRuby = list.some(item => item.language == 'Ruby' )
 
     return isRuby
