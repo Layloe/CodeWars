@@ -10,10 +10,13 @@
 // Test.assertEquals(greet("Jim"), "Hello, Jim!")
 
 //? Pseudocode: debug
-//  if else
+// if else
+// conditionals 
+
 const assert = require('assert')
 
 function greet(name){
+
     if(name === "Johnny")
         return "Hello, my love!"
     else {

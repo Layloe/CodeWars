@@ -25,7 +25,7 @@
 //example:
 // "Ajylvpy", ["Ajylvpy", "ylvpyAj", "jylvpyA", "lvpyAjy", "pyAjylv", "vpyAjyl", "ipywee"]) -> false)
 
-//pseudocode: skip
+//pseudocode: skip/time
 
 
 function containAllRots(strng, arr) {
