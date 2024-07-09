@@ -9,6 +9,8 @@
 
 //? Pseudocode: debug: get both functions working and returning the same obj
 
+// const getMax1 = () =>  {const max = {name : 'Max Headroom'}; return max}
+// const getMax2 = () =>  ({name : 'Max Headroom'})
 
 
 function getMax1()
