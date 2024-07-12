@@ -21,13 +21,13 @@
 
 //? Pseudocode: debug: restructure func, fix conditionals 
 
-const assert = require('assert')
+// const assert = require('assert')
 
- function yourFutureCareer(career) { //called time, pick up on tests
-   
-    if (Math.random(career) <= 0.32) {
+ function yourFutureCareer() { //called time, pick up on test
+   const career = Math.random()
+    if (career <= 0.32) {
         return "FrontEnd Developer"
-    } else if (Math.random(career) <= 0.65) 
+    } else if (career <= 0.65) 
         return  'BackEnd Developer'
      else {
         return 'Full-Stack Developer'
@@ -37,9 +37,9 @@ const assert = require('assert')
 
 console.log(yourFutureCareer());
 
-assert.strictEqual(yourFutureCareer() career <= 0.32), "FrontEnd Developer");
-assert.strictEqual(yourFutureCareer() career <= 0.65, 'BackEnd Developer');
-assert.strictEqual(yourFutureCareer((career) > 0.65), 'Full-Stack Developer');
+// assert.strictEqual(yourFutureCareer( ) , "FrontEnd Developer");
+// assert.strictEqual(yourFutureCareer( ) , 'BackEnd Developer');
+// assert.strictEqual(yourFutureCareer( ), 'Full-Stack Developer');
 
 // Create your own tests here. These are some of the methods available:
 //  Test.expect(boolean, [optional] message) 
