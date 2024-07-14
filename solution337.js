@@ -15,19 +15,20 @@
 //? Example:
 //   Test.assertEquals(new Dinglemouse("Clint", "Eastwood").getFullName(), "Clint Eastwood")
 
-//? Pseudocode: debug: create vars in constructor with: this. Then fix the function concat
+//? Pseudocode: debug: create vars in constructor with: this. Then fix the function concat.
+//edge cases add .trim()
 
 const assert = require('assert')
 
 class Dinglemouse {
 
-    constructor( firstName, lastName ){
+    constructor( firstName,lastName ){
         this.firstName = firstName
         this.lastName = lastName
     }
     
     getFullName(){
-      return this.firstName+" "+this.lastName
+      return `${this.firstName} ${this.lastName}`.trim()
     }
     
   }
