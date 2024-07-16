@@ -13,12 +13,14 @@
 //? Example:
 // assert.strictEqual(opposite(3.3333333), -3.3333333)
 
-//? Pseudocode: create var, ifelse
+//? Pseudocode: create var Math.abs(), ifelse <>
 
 const assert = require('assert')
 
+// const opposite = number => -number
+
 function opposite(number) {
-    const numConvert = number
+    const numConvert = Math.abs(number)
     if (number > 0) {
         return -numConvert 
     }
