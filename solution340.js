@@ -22,6 +22,8 @@
 
 const assert = require('assert')
 
+// const makeNegative = num => num > 0 ? -num : num
+
 function makeNegative(num) {
     const numConvertToNeg = Math.abs(num)
     if (numConvertToNeg == 0) {
