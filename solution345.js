@@ -19,7 +19,7 @@
 //? Example:
 //   assert.strictEqual(litres(2), 1, 'should return 1 litre');
 
-//? Pseudocode: var -> parseInt -> /.5 -> edge case
+//? Pseudocode: var -> parseInt/Math.floor ->  * .5 -> edge case
 
 const assert = require('assert')
 
