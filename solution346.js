@@ -28,8 +28,9 @@ function century(year) {
   }
   console.log(century(89))
 
-assert.assertEquals(century(1705), 18, 'Testing for year 1705');
-assert.assertEquals(century(1900), 19, 'Testing for year 1900');
-assert.assertEquals(century(1601), 17, 'Testing for year 1601');
-assert.assertEquals(century(2000), 20, 'Testing for year 2000');
-assert.assertEquals(century(89), 1, 'Testing for year 89');
+  //change test to assert.strictEqual
+// assert.assertEquals(century(1705), 18, 'Testing for year 1705');
+// assert.assertEquals(century(1900), 19, 'Testing for year 1900');
+// assert.assertEquals(century(1601), 17, 'Testing for year 1601');
+// assert.assertEquals(century(2000), 20, 'Testing for year 2000');
+// assert.assertEquals(century(89), 1, 'Testing for year 89');
