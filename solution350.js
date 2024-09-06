@@ -19,4 +19,4 @@ function century(year) {
 // 2000 --> 20
 // 2742 --> 28
 
-//if the number is equal to or less than 100 return a 1, else if the number is over 101 return 4 digit number that is the century.
+//if the number is equal to or less than 100 return a 1, else if the number is over 101 return 4 digit number that is the century. Use method Math.ceil()
