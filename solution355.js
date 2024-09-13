@@ -11,4 +11,4 @@ console.log(last('man i need a taxi up to ubud'))
 
 //i.e ('man i need a taxi up to ubud') => ['a', 'need', 'ubud', 'i', 'taxi', 'man', 'to', 'up']);
 
-//split string then sort by last index 
+//split string then sort by last index //googled localeCompare() method to assist in sort
