@@ -5,7 +5,7 @@
 
 // You can return the answer in any order.
 
-function twoSum(nums, target) {
+function twoSum(nums, target) { 
 
 } 
 console.log(twoSum([2,7,11,15]))
