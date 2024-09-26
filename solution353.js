@@ -7,7 +7,7 @@ function calc(x){
 }
 console.log(calc('abcdef'))
 
-//Input is going to be a string of random letters. Never empty
+//Input is going to be a string of random letters. Never empty 
 
 //Output is going to be number or a sum
 
