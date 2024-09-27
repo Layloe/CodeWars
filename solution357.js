@@ -5,8 +5,16 @@
 
 // You can return the answer in any order.
 
-function twoSum(nums, target) { 
-
+function twoSum(nums, target) { // add to interview list
+  // Step 1: Iterate over the numbers in the array.
+  for(let i = 0; i < nums.length; i++) {
+    // Step 2: For each number, iterate over the rest of the numbers in the array.
+    for(let j = i+1; j < nums.length; j++) {
+      // Step 3: Check if the current two numbers add up to the target.
+      if(nums[i] + nums[j] === target) 
+        return [i, j];
+    }
+  }
 } 
 console.log(twoSum([2,7,11,15]))
 
