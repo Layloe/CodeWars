@@ -2,7 +2,7 @@
 
 //num -> to that num -> div 3 fiz; div 3/5 fizz buzz
 //always int; pos; no floats; int always 
-//print to console; notes 
+//print to console; notes
 
 function fizzBuzz(num) {
 
