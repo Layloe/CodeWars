@@ -20,7 +20,7 @@
 
 function findJewels(jewels) {
     let countObj = {}
-    for(const currentItem of jewels) {
+    for(const currentItemInLoop of jewels) {
         if (countObj[currentItem]) {
             countObj[currentItem]++
         }else {
@@ -30,3 +30,4 @@ function findJewels(jewels) {
     return countObj
 }
 console.log(findJewels('AbBaaa'))
+
