@@ -6,6 +6,7 @@
 // example:
 // Input: [1, 2, 2, 3, 3, 3]
 // Output: {1: 1, 2: 2, 3: 3}
+// use a for of to loop through the variable in the function -> declare an empty obj for the count -> if item is not in countObj var put it there++ else if it is there add 1
 
 
 function frequencyCount(arrNums) {
