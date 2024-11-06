@@ -9,7 +9,8 @@ function checkForDupes(arrNums) {
         if (countObj[currentItemInLoop]) {
             countObj[currentItemInLoop]++
         } else {
-            countObj[currentItemInLoop] >= true
+            countObj[currentItemInLoop] = 1
+            
         }
     }
     return countObj

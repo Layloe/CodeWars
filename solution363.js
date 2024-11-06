@@ -18,16 +18,32 @@
 // jewels and stones consist of only English letters.
 // All the characters of jewels are unique.
 
-function findJewels(jewels) {
-    let countObj = {}
-    for(const currentItemInLoop of jewels) {
-        if (countObj[currentItem]) {
-            countObj[currentItem]++
-        }else {
-            countObj[currentItem] = 1
-        }
-    }  
-    return countObj
-}
-console.log(findJewels('AbBaaa'))
+// function findJewels(jewels) {
+//     let countObj = {}
+//     for(const currentItemInLoop of jewels) {
+//         if (countObj[currentItemInLoop]) {
+//             countObj[currentItemInLoop]++
+//         }else {
+//             countObj[currentItemInLoop] = 1
+//         }
+//     }  
+//     return countObj
+// }
+// console.log(findJewels('AbBaaa'))
 
+
+
+//from memory
+
+function jewelsCount(jewelsArr) {
+    let objCount = {}
+    for (const currentItem of jewelsArr){
+        if (objCount[currentItem]){
+            objCount[currentItem]++
+        }else {
+            objCount[currentItem] = 1
+    }
+    }
+
+}
+console.log(jewelsCount('AbBaaa'))

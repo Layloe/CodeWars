@@ -15,7 +15,7 @@ function frequencyCount(arrNums) {
     if ( countObj[currentItemInLoop] ) {
         countObj[currentItemInLoop]++
     }else {
-        countObj[currentItemInLoop] = 1
+        countObj[currentItemInLoop]
     }
    }
    return countObj
