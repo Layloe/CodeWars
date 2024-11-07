@@ -7,12 +7,30 @@ function checkForDupes(arrNums) {
     let countObj = {}
     for (const currentItemInLoop of arrNums) {
         if (countObj[currentItemInLoop]) {
-            countObj[currentItemInLoop]++
+            return true
+            // countObj[currentItemInLoop]++
         } else {
-            countObj[currentItemInLoop] = 1
+            countObj[currentItemInLoop] = true
+            // countObj[currentItemInLoop] = 1 && !countObj[currentItemInLoop] <= 1
             
         }
     }
-    return countObj
+    return false
+    // countObj
 }
 console.log(checkForDupes([1, 2, 3, 1]))
+
+// function containsDupes(arr){
+//     const numsMap = {}
+//     for(num of arr){
+//       if(numsMap[num]){
+//         return true
+//       }else{
+//         numsMap[num] = true
+//       }
+//     }
+//     return false
+  
+//     // return new Set(arr).size !== arr.length
+    
+//   }

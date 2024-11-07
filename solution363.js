@@ -41,9 +41,10 @@ function jewelsCount(jewelsArr) {
         if (objCount[currentItem]){
             objCount[currentItem]++
         }else {
-            objCount[currentItem] = 1
-    }
-    }
+            objCount[currentItem] = 1 && objCount[currentItem] > 2
 
+        }
+    }
+    return objCount
 }
 console.log(jewelsCount('AbBaaa'))
