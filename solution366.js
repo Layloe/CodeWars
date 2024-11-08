@@ -18,7 +18,7 @@ function checkForDupes(arrNums) {
     return false
     // countObj
 }
-console.log(checkForDupes([1, 2, 3, 1]))
+// console.log(checkForDupes([1, 2, 3, 1]))
 
 // function containsDupes(arr){
 //     const numsMap = {}
@@ -34,3 +34,16 @@ console.log(checkForDupes([1, 2, 3, 1]))
 //     // return new Set(arr).size !== arr.length
     
 //   }
+
+function hashMemory(arr) {
+    let obj = {}
+    for (currentItemInLoop of arr ) {
+        if (obj[currentItemInLoop]) {
+            obj[currentItemInLoop]++
+        }else {
+            obj[currentItemInLoop] = 1
+        }
+    }
+    return obj
+}
+console.log(hashMemory([1,2,3,1]))
