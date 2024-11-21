@@ -35,14 +35,14 @@ console.log(hashPractice([2,5,4,4,4,4]))
 function gamesWon(arr) {
     const parseNumsOfScore = arr.map(item => item.split(':'))
     let sum = 0
-    for (let i; i < arr.lenght; i++) {
+    for (let i; i < arr.length; i++) {
         if (parseInt(parseNumsOfScore[0]) > parseInt(parseNumsOfScore[1])) {
             sum += 3
         }else if(parseInt(parseNumsOfScore[0]) === parseInt(parseNumsOfScore[1])){
             sum += 1
         }
     }
-    return sum
+    return parseNumsOfScore
 }
 console.log(gamesWon(['1:0','2:0','3:0','4:0','2:1','3:1','4:1','3:2','4:2','4:3']))
 //input is going to be an arr of strings of numbers with the format of '0:1'
