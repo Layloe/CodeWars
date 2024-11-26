@@ -17,4 +17,4 @@ console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", 
 //input is going to be an array of strings
 //output is a string with "***" between each of its letters
 // ["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]), 'b***i***t***c***o***i***n' )
-// I need to declare a variable that will loop thru the arr and return a sorted arr based on ascii values. Then I need to transform it back to letters and join the array with ***
+// I need to declare a variable that will loop thru the arr and return a sorted arr based on ascii values. Then I need to transform it back to letters and join the array with *** Spartens what is your proffesion UWA! UWA!
