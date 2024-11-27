@@ -17,5 +17,5 @@ function array(string) {
 //input is going to be a string
 //output is a string and the removal of the first and last items of the str. If item length less than 2 return null.
 // example '1,2,3,4', '2 3' 
-//first I'm going to split the string and then use the method slice to remove first and last items. Condtional if length > 2 return null.
+//first I'm going to split the string and then use the method slice to remove first and last items. Conditional if length > 2 return null.
 
