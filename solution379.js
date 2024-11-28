@@ -31,4 +31,4 @@ function toCsvText(array) {
 //input is going to be nested arrays of numbers
 //output CSV representation of a two-dimensional numeric array
 //example is above
-//join or concat array then split, loop through arr and if arr length is > 4 splice.. nope it's just a join('/n')
+//join or concat array then split, loop through arr and if arr length is > 4 splice.. nope it's just a join('/n') bad visual representation of code challenge 
