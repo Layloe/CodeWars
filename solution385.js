@@ -22,6 +22,7 @@ function removeChar(str){
 // We need a function that can transform a string into a number. What ways of achieving this do you know?
 
 // Note: Don't worry, all inputs will be strings, and every string is a perfectly valid representation of an integral number.
+// const stringToNumber = str => parseInt(str)
 const stringToNumber = function(str){
     // put your code here
     return parseInt(str)
@@ -49,3 +50,35 @@ console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'))
 //output will be a string with no white space
 //('8aaaaa dddd r     '), '8aaaaaddddr')
 //return using methods split with white space and join
+
+// Write a function which converts the input string to uppercase.
+// const makeUpperCase = str => str.toUpperCase()
+function makeUpperCase(str) {
+    return str.toUpperCase()
+  }
+  console.log(makeUpperCase('hello'))
+
+  //input is going to be a str
+  //output make str uppercase 
+  //use method toUpperCase()
+
+//   Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+
+// [Make sure you type the exact thing I wrote or the program may not execute properly]
+// const greet = name => `Hello, ${name} how are you doing today?`
+function greet(name){
+    return `Hello, ${name} how are you doing today?`
+  }
+  console.log(greet('Eric'))
+ //input is going to be a string name
+ //output will be a string with name inserted
+ //use template literals with given string to insert name
+
+//  Implement a function which convert the given boolean value into its string representation.
+function booleanToString(b){
+    return b.toString()
+  }
+  console.log(booleanToString(true))
+
+
+
