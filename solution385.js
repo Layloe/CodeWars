@@ -75,10 +75,32 @@ function greet(name){
  //use template literals with given string to insert name
 
 //  Implement a function which convert the given boolean value into its string representation.
+// const booleanToString = b => b.toString()
 function booleanToString(b){
     return b.toString()
   }
   console.log(booleanToString(true))
+// input will be a boolean
+//output will be string
+// use method toString
+
+
+// Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+// The output should be two capital letters with a dot separating them.
+
+// It should look like this:
+
+// Sam Harris => S.H
+
+// patrick feeney => P.F
+function abbrevName(name){
+
+}
+console.log(abbrevName('Kendric Lamar'))
+// input will be string/name
+//output will be first and last name char seperated by .
+//
 
 
 
