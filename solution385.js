@@ -85,22 +85,7 @@ function booleanToString(b){
 // use method toString
 
 
-// Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
 
-// The output should be two capital letters with a dot separating them.
-
-// It should look like this:
-
-// Sam Harris => S.H
-
-// patrick feeney => P.F
-function abbrevName(name){
-
-}
-console.log(abbrevName('Kendric Lamar'))
-// input will be string/name
-//output will be first and last name char seperated by .
-//
 
 
 
