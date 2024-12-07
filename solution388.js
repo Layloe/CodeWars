@@ -11,7 +11,19 @@
 // The input string can be of arbitrary length - in particular, it may be empty. All input is guaranteed to be valid, i.e. each input string will only ever consist of 'G', 'C', 'A' and/or 'T'.
 const assert = require('assert')
 function DNAtoRNA(dna) {
+    let store = ''
+    for (let i = 0; i < dna.length; i++) {
+      if (dna[i]== 'T') {
+        store += 'U' 
+      } else {
+        store += dna[i]
+      }
+    }
+    return store
+
     // return dna.split('').map(item => item.includes('T') ? item.replaceAll('T', 'U') : item).join('')
+
+    //return dna.replaceAll('U','T')
   }
   console.log(DNAtoRNA('TTTT'))
   assert.strictEqual(DNAtoRNA("TTTT"), "UUUU")
