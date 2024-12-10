@@ -24,12 +24,24 @@ function check(a, x) {
 // Task:
 // Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
 var countSheep = function (num){
-    let sheepCountStr = ''
+    let stringStorage = ''
     for (let i = 1; i <= num; i++) {
-        sheepCountStr += `${i} sheep...`
+  
+        stringStorage += `${[i]} sheep...`
+   
     }
-    return sheepCountStr
+    // return stringStorage
+    // let sheepCountStr = ''
+    // for (let i = 1; i <= num; i++) {
+    //     sheepCountStr += `${i} sheep...`
+    // }
+    // return sheepCountStr
     // return `${num++} sheep...`.repeat(num)
+    // let test = ''
+    // for ( let i = 1; i <= num; i++){
+    //     test += `${i} sheep...`
+    // }
+    // return test
   }
   console.log(countSheep(3))
   //input will be a non negative number
