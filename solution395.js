@@ -34,17 +34,16 @@ function strCount(str, letter){
 
 // What if the string is empty? Then the result should be empty object literal, {}.
 function count(string) {
-    let letterCount = {}
+    let letterObj = {}
     for (const curr of string) {
-        if (letterCount[curr]) {
-            letterCount[curr]++
-        } 
-        else {
-            letterCount[curr] = 1
+        if (letterObj[curr]) {
+            letterObj[curr] += 1
+        } else {
+            letterObj[curr] = 1
         }
+
     }
-    return letterCount
-    // let i = 0; i <= string.length; i++
+    return letterObj
   }
   console.log(count('ABbbbCC'))
   //input is going to be a string of random letters
