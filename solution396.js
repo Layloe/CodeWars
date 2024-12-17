@@ -24,6 +24,7 @@ console.log(countVowels('lets go!'))
 // In this Kata, a string is said to be in ALL CAPS whenever it does not contain any lowercase letter so any string containing no letters at all is trivially considered to be in ALL CAPS.
 function isUpperCase(str) {
     const alphabetUpperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    
     return str.includes(!alphabetUpperCase)
 }
 console.log(isUpperCase('UHGKJH'))
