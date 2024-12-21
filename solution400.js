@@ -44,10 +44,15 @@ assert.strictEqual(well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad
 // "Hi! Hi!" ---> "Hi! Hi"
 // "Hi"      ---> "Hi"
 function remove (string) {
+    if (string.at(-1) == "!") {
+        return string.slice(0,-1)
+    } else {
+        return string
+    }
     // return string.split('').filter(item => item !== '!').join('')
-    return string.split('!').join('')
+    // return string.split('!').join('')
   }
-  console.log(remove('!Hi!!!!!'))
+  console.log(remove('!Hi!'))
   //input will be a string
   //output will be a string without any exclamation points
   //examples above
