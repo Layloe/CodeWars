@@ -80,3 +80,52 @@ function apple(x){
 //    assert.strictEqual(apple('50'), 'It\'s hotter than the sun!!'); 
 //    assert.strictEqual(apple(4), 'Help yourself to a honeycomb Yorkie for the glovebox.');
 // use if else to compare the the squared number. Return one of two strings
+
+// Complete the solution so that the function will break up camel casing, using a space between words.
+
+// Example
+// "camelCasing"  =>  "camel Casing"
+// "identifier"   =>  "identifier"
+// ""             =>  ""
+function solution(string) {
+    const strToArr = string.split('').map((item, index) => {
+        if (item == item.toUpperCase()) {
+            return ' ' + item
+        } else{
+            return item
+        }
+    })  
+    return strToArr.join('')   
+  }
+  console.log(solution("camelCasing"))
+  //input will be a sting that will include camel case format or be empty
+  //output will be a string that separates the camel case with a space
+  assert.strictEqual(solution("camelCasing"), "camel Casing", `solution("camelCasing")`);
+  assert.strictEqual(solution("camelCasingTest"), "camel Casing Test", `solution("camelCasingTest")`);
+// split and loop thru and compare if any are upper case. If match get index and splice. 
+
+
+// Make a program that filters a list of strings and returns a list with only your friends name in it.
+
+// If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+
+// Input = ["Ryan", "Kieran", "Jason", "Yous"]
+// Output = ["Ryan", "Yous"]
+
+// Input = ["Peter", "Stephen", "Joe"]
+// Output = []
+// Input strings will only contain letters.
+// Note: keep the original order of the names in the output.
+function friend(friends){
+    const parseNames = friends.filter(item => item.length <= 4 ? item : null)
+    const removeNums = parseNames.filter(item => !Number(item) ? item : null)
+    return removeNums
+  }
+  console.log(friend(["Ryan", "Kieran", "Mark","1234"]))
+  //input will be an arr of strings that contain names 
+  //output is going to be an arr of names that are < 4 in length
+    assert.deepEqual(friend(["Ryan", "Kieran", "Mark"]), ["Ryan", "Mark"])
+    assert.deepEqual(friend(["Ryan", "Jimmy", "123", "4", "Cool Man"]), ["Ryan"])
+    assert.deepEqual(friend(["Jimm", "Cari", "aret", "truehdnviegkwgvke", "sixtyiscooooool"]), ["Jimm", "Cari", "aret"])
+    assert.deepEqual(friend(["Love", "Your", "Face", "1"]), ["Love", "Your", "Face"])
+   // filter names that are < 4 in length. Use Number to filter the nums from names. 
