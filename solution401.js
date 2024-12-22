@@ -117,7 +117,7 @@ function solution(string) {
 // Input strings will only contain letters.
 // Note: keep the original order of the names in the output.
 function friend(friends){
-    const parseNames = friends.filter(item => item.length <= 4 ? item : null)
+    const parseNames = friends.filter(item => item.length == 4 ? item : null)
     const removeNums = parseNames.filter(item => !Number(item) ? item : null)
     return removeNums
   }
