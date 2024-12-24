@@ -13,23 +13,31 @@
 // Make sure you cover the cases where certain words do not show up with correct capitalization. For example, the input "pOLitiCIaN" should still return "Your tax dollars".
 const assert = require('assert')
 function getDrinkByProfession(param){
-    // const objArr = [{"Jabroni" : "Patron Tequila", "School Counselor" : "Anything with Alcohol"}]
-    switch (param.toLowerCase()) {
-        case "jabroni" :
-            return "Patron Tequila"
-        case "school counselor" : 
-            return "Anything with Alcohol"
-        case "programmer" : 
-            return "Hipster Craft Beer"
-        case "bike gang member" : 
-            return "Moonshine"
-        case "politician" : 
-            return "Your tax dollars"
-        case "rapper" : 
-            return "Cristal"
-        default :	
-            return "Beer"
-    }
+    const objArr = {
+        "jabroni": "Patron Tequila",
+        "school counselor": "Anything with Alcohol",
+        "programmer": "Hipster Craft Beer",
+        "bike gang member": "Moonshine",
+        "politician": "Your tax dollars",
+        "rapper": "Cristal"
+      }
+      return objArr[param.toLowerCase()] || "Beer"
+    // switch (param.toLowerCase()) {
+    //     case "jabroni" :
+    //         return "Patron Tequila"
+    //     case "school counselor" : 
+    //         return "Anything with Alcohol"
+    //     case "programmer" : 
+    //         return "Hipster Craft Beer"
+    //     case "bike gang member" : 
+    //         return "Moonshine"
+    //     case "politician" : 
+    //         return "Your tax dollars"
+    //     case "rapper" : 
+    //         return "Cristal"
+    //     default :	
+    //         return "Beer"
+    // }
 }
 console.log(getDrinkByProfession("jabrOni"))
 //input is going to be a table of strings
@@ -43,4 +51,13 @@ console.log(getDrinkByProfession("jabrOni"))
     assert.strictEqual(getDrinkByProfession("pundit"), "Beer", "'Pundit' should map to 'Beer'");
     assert.strictEqual(getDrinkByProfession("Pug"), "Beer", "'Pug' should map to 'Beer'");
 //thinking of using a switch or an obj to handle key value
-
+ function recallObjPractice (string) {
+    const objWithPairs = {    
+        "school counselor": "Anything with Alcohol",
+        "programmer": "Hipster Craft Beer",
+        "bike gang member": "Moonshine",
+        "politician": "Your tax dollars",
+    }
+    return objWithPairs[string]
+ }
+console.log(recallObjPractice("programmer"))
