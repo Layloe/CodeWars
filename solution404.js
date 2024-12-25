@@ -55,9 +55,13 @@ assert.strictEqual(toCsvText([
 function billboard(name, price = 30){
     // const nameSum = name.split('').length
     // return nameSum * price
-    const nameSum = name.split('').reduce((acc, curr ) => acc + price, 0)
-    return nameSum
-  
+    let sum = 0 
+    for (let i = 0; i < name.length; i++) {
+        sum += price
+    }
+    // const nameSum = name.split('').reduce((acc, curr ) => acc + price, 0)
+    // return nameSum
+    return sum
   } 
   console.log(billboard('Kobe Bryant'))
   //input is going to be string/name 
