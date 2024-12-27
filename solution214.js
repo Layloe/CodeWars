@@ -12,9 +12,9 @@
 //? Return: both strings in a concatinated with the word 'are'
 
 //? Example:
-// doTest('Animals', 'Good', 'Animals are Good', 'templateStrings(\'Animals\', \'Good\')')
-// doTest('You', 'special', 'You are special', 'templateStrings(\'You\', \'special\')')
-// doTest('lives', 'frozen', 'lives are frozen', 'templateStrings(\'lives\', \'frozen\')')
+// assert.strictEqual('Animals', 'Good', 'Animals are Good', 'templateStrings(\'Animals\', \'Good\')')
+// assert.strictEqual('You', 'special', 'You are special', 'templateStrings(\'You\', \'special\')')
+// assert.strictEqual('lives', 'frozen', 'lives are frozen', 'templateStrings(\'lives\', \'frozen\')')
 
 
 //? Psuedocode: Use template litterals
@@ -24,8 +24,8 @@ var templateStrings = function(noun, adjective) {
   }
 console.log(templateStrings('Animals', 'Good'))
 
-//   doTest('Animals', 'Good', 'Animals are Good', 'templateStrings(\'Animals\', \'Good\')')
-//   doTest('You', 'special', 'You are special', 'templateStrings(\'You\', \'special\')')
-//   doTest('lives', 'frozen', 'lives are frozen', 'templateStrings(\'lives\', \'frozen\')')
+//   assert.strictEqual('Animals', 'Good', 'Animals are Good', 'templateStrings(\'Animals\', \'Good\')')
+//   assert.strictEqual('You', 'special', 'You are special', 'templateStrings(\'You\', \'special\')')
+//   assert.strictEqual('lives', 'frozen', 'lives are frozen', 'templateStrings(\'lives\', \'frozen\')')
 
 

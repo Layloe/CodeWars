@@ -17,6 +17,7 @@ function defineSuit(card) {
 
     return cardDeck[card.at(-1)]
     // return card.length == 1 ? cardDeck[card[1]] : cardDeck[card[2]]
+    
     // if(card.includes('♣')) {
     //     return 'clubs'
     // }

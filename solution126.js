@@ -17,14 +17,14 @@
 //Return: the index of the numerical element that lies between the other two elements
 
 //Example:
-	// doTest([2, 3, 1], 0);
-	// doTest([5, 10, 14], 1)
-    // doTest([2.1, 3.2, 1.4], 0);
-    // doTest([5.9, 10.4, 14.2], 1)
-    // doTest([-2, -3, -1], 0);
-    // doTest([-5, -10, -14], 1)
-    // doTest([-2, -3.2, 1], 0);
-    // doTest([-5.2, -10.6, 14], 0)
+	// assert.strictEqual([2, 3, 1], 0);
+	// assert.strictEqual([5, 10, 14], 1)
+    // assert.strictEqual([2.1, 3.2, 1.4], 0);
+    // assert.strictEqual([5.9, 10.4, 14.2], 1)
+    // assert.strictEqual([-2, -3, -1], 0);
+    // assert.strictEqual([-5, -10, -14], 1)
+    // assert.strictEqual([-2, -3.2, 1], 0);
+    // assert.strictEqual([-5.2, -10.6, 14], 0)
 
 //Psuedocode: use methods  filter, sort() in asc and find index of middle num and compare
 //loop thru array then compare 

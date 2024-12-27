@@ -13,9 +13,9 @@
 //? Return: a sting with exclamation mark removed form end of a string
 
 //? Example:
-// doTest("Hi!", "Hi");
-// doTest("Hi!!!", "Hi!!");
-// doTest("!Hi", "!Hi");
+// assert.strictEqual("Hi!", "Hi");
+// assert.strictEqual("Hi!!!", "Hi!!");
+// assert.strictEqual("!Hi", "!Hi");
 
 //? Psuedocode: conditonals slice(0,-1)
 

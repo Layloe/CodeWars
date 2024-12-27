@@ -13,12 +13,12 @@
 //Return: A string that checks if and exlimation mark is at the end of a string if true removes an exclamation mark from the end of a string
 
 //Example:
-        // doTest("Hi!", "Hi");
-		// doTest("Hi!!!", "Hi!!");
-		// doTest("!Hi", "!Hi");
-		// doTest("!Hi!", "!Hi");
-		// doTest("Hi! Hi!", "Hi! Hi");
-		// doTest("Hi", "Hi");
+        // assert.strictEqual("Hi!", "Hi");
+		// assert.strictEqual("Hi!!!", "Hi!!");
+		// assert.strictEqual("!Hi", "!Hi");
+		// assert.strictEqual("!Hi!", "!Hi");
+		// assert.strictEqual("Hi! Hi!", "Hi! Hi");
+		// assert.strictEqual("Hi", "Hi");
 
 //Psuedocode: Use endsWith('!') to check if exlimation mark is at the end of a string. If true use slice(-1)
 
@@ -27,7 +27,7 @@
 
 // const strictEqual = require("chai").assert.strictEqual;
 
-// function doTest(input, expected) {
+// function assert.strictEqual(input, expected) {
 // 	const actual = remove(input);
 // 	strictEqual(actual, expected, `for string:\n"${input}"\n`);
 // }
@@ -47,9 +47,9 @@ function remove (string) {
   }
 
   remove('Hi')
-        // doTest("Hi!", "Hi");
-		// doTest("Hi!!!", "Hi!!");
-		// doTest("!Hi", "!Hi");
-		// doTest("!Hi!", "!Hi");
-		// doTest("Hi! Hi!", "Hi! Hi");
-		// doTest("Hi", "Hi");
+        // assert.strictEqual("Hi!", "Hi");
+		// assert.strictEqual("Hi!!!", "Hi!!");
+		// assert.strictEqual("!Hi", "!Hi");
+		// assert.strictEqual("!Hi!", "!Hi");
+		// assert.strictEqual("Hi! Hi!", "Hi! Hi");
+		// assert.strictEqual("Hi", "Hi");

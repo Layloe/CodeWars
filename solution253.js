@@ -20,16 +20,16 @@
 //? Return: one of two strings depending on the order of the outlier :"Oi! Sheep number 1! You are about to be eaten by a wolf!" or "Pls go away and stop eating my sheep"
 
 //? Example:
-// doTest(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"],
+// assert.strictEqual(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"],
 // "Oi! Sheep number 2! You are about to be eaten by a wolf!"
 // );
-// doTest(["sheep", "wolf", "sheep", "sheep", "sheep", "sheep", "sheep"],
+// assert.strictEqual(["sheep", "wolf", "sheep", "sheep", "sheep", "sheep", "sheep"],
 // "Oi! Sheep number 5! You are about to be eaten by a wolf!"
 // );
-// doTest(["wolf", "sheep", "sheep", "sheep", "sheep", "sheep", "sheep"],
+// assert.strictEqual(["wolf", "sheep", "sheep", "sheep", "sheep", "sheep", "sheep"],
 // "Oi! Sheep number 6! You are about to be eaten by a wolf!"
 // );
-// doTest(["sheep", "wolf", "sheep"],
+// assert.strictEqual(["sheep", "wolf", "sheep"],
 // "Oi! Sheep number 1! You are about to be eaten by a wolf!"
 
 //? Psuedocode: the array is reversed with index value starting at 1
@@ -53,11 +53,11 @@ console.log(warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "sheep", 
 
 assert.strictEqual(warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"]), "Oi! Sheep number 2! You are about to be eaten by a wolf!")
 assert.strictEqual(warnTheSheep(["sheep", "sheep", "wolf"]), "Pls go away and stop eating my sheep")
-// doTest(["sheep", "wolf", "sheep", "sheep", "sheep", "sheep", "sheep"],
+// assert.strictEqual(["sheep", "wolf", "sheep", "sheep", "sheep", "sheep", "sheep"],
 // "Oi! Sheep number 5! You are about to be eaten by a wolf!"
 // );
-// doTest(["wolf", "sheep", "sheep", "sheep", "sheep", "sheep", "sheep"],
+// assert.strictEqual(["wolf", "sheep", "sheep", "sheep", "sheep", "sheep", "sheep"],
 // "Oi! Sheep number 6! You are about to be eaten by a wolf!"
 // );
-// doTest(["sheep", "wolf", "sheep"],
+// assert.strictEqual(["sheep", "wolf", "sheep"],
 // "Oi! Sheep number 1! You are about to be eaten by a wolf!"

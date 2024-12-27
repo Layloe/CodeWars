@@ -13,10 +13,10 @@
 //? Return: a string with all lowercase vowles missing
 
 //? Example:
-// doTest('hello', 'hll');
-// doTest('how are you today?', 'hw r y tdy?');
-// doTest('complain', 'cmpln');
-// doTest('never', 'nvr');
+// assert.strictEqual('hello', 'hll');
+// assert.strictEqual('how are you today?', 'hw r y tdy?');
+// assert.strictEqual('complain', 'cmpln');
+// assert.strictEqual('never', 'nvr');
 
 //? Psuedocode: split('') str
 //? filter()
