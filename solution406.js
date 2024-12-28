@@ -28,3 +28,13 @@ function isLochNessMonster(s) {
     // assert.strictEqual("three fiddy", false);
     // assert.strictEqual("", false);
   // use conditionals to look for specific strings with the method includes()
+
+  // function isLockNessMonster(s) {
+  //   let arr = ["tree fiddy",3.50,"three fifty"]
+  //   for (let word of arr){
+  //     if (s.indexOf(word) !== -1){
+  //       return true
+  //     }
+  //   }
+  //   return false
+  // }
