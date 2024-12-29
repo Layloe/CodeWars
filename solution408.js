@@ -72,23 +72,23 @@ function htmlspecialchars(formData) {
   console.log(htmlspecialchars("<h2>Hello World</h2>"))
   //input is going to be a string with special chars
   //output will be a string with special chars converted to other chars
-//   assert.strictEqual(
-//     htmlspecialchars("<h2>Hello World</h2>"),
-//     "&lt;h2&gt;Hello World&lt;/h2&gt;"
-//   );
-//   assert.strictEqual(
-//     htmlspecialchars("Hello, how would you & I fare?"),
-//     "Hello, how would you &amp; I fare?"
-//   );
-//   assert.strictEqual(
-//     htmlspecialchars('How was "The Matrix"?  Did you like it?'),
-//     'How was &quot;The Matrix&quot;?  Did you like it?'
-//   );
-//   assert.strictEqual(
-//     htmlspecialchars("<script>alert('Website Hacked!');</script>"),
-//     "&lt;script&gt;alert('Website Hacked!');&lt;/script&gt;"
-//   );
-  //first lets create an obj and loop thru to see if true. Then swap out using obj
+  assert.strictEqual(
+    htmlspecialchars("<h2>Hello World</h2>"),
+    "&lt;h2&gt;Hello World&lt;/h2&gt;"
+  );
+  assert.strictEqual(
+    htmlspecialchars("Hello, how would you & I fare?"),
+    "Hello, how would you &amp; I fare?"
+  );
+  assert.strictEqual(
+    htmlspecialchars('How was "The Matrix"?  Did you like it?'),
+    'How was &quot;The Matrix&quot;?  Did you like it?'
+  );
+  assert.strictEqual(
+    htmlspecialchars("<script>alert('Website Hacked!');</script>"),
+    "&lt;script&gt;alert('Website Hacked!');&lt;/script&gt;"
+  );
+  //first lets create an obj and loop thru to see if true. Then swap out using obj. Practicing hash maps
 
   function testHash(data) {
     let strConverted = ''
@@ -105,3 +105,49 @@ function htmlspecialchars(formData) {
     return strConverted
   }
   console.log(testHash('<>Das boot<>'))
+
+
+//   There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants.
+
+// Your task is to change the letters with diacritics:
+
+// ą -> a,
+// ć -> c,
+// ę -> e,
+// ł -> l,
+// ń -> n,
+// ó -> o,
+// ś -> s,
+// ź -> z,
+// ż -> z
+// and print out the string without the use of the Polish letters.
+
+// For example:
+
+// "Jędrzej Błądziński"  -->  "Jedrzej Bladzinski"
+
+function correctPolishLetters(string) {
+    let englishStr = ''
+    const obj = {
+        'ą':'a',
+        'ć':'c',
+        'ę':'e',
+        'ł':'l',
+        'ń':'n',
+       'ó ':'o',
+        'ś':'s',
+        'ź':'z',
+        'ż':'z',
+    }
+    for (const curr of string) {
+        englishStr += obj[curr] || curr
+    }
+    return englishStr
+}
+console.log(correctPolishLetters("Jędrzej Błądziński"))
+//input will be a string with polish letters
+//output is a string wih the polish char replaced with english char
+assert.strictEqual(correctPolishLetters("Jędrzej Błądziński"),"Jedrzej Bladzinski");
+assert.strictEqual(correctPolishLetters("Lech Wałęsa"),"Lech Walesa");
+assert.strictEqual(correctPolishLetters("Maria Skłodowska-Curie"),"Maria Sklodowska-Curie")
+// change given code to an obj then declare an empty var to hold str. Then for of loop to convert str
