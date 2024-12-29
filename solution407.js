@@ -41,8 +41,8 @@ function isVow(arr){
 // C# => Tools.FromCharCode(97) // a
 const arrowFunc = (arr) => arr.map(item => String.fromCharCode(item)).join('')
 console.log(arrowFunc([70,85,83,32,82,79,72,32,68,65,72]))
-// assert.assertEquals(ArrowFunc([84,101,115,116]), 'Test', 'Convert those numbers to letters')
-// assert.assertEquals(ArrowFunc([70,85,83,32,82,79,72,32,68,65,72]), 'FUS ROH DAH', 'Keep it up!')
+// assert.strictEqual(ArrowFunc([84,101,115,116]), 'Test', 'Convert those numbers to letters')
+// assert.strictEqual(ArrowFunc([70,85,83,32,82,79,72,32,68,65,72]), 'FUS ROH DAH', 'Keep it up!')
 //input will be an array of ascii numbers 
 //output will be converted ascii numbers to letters
 
