@@ -134,7 +134,7 @@ function correctPolishLetters(string) {
         'ę':'e',
         'ł':'l',
         'ń':'n',
-       'ó ':'o',
+        'ó':'o',
         'ś':'s',
         'ź':'z',
         'ż':'z',
@@ -151,3 +151,23 @@ assert.strictEqual(correctPolishLetters("Jędrzej Błądziński"),"Jedrzej Bladz
 assert.strictEqual(correctPolishLetters("Lech Wałęsa"),"Lech Walesa");
 assert.strictEqual(correctPolishLetters("Maria Skłodowska-Curie"),"Maria Sklodowska-Curie")
 // change given code to an obj then declare an empty var to hold str. Then for of loop to convert str
+
+function recallHash(str) {
+  let emptyStr = ''
+  const obj = {
+        'ą':'a',
+        'ć':'c',
+        'ę':'e',
+        'ł':'l',
+        'ń':'n',
+        'ó':'o',
+        'ś':'s',
+        'ź':'z',
+        'ż':'z',
+  }
+  for (const curr of str) {
+    emptyStr += obj[curr] || curr
+  }
+  return emptyStr
+}
+console.log(recallHash("Maria Skłodowska-Curie"))
