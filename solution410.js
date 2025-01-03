@@ -39,28 +39,25 @@ function changeMe(moneyIn){
 
 // Example (Input --> Output)
 // "CodEWaRs" --> [0,3,4,6]
-var capitals = function (word) {
-  let capitalIndexes = []
-  //  const findCapitals = word.split('')
-  // for (const curr of word) {
-  //   if (word[curr] == word[curr.toUpperCase()]) {
-  //   capitalIndexes.push(curr)
-  //   }
-  // }
-  // return findCapitals
+var capitals = function (word) { 
+ 
+  // let capitalIndexes = [...word].reduce((acc, curr, index) => curr == curr.toUpperCase() ? [...acc, index] : curr, [])
+  // [...word].reduce((pre, val, idx) => /[A-Z]/.test(val)? [...pre, idx] : pre, []);
 
-  for(let i = 0; i < word.length; i++) {
-    if(word[i].toUpperCase() == word[i]) capitalIndexes.push(i);
+   const findCapitals = word.split('')
+  for (const curr of word) {
+    if (word[curr] == word[curr.toUpperCase()]) {
+    capitalIndexes.push(curr)
+    }
   }
-  return capitalIndexes
-
+  return findCapitals
     //  const findCapitals = word
     //  .split('')
     //  .map((item, index, arr) => item == item.toUpperCase() ? index : null)
 
     //  return findCapitals.join('').split('').map(Number)
 }    
-console.log(capitals('codeWarssssss'))
+console.log(capitals('CodEWarssssss'))
 //input is going to be a string that contains lower and upper case letters
 //output will be an array of numbers
 // Example (Input --> Output)

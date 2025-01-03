@@ -17,21 +17,21 @@ const { assert } = require("console");
 // aliasGen('Larry', 'Brentwood') === 'Logic Bomb'
 // aliasGen('123abc', 'Petrovic') === 'Your name must start with a letter from A - Z.'
 
-// function aliasGen(first, last){
-//     const alphabet = 
-//     // 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-//     ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-//     const firstName = {A: 'Alpha', B: 'Beta', C: 'Cache'}
-//     const surname = {A: 'Analogue', B: 'Bomb', C: 'Catalyst'}
-//     // if (first[0].toUpperCase()) {
-//     //     return 'Your name must start with a letter from A - Z.'
-//     // }
-//     for (const curr of alphabet) {
-//         first[0] == curr
-//     }
-//     return first
-// }
-// console.log(aliasGen("Daisy", "cat"))
+function aliasGen(first, last) {
+    const alphabet = 
+    // 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    const firstName = {A: 'Alpha', B: 'Beta', C: 'Cache'}
+    const surname = {A: 'Analogue', B: 'Bomb', C: 'Catalyst'}
+    // if (first[0].toUpperCase()) {
+    //     return 'Your name must start with a letter from A - Z.'
+    // }
+    for (const curr of alphabet) {
+        first[0] == curr
+    }
+    return first
+}
+console.log(aliasGen("Daisy", "cat"))
 //input is going to be two params the first name and last name. Both params will be strings
 //output should be an item from the first object and item from last obj. Depending on what the argument first letters are.
 // These two objects are preloaded, you need to use them in your code
@@ -64,6 +64,7 @@ function countWords(str) {
     if (str == '') {
         return 0
     }
+    if (str)
     return str.trim().split(' ').join(' ') 
   }
   console.log(countWords("  Hello     Bart  "))
