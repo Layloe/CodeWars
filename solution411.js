@@ -54,13 +54,13 @@ const assert = require('assert')
 function calc(x){
     let total1 = 0
     let total2 = 0
-    const toNum = x.split('').map(char => char.charCodeAt(0)).join('')
-    for (const curr of [...toNum]) {
-        const toNumForRealsNow = parseInt(curr,10)
-        total1 += toNumForRealsNow
-        total2 += (toNumForRealsNow === 7 ? 1 : curr)
+    const toStringNum = x.split('').map(char => char.charCodeAt(0)).join('')
+    const strToNum = toStringNum.split('').map(Number)
+    for (const curr of strToNum) {
+        total1 += curr
+        total2 += (curr === 7 ? 1 : curr)
     }
-  return  total1 
+  return  total1 - total2
 }
 console.log(calc('abcdef'))
 //input is going to be a string of letters
