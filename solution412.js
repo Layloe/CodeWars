@@ -1,7 +1,9 @@
+const assert = require('assert')
 // Description:
+
 // You will be given an array of objects (associative arrays in PHP) representing data about developers who have signed up to attend the next coding meetup that you are organising.
 
-const { assert } = require("console");
+// const { assert } = require("console");
 
 // Your task is to return:
 
@@ -74,19 +76,20 @@ function isRubyComing(list) {
 // const assert = require('assert')
 function tidyNumber(n){
     const toStrToNum = String(n).split('').map(Number)
-       const numArr = toStrToNum.map((item, index, arr) => {       
-        if (arr[index + 1] > item) {
-            return false
-        }
-    })
-    return numArr.slice(0, -1).includes(undefined) 
+    //    const numArr = toStrToNum.map((item, index, arr) => {       
+    //     if (arr[index + 1] > item) {
+    //         return false
+    //     }
+    // })
+    // return numArr.slice(0, -1).includes(undefined)
+    return toStrToNum.sort((a, b) => a - b).join('') == n
   }
   console.log(tidyNumber(2789))
   //input will always be a number 
   //output will be a boolean depending on if digits are in non-decreasing order.
-//   assert.strictEqual(tidyNumber(12),true);
-//   assert.strictEqual(tidyNumber(102),false);
-//   assert.strictEqual(tidyNumber(9672),false);
-//   assert.strictEqual(tidyNumber(2789),true);
-//   assert.strictEqual(tidyNumber(2335),true);
+  assert.strictEqual(tidyNumber(12),true);
+  assert.strictEqual(tidyNumber(102),false);
+  assert.strictEqual(tidyNumber(9672),false);
+  assert.strictEqual(tidyNumber(2789),true);
+  assert.strictEqual(tidyNumber(2335),true);
   //loop thru use the index + 1 then subtact from curr if num is less then curr
