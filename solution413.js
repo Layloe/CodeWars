@@ -17,16 +17,17 @@
 
 // The input array will always be valid and formatted as in the example above.
 function getFirstPython(list) {
-    const pythonDev = list.find(item => item.language == 'Python')
-    return  pythonDev ? `${pythonDev.firstName}, ${pythonDev.country}` : 'There will be no Python developers'
-    // for (const curr of list) {
-        // if (curr.language == 'Python') {
-        //   return  `${curr.firstName} ${curr.country}`
-        // }else {
-        //    return 'There will be no Python developers'
-        // }
-    // }
-    
+    // const pythonDev = list.find(item => item.language == 'Python')
+    // return  pythonDev ? `${pythonDev.firstName}, ${pythonDev.country}` : 'There will be no Python developers'
+
+    // return list.filter(item => item.language == 'Python' ? `${item.firstName}, ${item.country}` : null)
+    // .find(x=> x.language == 'Python')
+    for (const curr of list) {
+      if (curr.language == 'Python') {
+        return `${curr.firstName}, ${curr.country}`
+      }
+    }
+    return 'There will be no Python developers'
   }
   console.log(getFirstPython([
     { firstName: 'Mark', lastName: 'G.', country: 'Scotland', continent: 'Europe', age: 22, language: 'JavaScript' },
@@ -36,4 +37,4 @@ function getFirstPython(list) {
   //input will be an array of objects 
   //output will be one of two strings, fist name and country or 'There will be no Python developers'
   //example is above
-  //map/loop thru then conditional to check if lenguage is = to 'python'. If true return  first name and country if falsy return 'There will be no Python developers'
+  //map/loop thru then conditional to check if language is = to 'python'. If true return  first name and country if falsy return 'There will be no Python developers'
