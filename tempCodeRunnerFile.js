@@ -1,1 +1,1 @@
-.split('').reverse().join('')
+

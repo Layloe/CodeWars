@@ -22,13 +22,13 @@ function getFirstPython(list) {
 
     // return list.filter(item => item.language == 'Python' ? `${item.firstName}, ${item.country}` : null)
     // .find(x=> x.language == 'Python')
-    for (const curr of list) {
-      if (curr.language == 'Python') {
-        return `${curr.firstName}, ${curr.country}`
-      }
+  for (const curr of list) {
+    if (curr.language == 'Python') {
+      return `${curr.firstName}, ${curr.country}`
     }
-    return 'There will be no Python developers'
   }
+  return 'There will be no Python developers'
+}
   console.log(getFirstPython([
     { firstName: 'Mark', lastName: 'G.', country: 'Scotland', continent: 'Europe', age: 22, language: 'JavaScript' },
     { firstName: 'Victoria', lastName: 'T.', country: 'Puerto Rico', continent: 'Americas', age: 30, language: 'Python' },
