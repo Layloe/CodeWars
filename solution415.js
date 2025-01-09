@@ -7,13 +7,12 @@ const assert = require('assert')
 // 13579  ---> "1-3-5-7-9"
 //  86420 ---> "86420"
 function insertDash(num) {
-    const toStr = String(num).split('') 
     let dashArr = []
-    for (const curr of toStr) {
-        if (curr % 2 == 0 && [curr + 1] % 2 == 0) {
-           return dashArr += dashArr[curr] + '-'
+    const toStr = String(num).split('').map((item, index, arr) => {
+        if (item % 2 == 0 && item + 1 % 2 !== 0) {
+           dashArr.push(item + '-') || item
         }
-    }
+    })
     // const splitArr = String(num).split('').map((item, index, arr )=> {
     //     if (item + 1 % 2 !== 0 && item % 2 !== 0 && item - 1 % 2 !== 0) {
     //         return item + '-' 
@@ -23,6 +22,7 @@ function insertDash(num) {
     //     }
     // })
     // return splitArr
+    return dashArr
  }
 console.log(insertDash(4547939)) 
 //input is going to be a number

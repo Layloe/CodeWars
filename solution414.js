@@ -3,7 +3,7 @@
 // If two words have the same last letter, the returned array should show them in the order they appeared in the given string.
 
 // All inputs will be valid.
- //!edgecase
+
 const assert = require('assert')
 function last(x){
     // const sortReversedArr = x.split('').reverse().join('').split(' ').sort().join(' ')
@@ -12,7 +12,6 @@ function last(x){
     // return sortArr
 
     return x.split(' ').sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1))
-    // return x.split(' ').sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1))
 }
 console.log(last('man i need a taxi up to ubud'))
 //input is going to be a string of words
