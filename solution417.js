@@ -26,13 +26,14 @@ function last(x){
 // The rotten fruit name will be in this camelcase (rottenFruit).
 // The returned array should be in lowercase.
 function removeRotten(bagOfFruits){
+    if (!bagOfFruits) {
+        return []
+    }
     const removeRottenStr = bagOfFruits.map(item => {
         if (item.includes('rotten')) {
             return item.toLowerCase().slice(-6)
         } 
-        else {
-           return item
-        }
+        return item
     })
     return removeRottenStr
   }
