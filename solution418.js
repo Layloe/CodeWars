@@ -12,8 +12,8 @@
 // Try to avoid using the % (modulo) operator.
 function divisibleByThree(str){
     const sum = str.split('').map(Number).reduce((curr, acc) => acc + curr, 0)
-    const divideBy3 = sum / 3 
-    const multiplyBy3 = divideBy3 * 3
+    // const divideBy3 = sum / 3 
+    // const multiplyBy3 = divideBy3 * 3
     // const maffsSum = multiplyBy3 - sum
     return sum % 3 == 0
 }
