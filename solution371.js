@@ -30,6 +30,7 @@ function string_to_array(str) {
 }
 console.log(string_to_array("I love arrays they are my favorite"))
 //input is going to be a string
-//output is going to be an array with the words of the string seperated by ","
+//output is going to be an array with the words of the string seperated by a white space
 // "Robin Singh" ==> ["Robin", "Singh"]
 //going to use the method split() to turn into an arr
+

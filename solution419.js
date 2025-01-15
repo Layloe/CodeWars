@@ -8,13 +8,9 @@
 // If the string to search for is "me", and the array to search is ["home", "milk", "Mercury", "fish"], the method should return ["home", "Mercury"].
 const assert = require('assert')
 function wordSearch(query, seq){
-    let matches = []
-    const findMatches = seq.filter((item) => {
-        if (item.includes(query.toLowerCase()) || item.includes(query.toUpperCase())) {
-            matches.push(item)
-        }
-    })
-    return matches
+    const findMatches = seq.filter(item => item.toLowerCase().includes(query.toLowerCase()))
+
+    return findMatches.length ? findMatches : []
   }
   console.log(wordSearch("ab", ["za", "ab", "abc", "zab", "zbc"]))
   // input will have two parameters the query string and the array of strings to search
