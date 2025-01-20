@@ -12,4 +12,4 @@ console.log(capMe(['jo', 'nelson', 'jurie']))
 //input will be an array of strings/names
 //output an array of each name with its first letter capitalized.
 //see above for examples
-//map at index zero toUpperCase + [1] toLowerCase
+//map at index zero toUpperCase + [1] slice toLowerCase
