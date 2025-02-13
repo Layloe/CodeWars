@@ -11,7 +11,8 @@ function moveTen(s){
     // return findLetter
     let alphabet = 'abcdefghijklmnopqrstuvwxyz';
     let move10 = 'klmnopqrstuvwxyzabcdefghij';
-    return s.replace(/[a-z]/g, x => move10[alphabet.indexOf(x)]);
+    return [...s].map(item => move10[alphabet.indexOf(item)]).join('')
+    
 }
 console.log(moveTen("testcase"))
 
@@ -21,3 +22,4 @@ assert.strictEqual(moveTen("testcase"), "docdmkco");
 assert.strictEqual(moveTen("codewars"), "mynogkbc");
 assert.strictEqual(moveTen("exampletesthere"), "ohkwzvodocdrobo");
 // declare a variable and assign lowercase alphabet then add split and map. Use the index to add 10. Then use conditionals once it goes past 'z', to start again at 'a'.
+// return s.replace(/[a-z]/g, x => move10[alphabet.indexOf(x)]);
