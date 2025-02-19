@@ -15,10 +15,14 @@
 // Age is represented by a number which can be any positive integer.
 
 function getAverageAge(list) {
-    let ages = []
-    const findAge = list.forEach(item => ages.push(item.age))
+  return list.reduce((sum, curr) => sum + curr.age, 0) / list.length
+    // let ages = []
+    // if (list.length < 1) {
+    //   return list[age]
+    // }
+    // const findAge = list.forEach(item => ages.push(item.age))
 
-    return  Math.ceil((ages[0] + ages[1]) / 2)
+    // return Math.round((ages[0] + ages[1]) / 2)
   }
   console.log(getAverageAge(
     [

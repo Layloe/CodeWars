@@ -1,1 +1,1 @@
-    return toArr
+   // { firstName: 'Victoria', lastName: 'T.', country: 'Puerto Rico', continent: 'Americas', age: 70, language: 'Python' },
