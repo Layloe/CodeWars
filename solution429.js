@@ -22,9 +22,8 @@
 // The strings representing whether someone is a GitHub admin will always be formatted as 'yes' and 'no' (all lower-case).
 // The strings representing a given language will always be formatted in the same way (e.g. 'JavaScript' will always be formatted with upper-case 'J' and 'S'.
 function findAdmin(list, lang) {
-    const filterLang = list.filter((item) => item.githubAdmin == 'yes')
-    const filterAdmin = list.filter((item) => item.language == "JavaScript" )
-    if (filterLang.length == 0) {
+    const filterAdmin = list.filter((item) => item.language == lang && item.githubAdmin == 'yes' )
+    if (list.length < 1) {
         return []
     }
     
