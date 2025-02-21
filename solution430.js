@@ -21,3 +21,8 @@ function nthChar(words){
     assert.strictEqual(nthChar([]),'');
     assert.strictEqual(nthChar(['yoda', 'best', 'has']), 'yes'); 
 // declare a var that will hold logic then use map and figure how to make a counter. Hit my time limit and had to look at the answers and apparently map => item[index] counts the index as well. The more you know :)
+
+function remember(words) {
+    return words.map((item,index) => item[index]).join('')
+}
+console.log(remember(['yoda', 'best', 'has']))
