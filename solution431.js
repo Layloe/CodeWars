@@ -4,17 +4,18 @@
 
 // Given a string of binary, return the version the photocopier gives you as a string.
 const assert = require('assert')
-function broken(x){
-    let onesAndZeros = []
-    const pushTo =  x.split('').map(item => {
-            if ( item == '0') {
-                return onesAndZeros.push('1')
-            }
-            if (item == '1') {
-                return onesAndZeros.push('0')
-            }
-        })
-        return onesAndZeros.join('')
+const broken = x => x.split('').map((item, index) => item == '0' ? '1' : '0').join('')
+// function broken(x) {
+//     let onesAndZeros = []
+//     const pushTo =  x.split('').map(item => {
+//             if ( item == '0') {
+//                 return onesAndZeros.push('1')
+//             }
+//             if (item == '1') {
+//                 return onesAndZeros.push('0')
+//             }
+//         })
+//         return onesAndZeros.join('')
     // return x.split('').map(item => {
     //     if (x.includes('0')) {
     //         return '1'
@@ -24,7 +25,7 @@ function broken(x){
     //     }
     // })
     // return x.replaceAll('0', '1') && x.replaceAll('1', '0')
-}
+// }
 console.log(broken('10000000101101111110011001000'))
 // input will be an string of '1' and '0's
 // output will be a string on nums that swaps the 1 to 0 and vice versa
