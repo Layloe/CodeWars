@@ -25,14 +25,13 @@
 // there are 5 possible meal options and the strings representing the selected meal option will always be formatted in the same way, as follows: 'standard', 'vegetarian', 'vegan', 'diabetic', 'gluten-intolerant'.
 
 function orderFood(list) {
-    let mealPrefernces = {}
-  
-    for (const currItem of list) {
-        if (mealPrefernces[currItem.meal]) {
-            mealPrefernces[currItem.meal]++
-        } else {
-            mealPrefernces[currItem.meal] = 1
-        }
+    let mealPreferences = {}
+    for (currItem of list) {
+      if (mealPreferences[currItem.meal]) {
+        mealPreferences[currItem.meal]++
+      } else  {  
+        mealPreferences[currItem.meal] = 1
+      }
     }
     return mealPrefernces
   }
@@ -51,3 +50,4 @@ function orderFood(list) {
   // output will be an object that keeps count of five possible meal preferences
    // { vegetarian: 2, standard: 1, vegan: 1 }
   // hash map with for of loop 
+
