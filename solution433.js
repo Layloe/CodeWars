@@ -23,6 +23,7 @@ const assert = require('assert')
 function crap(x, bags, cap){
     let poop = 0
     const flattenArray = x.flat()
+    const capAndBags = bags !== 0 || cap !== 0 ? bags * cap : cap
     for (currItem of flattenArray) {
         if (currItem == 'D') {
             return 'Dog!!'
@@ -30,9 +31,11 @@ function crap(x, bags, cap){
         if (currItem == '@') {
             poop++
         }
-        if (bags == 0) {
+        if (bags == 0 && poop >= 1) {
             return "Cr@p"
         }
+        
+
     }
 
     return bags < poop ? 'Cr@p' : 'Clean'
