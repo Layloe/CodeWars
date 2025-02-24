@@ -5,10 +5,11 @@
 
 // Note that numbers written as strings are strings and must be sorted with the other strings.
 function dbSort(a){
-    const sortChars = a.map((item,index) => String.fromCharCode(item)).sort()
-    return sortChars.map(item => item.charCodeAt())
+    const sortNums = a.filter(item => typeof item == 'number').sort()
+    const sortString = a.filter((item) => typeof item == 'string').sort()
+    return sortNums.concat(sortString)
     }
-    console.log(dbSort(["Banana", "Orange", "Apple", "Mango", 0, 2, 2]))
+    console.log(dbSort(["Apple",46,"287",574,"Peach","3","69",78,"Grape","423"]))
 // input will be an array of numbers and strings
 // output will be an array with first the nums sorted in ascending order then strings sorted in ascending order.
 // assert.deepEqual(dbSort([6, 2, 3, 4, 5]), [2, 3, 4, 5, 6]);
