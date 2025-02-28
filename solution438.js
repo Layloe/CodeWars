@@ -11,14 +11,22 @@ const assert = require('assert')
 
 function numObj(s){
   let objCharCode = {}
-  for (currItem of s) {
-    if (objCharCode[currItem]) {
-        {objCharCode[currItem]++ }
-    }else {
-        objCharCode[currItem] = String.fromCharCode(currItem)
-    }
-  }
-  return [objCharCode]
+  const singleObjs = s.map(item => {
+    { [item] : String.fromCharCode(item) }
+    // if (objCharCode[item]) {
+    // objCharCode[{number: item, char: String.fromCharCode(item)}]
+    // // objCharCode[item] = String.fromCharCode(item)
+    // }
+  })
+  // for (currItem of s) {
+  //   objCharCode.push({number: currItem, char: String.fromCharCode(currItem)})
+    // if (objCharCode[currItem]) {
+    //     objCharCode[currItem]++ 
+    // }else {
+    //     objCharCode[currItem] = String.fromCharCode(currItem)
+    // }
+  // }
+  return objCharCode
 }
 console.log(numObj([118,117,120]))
 // input will be an array of numbers
