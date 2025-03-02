@@ -8,7 +8,7 @@
 const assert = require('assert')
 
 function well(x){
-    const flatArr = x.flat().map(item => item.toLowerCase())
+    const flatArr = x.flat().map(item => item.toString().toLowerCase())
     const findGood = flatArr.filter(item => item == 'good')
         if (findGood.length > 2) {
             return 'I smell a series!'
