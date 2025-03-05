@@ -7,8 +7,11 @@
 // For example:
 
 // if (x) == ['a', 3] you should return [['a', 3], ['a', 3], ['a', 3]].
+const assert = require('assert')
+
 function explode(x){
     let score = 0
+    let arr = [] 
 
         if (typeof x[0] != 'number' && typeof x[1] != 'number') {
             return 'Void!'
@@ -22,17 +25,20 @@ function explode(x){
         if (typeof x[0] == 'number' && typeof x[1] != 'number') {
              score += x[0]
         } 
-    return x.map(item => item.repeat(x, score))
+        for (let i = 0; i < score; i++) {
+            arr.push(x)
+        }
+    return arr
 }    
 console.log(explode([9, 'a']))
 
 // input is a two value array that will contain numbers or strings
 // output will be a nested arrays that will be repeated depending on the outcome
-    // assert.deepEqual(explode([9, 3]), [[9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3]]);
-    // assert.deepEqual(explode(['a', 3]), [['a', 3], ['a', 3], ['a', 3]] ); 
-    // assert.deepEqual(explode([6, 'c']), [[6, 'c'], [6, 'c'], [6, 'c'], [6, 'c'], [6, 'c'], [6, 'c']]); 
-    // assert.deepEqual(explode(['a', 'b']), 'Void!');  
-    // assert.deepEqual(explode(["a", 0]), []); 
+    assert.deepEqual(explode([9, 3]), [[9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3]]);
+    assert.deepEqual(explode(['a', 3]), [['a', 3], ['a', 3], ['a', 3]] ); 
+    assert.deepEqual(explode([6, 'c']), [[6, 'c'], [6, 'c'], [6, 'c'], [6, 'c'], [6, 'c'], [6, 'c']]); 
+    assert.deepEqual(explode(['a', 'b']), 'Void!');  
+    assert.deepEqual(explode(["a", 0]), []); 
 // use conditionals and typeof to determine score then declare a variable that will contain score finally repeat score times
 
 // if (typeof x[0] != 'number' && typeof x[1] != 'number') {
