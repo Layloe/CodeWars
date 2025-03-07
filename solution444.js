@@ -36,21 +36,21 @@ function driver(data) {
       plateNumber.push(data[2]) 
       // console.log(plateNumber.fill('9'))
     } 
-    plateNumber.push(data[3].slice(9, 10))
-      data.forEach((item, index, arr) => {
-        
+    plateNumber.push(data[3].slice(-2, -1))
+    const month = new Date(data[3]).toString().slice(8, 10)
+    console.log(data)
+    if (data[-2] == 'F') {
+      plateNumber.push(month[0] + 5 && month[1] + 5)
+    }
+    plateNumber.push(month)
+    console.log(month)
+
+      data.forEach((item, index, arr) => {      
     });
-    
-    // for (let i = 0; i < data.length; i++) {
-    // if (data[2].length < 5) {
-    //   return plateNumber.push(data[2])
-      // plateNumber.push(data[2])
-  //   } 
-  // }
 
     return plateNumber
   }
-  console.log(driver(["John","James","Smith","01-Jan-2010","M"]))
+  console.log(driver(["John","James","Smith","01-Jan-2010","F"]))
   
   // input is going to be an array containing strings 
   // output will be a 16 digit string containing uppercase letters and numbers
