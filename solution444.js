@@ -31,15 +31,26 @@
 // Good luck and enjoy!
 function driver(data) {
     let plateNumber = []
-    if (plateNumber[data[2]]) {
-      plateNumber.push(data[2])
-    } else {
-      data
-    }
+    if (data[2].length <= 5) {
+      const fillLength = 5 - data[2].length
+      plateNumber.push(data[2]) 
+      // console.log(plateNumber.fill('9'))
+    } 
+    plateNumber.push(data[3].slice(9, 10))
+      data.forEach((item, index, arr) => {
+        
+    });
+    
+    // for (let i = 0; i < data.length; i++) {
+    // if (data[2].length < 5) {
+    //   return plateNumber.push(data[2])
+      // plateNumber.push(data[2])
+  //   } 
+  // }
 
     return plateNumber
   }
-  console.log(driver(["John","James","Smith","01-Jan-2000","M"]))
+  console.log(driver(["John","James","Smith","01-Jan-2010","M"]))
   
   // input is going to be an array containing strings 
   // output will be a 16 digit string containing uppercase letters and numbers

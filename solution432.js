@@ -33,7 +33,7 @@ function orderFood(list) {
         mealPreferences[currItem.meal] = 1
       }
     }
-    return mealPrefernces
+    return mealPreferences
   }
   console.log(orderFood([
     { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'C', 
