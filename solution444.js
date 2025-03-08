@@ -31,26 +31,42 @@
 // Good luck and enjoy!
 function driver(data) {
     let plateNumber = []
+    const date = new Date(data[3])
+    // 1–5: The first five characters of the surname (padded with 9s if less than 5 characters)
     if (data[2].length <= 5) {
       const fillLength = 5 - data[2].length
-      plateNumber.push(data[2]) 
-      // console.log(plateNumber.fill('9'))
+      plateNumber.push(data[2].toUpperCase()) 
+      // console.log(plateNumber.fill('9'))  //! fill 9s
     } 
+    // 6: The decade digit from the year of birth (e.g. for 1987 it would be 8)
     plateNumber.push(data[3].slice(-2, -1))
     const month = new Date(data[3]).toString().slice(8, 10)
-    console.log(data)
-    if (data[-2] == 'F') {
-      plateNumber.push(month[0] + 5 && month[1] + 5)
-    }
+    // 7–8: The month of birth (7th character incremented by 5 if driver is female i.e. 51–62 instead of 01–12)
+    if (data[4] == 'F') {
+      plateNumber.push(month[0]) //!month + 5 needs to add 5 month for female
+    } else {
     plateNumber.push(month)
-    console.log(month)
+    // console.log(month)
+    }  
+    // 9–10: The date within the month of birth
+    plateNumber.push(data[3].slice(0,2))
+    // 11: The year digit from the year of birth (e.g. for 1987 it would be 7)
+    plateNumber.push(data[3].slice(-1))
+    // 12–13: The first two initials of the first name and middle name, padded with a 9 if no middle name
+    if (data[1] == '') {
+      plateNumber.push(data[0].slice(0,1) + '9')
+    } else {
+      plateNumber.push(data[0].slice(0,1) + data[1].slice(0,1))
+    }
+    // 14: Arbitrary digit – usually 9, but decremented to differentiate drivers with the first 13 characters in common. We will always use 9
+    plateNumber.push('9')
+    // 15–16: Two computer check digits. We will always use "AA"
+    plateNumber.push('AA')
 
-      data.forEach((item, index, arr) => {      
-    });
 
-    return plateNumber
+    return plateNumber.join('')
   }
-  console.log(driver(["John","James","Smith","01-Jan-2010","F"]))
+  console.log(driver(["Johanna","","Gibbs","13-Dec-1981","F"]))
   
   // input is going to be an array containing strings 
   // output will be a 16 digit string containing uppercase letters and numbers
