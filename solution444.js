@@ -46,10 +46,11 @@ function driver(data) {
     // 7–8: The month of birth (7th character incremented by 5 if driver is female i.e. 51–62 instead of 01–12)
     const month = new Date(data[3]).getMonth() + 1
     if (data[4] == 'F') {
-      plateNumber.push(month.toString()[0] * 5)
-      console.log(month.toString()[0] * 5 + month.toString()[1]) 
+      plateNumber.push(month.toString()[0] * 6 + month.toString()[1])
+      console.log(month.toString()[0] * 6 + month.toString()[1]) // need to add 5 to index 0 
     } else {
-    plateNumber.push(month)
+    plateNumber.push('0' + month.toString())
+    console.log(month)
     }  
 
     // 9–10: The date within the month of birth
@@ -73,7 +74,7 @@ function driver(data) {
 
     return plateNumber.join('')
   }
-  console.log(driver(["Johanna","","Gibbs","13-Dec-1981","F"]))
+  console.log(driver(["Andrew","Robert","Lee","02-September-1981","M"]))
   
   // input is going to be an array containing strings 
   // output will be a 16 digit string containing uppercase letters and numbers
