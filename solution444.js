@@ -74,7 +74,7 @@ function driver(data) {
 
     return plateNumber.join('')
   }
-  console.log(driver(["Andrew","Robert","Lee","02-September-1981","M"]))
+  console.log(driver(["Johanna","","Gibbs","13-Dec-1981","F"]))
   
   // input is going to be an array containing strings 
   // output will be a 16 digit string containing uppercase letters and numbers
