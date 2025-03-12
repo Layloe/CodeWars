@@ -16,13 +16,17 @@
 // If one string is longer than the other, there should be a space where the character would be
 function transposeTwoStrings (array) {
     let transposedArr = []
-    for (let i = 0; i < array.length; i++) {
-        transposedArr.push(`${[0]}` + `${[1]}`)
+    var len = Math.max(array[0].length, array[1].length)
+    console.log(len)
+    for (let i = 0; i < len; i++) {
+        const column = (array[0][i] || '')+ " " + (array[1][i] || '')
+        transposedArr.push(column)
     }
-	return transposedArr
+
+	return transposedArr.join('\n')
 }
 console.log(transposeTwoStrings(['Hello', 'World']))
 // Input will be an array that contains two strings
 // Output will be a string that is transposed with each line containing one letter of each word in array
 // Example is above 
-// I think I will go with slice with /nl
+// I think I will go with slice with /nl.Nope, didn't know and studied solutions
