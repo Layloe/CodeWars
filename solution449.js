@@ -11,15 +11,19 @@ const assert = require('assert')
 
 function missingWord(nums, str) {
     let decipher = []
-    const numsArrSort = nums.sort()
+    const numsArrSort = nums.sort((a, b) => a - b)
     const cleanStrToArray = str.split(' ').join('').split('')
+
+    if (Math.max(...nums) > cleanStrToArray.length) {
+         return "No mission today"
+    }
     cleanStrToArray.map((item, index) => {
         decipher.push(cleanStrToArray[numsArrSort[index]])
     })
     
     return decipher.join('').toLowerCase()
   }
-  console.log(missingWord([29, 31, 8], "The quick brown fox jumps over the lazy dog"))
+  console.log(missingWord([12, 4, 6], "Good Morning"))
   // Input will have two parameters one is an array of nums the other is a string.
   // Output is a string that will contain the index location of a letter from a sorted array in         ascending order.
   assert.strictEqual(missingWord([5, 0, 3], "I love you"), "ivy")
