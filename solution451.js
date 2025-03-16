@@ -10,13 +10,6 @@
 const assert = require('assert')
 
 function olympicRing(a){
-    // const medalLibrary = {
-    //     0 : 'Not even a medal!',
-    //     1 : 'Not even a medal!',
-    //     2 : 'Bronze!',
-    //     3 : 'Silver!',
-    //     4 : 'Gold!'
-    // }
     const findRings = a.split('').filter(item => [`a`,`b`,`d`,`e`,`g`,`o`,`p`,`q`,`A`,`D`,`O`,`P`,`Q`,`R`].includes(item)).length / 2
 
     if (findRings <= 1) {
