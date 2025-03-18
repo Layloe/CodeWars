@@ -10,7 +10,7 @@
 const assert = require('assert')
 
 function olympicRing(a){
-    const findRings = a.split('').filter(item => [`a`,`b`,`d`,`e`,`g`,`o`,`p`,`q`,`A`,`D`,`O`,`P`,`Q`,`R`].includes(item)).length / 2
+    const findRings = Math.floor(a.split('').filter(item => [`a`,`b`,`d`,`e`,`g`,`o`,`p`,`q`,`A`,`D`,`O`,`P`,`Q`,`R`].includes(item)).length / 2)
 
     if (findRings <= 1) {
         return 'Not even a medal!'
@@ -28,7 +28,7 @@ function olympicRing(a){
     return findRings 
 
 }
-console.log(olympicRing('wHjMudLwtoPGocnJ'))
+console.log(olympicRing('sWEBWePVsQjGgPsxvbroThLJCn'))
 // Input will contain a string of random upper and lowercase letters
 // Output will be one of four strings; if score is 1 or less, return 'Not even a medal!'; if score is 2, return 'Bronze!'; if score is 3, return 'Silver!'; if score is more than 3, return 'Gold!';
     assert.strictEqual(olympicRing('wHjMudLwtoPGocnJ'), 'Bronze!');

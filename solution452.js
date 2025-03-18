@@ -1,4 +1,4 @@
-const invalidIds = new Set([1, 3, 3, 7])
+const invalidIds = new Set([1, 3, 3, 7]) //! Claire-ification 
 const jobIds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 //Mimics API rejects entire batch
