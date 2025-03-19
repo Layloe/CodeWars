@@ -14,10 +14,10 @@
 const assert = require('assert')
 
 function mispelled(word1, word2) {
-    const checkString = new Set(word1) == word2
-    return checkString
+    const checkString = word1.split('').filter((item, index) => word1[index].includes(word2) )  
+    return checkString 
 }
-console.log(mispelled('versed', 'v5rsed'))
+console.log(mispelled('1versed', 'versed'))
 
 // Input will include two parameters both of them strings
 // Output is a boolean 
