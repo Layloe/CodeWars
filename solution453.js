@@ -14,8 +14,17 @@
 const assert = require('assert')
 
 function mispelled(word1, word2) {
-    const checkString = word1.split('').filter((item, index) => word1[index].includes(word2) )  
-    return checkString 
+    const arr = []
+    const checkString = word1.split('').filter((item, index) => {
+        item == word2[index]
+        // if (!item.includes(...word2)) {
+        //     arr.push(item)
+        // }
+        // if (item !== word2[index]) {
+        //     arr.push(item)
+        // }
+    })  
+    return checkString
 }
 console.log(mispelled('1versed', 'versed'))
 
