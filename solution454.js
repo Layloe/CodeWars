@@ -8,16 +8,17 @@
 // The length of all words provided in the list will be >= n. The format will be "x, x, x". In Haskell you'll get a list of Strings instead
 
 function sortIt(list, n) {
-    const testArray = {}
-    const cleanList = list.split(' ').join('').split(',')
+    const testObj = {}
+    const cleanList = list.split(', ')
    for (currItem of cleanList) {
-    if (testArray[currItem]) {
-      testArray[currItem]++
+    if (testObj[currItem]) {
+      testObj[currItem]
     } else {
-      testArray[currItem] = testArray[currItem.slice(n)] 
+      let sortLetter = currItem[n - 1]
+      testObj[currItem] = sortLetter
     }
    }
-    return testArray
+    return testObj
   }
   console.log(sortIt('cat, dog, eel, bee', 3))
 // Input will be two params one will be a string of words and the other an integer

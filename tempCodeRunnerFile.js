@@ -1,1 +1,1 @@
-.split(',')
+testObj[currItem]
