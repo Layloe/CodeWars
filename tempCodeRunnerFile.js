@@ -1,1 +1,2 @@
-testObj[currItem]
+
+    
