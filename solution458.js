@@ -6,10 +6,12 @@
 // solution('abc', 'd') // returns false
 const assert = require('assert')
 
+// const solution = (str, ending) => str.endsWith(ending)
+
 function solution(str, ending){
     const endLength = -ending.length 
     // return str.endsWith(ending)
-    return str.slice(endLength) == ending
+    return str.slice(endLength ) == ending
   }
   console.log(solution('samurai', 'ai'))
   // Input will have two params and will  both be strings

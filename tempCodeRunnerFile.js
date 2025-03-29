@@ -1,1 +1,2 @@
-console.log(str.slice(ending.length))
+
+    })
