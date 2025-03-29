@@ -24,3 +24,4 @@ console.log(accum("ZpglnRxqenU"))
         assert.strictEqual(accum("EvidjUnokmM"), "E-Vv-Iii-Dddd-Jjjjj-Uuuuuu-Nnnnnnn-Oooooooo-Kkkkkkkkk-Mmmmmmmmmm-Mmmmmmmmmmm");
         assert.strictEqual(accum("HbideVbxncC"), "H-Bb-Iii-Dddd-Eeeee-Vvvvvv-Bbbbbbb-Xxxxxxxx-Nnnnnnnnn-Cccccccccc-Ccccccccccc");
 // First step is to create a var that will contain parameter then going to lowercase and split to an array so I can map over it then use if else to capitalize first char using toUpperCase using the index and concat it to a sliced string repeated index location amount of times.
+
