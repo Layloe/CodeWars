@@ -7,13 +7,11 @@
 const assert = require('assert')
 
 function solution(str, ending){
-    const length = ending.length -1
-    console.log(str.slice(ending.length -1))
-    return str.slice(length ) == ending
+  return str.endsWith(ending)
   }
   console.log(solution('samurai', 'ai'))
   // Input will have two params and will  both be strings
   // OUtput is a boolean
-//   assert.assertEquals(solution('abcde', 'cde'), true)
-//   assert.assertEquals(solution('abcde', 'abc'), false)
+  assert.strictEqual(solution('abcde', 'cde'), true)
+  assert.strictEqual(solution('abcde', 'abc'), false)
   // Get the ending param length then slice str param and compare
