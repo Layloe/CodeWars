@@ -7,7 +7,9 @@
 const assert = require('assert')
 
 function solution(str, ending){
-  return str.endsWith(ending)
+    const endLength = -ending.length 
+    // return str.endsWith(ending)
+    return str.slice(endLength) == ending
   }
   console.log(solution('samurai', 'ai'))
   // Input will have two params and will  both be strings
