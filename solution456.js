@@ -13,11 +13,11 @@ function alphaSeq (str) {
  const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
  const cleanStr = str.toLowerCase().split('').sort()
  const findIndexNum = cleanStr.map((item, index) => {
-    if (item == 'a') {
-       return item.toUpperCase() + item
-    } else {
-        item.toUpperCase() + item.repeat(alphabet.indexOf(item))
-    }
+    // if (item == 'a') {
+    //    return item.toUpperCase() + item
+    // } else {
+    //     item.toUpperCase() + item.repeat(alphabet.indexOf(item))
+    // }
     return item.toUpperCase() + item.repeat(alphabet.indexOf(item))
  })
 
