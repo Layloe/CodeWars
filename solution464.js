@@ -14,7 +14,17 @@
 function solve(arr){  
     let count = 0
     alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-    
+    const lowerCase = arr.join(',').toLowerCase().split(',').sort()
+    const findIndex = lowerCase.map((item, index) => {
+      if (item == alphabet[index]) {
+        count++
+      }
+      console.log(item == alphabet[index])
+      // console.log(alphabet[index])
+    })
+      console.log(count)
+
+    return lowerCase
 
   };
   console.log(solve(["abode","ABc","xyzD"]))
