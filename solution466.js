@@ -7,7 +7,15 @@
 // solution({a: 1, b: '2'}) // should return "a = 1,b = 2"
 
 function solution(pairs){
-    return pairs.stringify()
+    let strings = []
+    // for (let i = 0; i < pairs.length; i++) {
+    //     strings.push(Object.entries(pairs[i]))
+    // }
+    const toArray = Object.entries(pairs)
+    let toString = toArray.map(item => toString(strings.push(item)))
+    console.log(Object.entries(pairs))
+    return toString
+    // return `${Object.keys(pairs)},${Object.values(pairs)}`
   }
   console.log(solution({'a': 1, 'b': 2}))
 
