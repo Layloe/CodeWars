@@ -12,19 +12,29 @@
 // If you like this Kata, please try:
 
 function solve(arr){  
-    let count = 0
-    alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-    const lowerCase = arr.join(',').toLowerCase().split(',').sort()
-    const findIndex = lowerCase.map((item, index) => {
-      if (item == alphabet[index]) {
-        count++
+    
+   const alphabet = "abcdefghijklmnopqrstuvwxyz"
+    // alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    // const lowerCase = arr.map((item) => item.toLowerCase().split('')) 
+    // const findIndex = lowerCase.filter((item, index) => {
+    //   index== alphabet.indexOf(item)
+        
+    //   console.log(item == alphabet[item])
+    //   // console.log(alphabet[index])
+    // }).length
+    //   console.log(findIndex)
+    const lowerCase = arr.map((item, index) => {
+      let count = 0
+      for (let i = 0; i < arr.length; i++) {
+        const letter = item[i].toLowerCase()
+        if (alphabet.indexOf(letter) == i) {
+          count++
+        }
       }
-      console.log(item == alphabet[index])
-      // console.log(alphabet[index])
+      return count
     })
-      console.log(count)
 
-    return lowerCase
+    // return lowerCase
 
   };
   console.log(solve(["abode","ABc","xyzD"]))
