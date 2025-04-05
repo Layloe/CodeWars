@@ -5,25 +5,21 @@
 // Example:
 
 // solution({a: 1, b: '2'}) // should return "a = 1,b = 2"
+const assert = require('assert')
 
 function solution(pairs){
-    let strings = []
-    // for (let i = 0; i < pairs.length; i++) {
-    //     strings.push(Object.entries(pairs[i]))
-    // }
-    const toArray = Object.entries(pairs)
-    let toString = toArray.map(item => toString(strings.push(item)))
-    console.log(Object.entries(pairs))
-    return toString
-    // return `${Object.keys(pairs)},${Object.values(pairs)}`
+    const toArray = Object.keys(pairs)
+    let toString = toArray.map(item => item + ' = ' + pairs[item])
+    // console.log(Object.entries(pairs))
+    return toString.join(',')
   }
   console.log(solution({'a': 1, 'b': 2}))
 
 // Input will be a object that contains key value pairs
 // Output will be a string that replaces : with =
-//     assert.strictEqual(solution({'a': 1, 'b': 2}), 'a = 1,b = 2')
-//     assert.strictEqual(solution({'a': 'b', 'b': 'a'}), 'a = b,b = a')
-//     assert.strictEqual(solution({0: 'a', 'b': 2}), '0 = a,b = 2')
-//     assert.strictEqual(solution({'b': 1, 'c': 2, 'e': 3}), 'b = 1,c = 2,e = 3')
-//     assert.strictEqual(solution({}), '')
+    assert.strictEqual(solution({'a': 1, 'b': 2}), 'a = 1,b = 2')
+    assert.strictEqual(solution({'a': 'b', 'b': 'a'}), 'a = b,b = a')
+    assert.strictEqual(solution({0: 'a', 'b': 2}), '0 = a,b = 2')
+    assert.strictEqual(solution({'b': 1, 'c': 2, 'e': 3}), 'b = 1,c = 2,e = 3')
+    assert.strictEqual(solution({}), '')
 // split() then join with : as the delimiter 
