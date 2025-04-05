@@ -24,23 +24,14 @@ const assert = require('assert')
 
 function nicknameGenerator(name) {
     const vowels = 'aeiou'
-    // const nameArr = name.split('').map((item, index) => {
         if (name.length <= 3) {
             return "Error: Name too short"
         }
-        if (name[3] !== name.indexOf(...vowels)) {
+        if (name[2] !== name.indexOf(...vowels)) {
             return name.slice(0, 3)
         } else {
             return name.slice(0, 4)
         }
-        // if (item[3] == 'a' || item[3] == 'e' || item[3] == 'i' || item[3] == 'o' || item[3] == 'u') {
-        //     return null
-        // } else {
-        //     // return item.silce(0, 3)
-        // }
-    // })
-    console.log(...vowels)
-    return nameArr.join('')
 }
 console.log(nicknameGenerator("Samantha"))
 // Input will be a string of a name with first letter capitalized
