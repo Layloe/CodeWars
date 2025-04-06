@@ -27,7 +27,9 @@
 function greetDevelopers(list) {
     const addProperty = list.map(item => ({...item,
         greeting: `Hi ${item.firstName}, what do you like the most about ${item.language}?`
-    }))
+    })
+)
+
     return addProperty
   }
   console.log(greetDevelopers([
