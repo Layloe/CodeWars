@@ -28,17 +28,30 @@
 
 // Enjoy Learning!!
 function tidyNumber(n){
-  for (let i = 0; i < n.length; i++) {
-    for (let j = 0; j < n.length; j++) {
-     if (n[i] < j[i]) {
-        return true
-     } else {
-        return false
-     }
+  const greaterThan = String(n).split('').filter((item, index, arr) => {
+    if (item <= arr[index + 1] == false) {
+      console.log()
+
+      return true
     }
-  }
+    else {
+      return false
+    }
+    console.log(arr[index])
+  })
+ 
+  // for (let i = 0; i < n.length; i++) {
+  //   for (let j = 0; j < n.length; j++) {
+  //    if (i < j[i]) {
+  //       return true
+  //    } else {
+  //       return false
+  //    }
+  //   }
+  // }
+  return greaterThan
 }
-console.log(tidyNumber(12))
+console.log(tidyNumber(122344))
 // Input will be a postive number
 // Output is a boolean
 // Test.assertEquals(tidyNumber(12),true);
