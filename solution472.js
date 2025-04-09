@@ -27,36 +27,25 @@
 // ALL translations are welcomed
 
 // Enjoy Learning!!
+const assert = require('assert')
 function tidyNumber(n){
-  const greaterThan = String(n).split('').filter((item, index, arr) => {
-    if (item <= arr[index + 1] == false) {
-      console.log()
-
+  const greaterThan = String(n).split('').map((item, index, arr) => {
+    if (arr[index + 1] >= item) {
       return true
     }
     else {
       return false
     }
-    console.log(arr[index])
   })
  
-  // for (let i = 0; i < n.length; i++) {
-  //   for (let j = 0; j < n.length; j++) {
-  //    if (i < j[i]) {
-  //       return true
-  //    } else {
-  //       return false
-  //    }
-  //   }
-  // }
-  return greaterThan
+  return greaterThan.slice(0,-1).includes(false)
 }
-console.log(tidyNumber(122344))
+console.log(tidyNumber(102))
 // Input will be a postive number
 // Output is a boolean
-// Test.assertEquals(tidyNumber(12),true);
-// Test.assertEquals(tidyNumber(102),false);
-// Test.assertEquals(tidyNumber(9672),false);
-// Test.assertEquals(tidyNumber(2789),true);
-// Test.assertEquals(tidyNumber(2335),true);
+// assert.strictEqual(tidyNumber(12),true);
+// assert.strictEqual(tidyNumber(102),false);
+// assert.strictEqual(tidyNumber(9672),false);
+// assert.strictEqual(tidyNumber(2789),true);
+// assert.strictEqual(tidyNumber(2335),true);
 // Use a for loop and a nested for loop one then compare current item to index 
