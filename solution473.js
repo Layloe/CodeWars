@@ -17,6 +17,7 @@
 
 // The input array will always be valid and formatted as in the example above.
 function isRubyComing(list) {
+  
     return list.some(item => item.language == 'Ruby')
   }
   console.log([
@@ -24,3 +25,7 @@ function isRubyComing(list) {
     { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
     { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' } 
   ])
+  // Input will be a arr of objects
+  // Output is a boolean
+  // Example in description 
+  // Use method some() with dot notation to find if 'Ruby'
