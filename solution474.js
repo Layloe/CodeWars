@@ -18,9 +18,17 @@
 // we will consider that there are no rotations of strng == ""
 // and for any array arr: contain_all_rots("", arr) --> true
 
-function containAllRots(strng, arr) {
-    const sortArrStr = arr.sort((a, b) => a.localeCompare(b) - b.localeCompare(a))
-    return sortArrStr
+function containAllRots(str, arr) {
+    for (let i = 0; i < str.length; i++) {
+        if (arr.indexOf(str.slice(i) + str.slice(0, i)) === -1) {
+
+            return false
+        }
+        console.log(str.slice(i))
+        console.log(str.slice(i) + str.slice(0, i))
+    }
+    
+    return true
 }
 console.log(containAllRots("bsjq", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"]))
 // Input will be am array of strings
