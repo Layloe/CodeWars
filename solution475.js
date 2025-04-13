@@ -7,20 +7,19 @@
 // "C...m" returns "Caught!" <-- as there are three characters between the two, the cat can jump.
 const assert = require('assert')
 
-function catMouse(x){
-    // const toArr = x.split('').map(item => {
-        if ([...x].slice(0, -1).length > 3) {
-            return "Escaped!"
-        } else {
-            return "Caught!"
-        }
-    // })
-    // return toArr
-}
+const catMouse = x => [...x].slice(1,-1).length <= 3 ? "Caught!" : "Escaped!"
+
+// function catMouse(x){
+//     if ([...x].slice(1, -1).length <= 3) {        
+//         return "Caught!"
+//     } 
+
+//     return "Escaped!"
+// }
 console.log(catMouse("C...m"))
 // Input will be a string always containing the upper 'C' at index 0 and lower 'm' at index -1
 // Output will be one of two strings "Escaped!" or "Caught!"
     assert.strictEqual(catMouse('C....m'), "Escaped!");
     assert.strictEqual(catMouse('C..m'), "Caught!");
     assert.strictEqual(catMouse('C.....m'), "Escaped!");
-// Split map and use conditionals to find length of center of string
+// Spread operator and use conditionals to find length of center of string
