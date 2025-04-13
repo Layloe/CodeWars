@@ -9,13 +9,13 @@ const assert = require('assert')
 
 const catMouse = x => [...x].slice(1,-1).length <= 3 ? "Caught!" : "Escaped!"
 
-// function catMouse(x){
-//     if ([...x].slice(1, -1).length <= 3) {        
-//         return "Caught!"
-//     } 
+function catMouse(x){
+    if ([...x].slice(1, -1).length <= 3) {        
+        return "Caught!"
+    } 
 
-//     return "Escaped!"
-// }
+    return "Escaped!"
+}
 console.log(catMouse("C...m"))
 // Input will be a string always containing the upper 'C' at index 0 and lower 'm' at index -1
 // Output will be one of two strings "Escaped!" or "Caught!"
