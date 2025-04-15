@@ -17,14 +17,11 @@
 
 // The input array will always be valid and formatted as in the example above.
 
+
 function getFirstPython(list) {
-    const findSnek = list.map((item) => {
-      if (item.language == 'Python') {
-        return `${item.firstName}, ${item.language}`
-      }
-    })
-    return findSnek.join('')
-    //const findSnek = list => list.filter(item => item.language == 'Python' ? `${item.firstName}, ${item.language}` : 'There will be no Python developers')
+  const findSnek = list.find(snek => snek.language == 'Python')
+
+  return findSnek ? `${findSnek.country}, ${findSnek.firstName}` : 'There will be no Python developers'
 }
 console.log(getFirstPython([
   { firstName: 'Mark', lastName: 'G.', country: 'Scotland', continent: 'Europe', age: 22, language: 'JavaScript' },
@@ -34,4 +31,4 @@ console.log(getFirstPython([
 // Input is an array of objects
 // Output is one of two strings, a string that contains < firstName here >, < country here > or 'There will be no Python developers'
 // Example is above
-// Create a var that will hold find loop method use conditionals with dot notation then use template literals to place firstName and country
+// Create a var that will hold find loop method use conditionals with dot notation then use template literals to place firstName and country else default string
