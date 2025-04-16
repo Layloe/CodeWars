@@ -6,8 +6,9 @@
 const assert = require('assert')
 
 function last(x) {
-    const toArrSort = x.split(' ').map(item => [...item].reverse()).sort()
-    return toArrSort.map(item => [...item].reverse().join(''))
+    return x.split(' ').sort((a,b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length -1))
+    // const toArrSort = x.split(' ').map(item => [...item].reverse()).sort()
+    // return toArrSort.map(item => [...item].reverse().join('')) 
 }
 console.log(last('man i need a taxi up to ubud'))
 // Input will be a string of words
