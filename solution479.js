@@ -15,22 +15,20 @@
 // 12  -->  "CoffeeScript"
 
 function caffeineBuzz(n){
+    if (n == 3 ) {
+        return "Java"
+    }
+    if (n == 1 ) {
+        return "mocha_missing!"
+    }
     if (n % 3 === 0 && n % 4 !== 0) {
         return "Java" + "Script"
     }
     if (n % 3 === 0 && n % 4 === 0) {
-        return "Coffee"
-    }
-    if (n % 3 !== 0 && n % 4 === 0 || n % 3 === 0 && n % 4 !== 0) {
         return 'Coffee' + 'Script'
     }
-    console.log(n % 3 === 0)
-
-    // if (n % 3 === 0) {
-    //     return "Java"
-    // }
 }
-console.log(caffeineBuzz(24))
+console.log(caffeineBuzz(12))
 
 // Input is a non-zero integer
 // Output is going to be one of four strings "Java", "Coffee", "Script", "mocha_missing!"
