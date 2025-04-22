@@ -3,7 +3,8 @@
 // Consonants are all letters used to write English excluding the vowels a, e, i, o, u.
 
 function consonantCount(str) {
-    return str.split('').filter(item => !'aeiouAEIOU'.includes(item)).length  }
+    return str.split(' ').filter(item => 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ'.includes(item)).join('').length
+  }
   console.log(consonantCount('aeiou AEIOU bcdfghjklmnpqrstvwxyz BCDFGHJKLMNPQRSTVWXYZ 01234567890_ ^&$#'))
 
   // Input is a string of letters
