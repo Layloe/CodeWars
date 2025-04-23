@@ -24,4 +24,4 @@ function splitInParts (s, partLength){
 //   assert.equal(splitInParts("supercalifragilisticexpialidocious", 3), "sup erc ali fra gil ist ice xpi ali doc iou s");
 //   assert.equal(splitInParts("HelloKata", 9), "HelloKata");
 //   assert.equal(splitInParts("HelloKata", 1), "H e l l o K a t a");
-// Skipping this one but I believe it's solved with hash map
+// Skipping this one but I believe it's solved with hash 
