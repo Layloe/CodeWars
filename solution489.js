@@ -10,14 +10,17 @@
 // "33333333" -> true
 // "7"        -> false
 // Try to avoid using the % (modulo) operator.
+const assert = require('assert')
+
 function divisibleByThree(str){
-    return str.split('').reduce((sum, curr) => (sum + Number(curr) % 3 == 0) , 0)
+    const sum = str.split('').reduce((sum, curr) => sum + Number(curr) , 0)
+    return sum % 3 == 0
 }
-console.log(divisibleByThree('1231'))
-// Input will be a string of numbers 
-// Output is a boolean
-    // assert.strictEqual(divisibleByThree('123'), true, "Should return true if the sum of the given digits is divisible by 3.")
-    // assert.strictEqual(divisibleByThree('19254'), true, "Should return true if the sum of the given digits is divisible by 3.")
-    // assert.strictEqual(divisibleByThree('88'), false, "Should return false if the sum of the given digits is not divisible by 3.")
-    // assert.strictEqual(divisibleByThree('1'), false, "Should return false if the sum of the given digits is not divisible by 3.")
-// I will split and reduce then divide by length then use if else if has remainder or not
+console.log(divisibleByThree('19254'))
+// Input will be a string of numbers. 
+// Output is a boolean.
+    assert.strictEqual(divisibleByThree('123'), true, "Should return true if the sum of the given digits is divisible by 3.")
+    assert.strictEqual(divisibleByThree('19254'), true, "Should return true if the sum of the given digits is divisible by 3.")
+    assert.strictEqual(divisibleByThree('88'), false, "Should return false if the sum of the given digits is not divisible by 3.")
+    assert.strictEqual(divisibleByThree('1'), false, "Should return false if the sum of the given digits is not divisible by 3.")
+// I will split and reduce then divide by length then use if else if has remainder or not. Also remember to change data type.
