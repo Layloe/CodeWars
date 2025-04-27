@@ -1,1 +1,2 @@
-item % 2 == 0 || 
+
+   return sortItem.filter(item => item == query)
