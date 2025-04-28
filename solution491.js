@@ -9,7 +9,7 @@
 const assert = require('assert')
 
 function wordSearch(query, seq) {
-    let results = []
+    // let results = []
     query = query.toLowerCase()
     const sortItem = seq.filter(item => item.toLowerCase().includes(query))
 //     .map(item => item
