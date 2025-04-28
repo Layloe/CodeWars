@@ -10,10 +10,16 @@ const assert = require('assert')
 
 function wordSearch(query, seq) {
     let results = []
-    
-   const sortItem = seq.map(item => item.toLowerCase().split('').sort().join('').slice(0,query.length) == query ? results.push(item) : null )
+    query = query.toLowerCase()
+    const sortItem = seq.filter(item => item.toLowerCase().includes(query))
+//     .map(item => item
+//     .toLowerCase()
+//     .split('')
+//     .sort()
+//     .join('')
+//     .slice(0,query.length) == query ? results.push(item) : null )
 
-   return results == [] ? "Empty" : results
+   return sortItem.length ? sortItem : ['Empty']
 }
 console.log(wordSearch("ab", ["za", "ab", "abc", "zab", "zbc"]))
 // Input has two parameters one is a string and the other is an array of strings.
@@ -21,5 +27,5 @@ console.log(wordSearch("ab", ["za", "ab", "abc", "zab", "zbc"]))
 assert.strictEqual(wordSearch("ab", ["za", "ab", "abc", "zab", "zbc"]), ["ab", "abc", "zab"])
 assert.strictEqual(wordSearch("aB", ["za", "ab", "abc", "zab", "zbc"]), ["ab", "abc", "zab"])
 assert.strictEqual(wordSearch("ab", ["za", "aB", "Abc", "zAB", "zbc"]), ["aB", "Abc", "zAB"])
-// assert.strictEqual(wordSearch("abcd", ["za", "aB", "Abc", "zAB", "zbc"]), ["Empty"])
+assert.strictEqual(wordSearch("abcd", ["za", "aB", "Abc", "zAB", "zbc"]), ["Empty"])
 // First I will filter the array and use if else to find matches that if true will return the item. Decided to go withassert.strictEqual
