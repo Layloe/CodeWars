@@ -23,5 +23,5 @@ console.log(flyBy( "xxxxxxxxxxxxxxxxxxxx", "====================T" ))
     // assert.strictEqual(flyBy('xxxxxx', '====T'), 'ooooox');
     // assert.strictEqual(flyBy('xxxxxxxxx', '==T'), 'oooxxxxxx'); 
     // assert.strictEqual(flyBy('xxxxxxxxxxxxxxx', '=========T'), 'ooooooooooxxxxx')
-// Use length to solve, create two variables to replace all 
+// Use length to solve, create two variables to replace all. Went free style and came up with this.
 
