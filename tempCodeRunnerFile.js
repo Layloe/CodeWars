@@ -1,2 +1,1 @@
-
-   return sortItem.filter(item => item == query)
+lamps
