@@ -10,11 +10,14 @@
 const assert = require('assert')
 
 function flyBy(lamps, drone){
-    const cleanInput = lamps.split('').filter(item => item == 'x').join('')
-    const replaceChars = cleanInput.replaceAll('x', 'o')
-    const findDifference = lamps.length - drone.length
+    const replaceLetters = lamps.split('').map((item, index) => index < drone.length ? 'o': item)
 
-    return replaceChars.slice(findDifference) + replaceChars.slice(0, findDifference).replaceAll('o', 'x')
+    return replaceLetters.join('')
+    // const cleanInput = lamps.split('').filter(item => item == 'x').join('')
+    // const replaceChars = cleanInput.replaceAll('x', 'o')
+    // const findDifference = lamps.length - drone.length
+
+    // return replaceChars.slice(findDifference) + replaceChars.slice(0, findDifference).replaceAll('o', 'x')
 }
 console.log(flyBy( "xxxxxxxxxxxxxxxxxxxx", "====================T" ))
 
