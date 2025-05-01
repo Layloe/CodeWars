@@ -20,7 +20,7 @@ function compare(s1, s2) {
     const toAsciiS1 = s1.split('').map((item, index) => uppercaseAlphabet.includes(item.toUpperCase()) ? item.charCodeAt() : '').reduce((acc, sum) => sum + acc)
     const toAsciiS2 = s1.split('').map((item, index) => uppercaseAlphabet.includes(item.toUpperCase()) ? item.charCodeAt() : '').reduce((acc, sum) => sum + acc)
 
-return toAsciiS1
+return toAsciiS1 === toAsciiS2
 }
 console.log(compare('AD', 'DD'))
 
