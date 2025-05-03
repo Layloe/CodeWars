@@ -10,14 +10,14 @@
   //returns 3
 
   function strCount(obj){
-    let count = 0
-    for (item in obj) {
-        if (typeof obj[item] == 'string') {
-            count++
-        }
-    }
-    return count
-    // return Object.values(obj).flat().filter((item, index) => (typeof item == 'string')).length
+    // let count = 0
+    // for (item in obj) {
+    //     if (typeof obj[item] == 'string') {
+    //         count++
+    //     }
+    // }
+    // return count
+    return Object.values(obj).flat().filter((item, index) => (typeof item == 'string')).length
   }
   console.log(strCount({
     first:  "1",
