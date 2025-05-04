@@ -20,3 +20,7 @@ function change(string){
     return toBinary.join('')
   }
   console.log(change("a **&  bZ"))
+  // Input is a string of random chars.
+  // Output is a string that is made up of 1's ans 0's and with the length of 26.
+  // Example above.
+  // Create a variable that changes argument to lowercase then get lowercase alphabet and split map then if else to see if item is in the alphabet and return 1 if true else 0
