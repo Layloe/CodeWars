@@ -16,4 +16,4 @@ console.log(calculate('1plus2plus3minus4'))
     // assert.assertEquals(calculate("1plus2plus3plus4"), '10');
     // assert.assertEquals(calculate('1minus2minus3minus4'), '-8');
 	// assert.assertEquals(calculate('1plus2plus3minus4'), '2');
-// Use if else to replace all words 'minus' 'plus' 'divide' 'multiply' then use the method eval to get sum.
+// Use if else to replace all words 'minus' 'plus' 'divide' 'multiply' then use the method eval to get sum. Turned out I had to split and join with operator words.
