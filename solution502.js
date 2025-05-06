@@ -7,22 +7,8 @@
 // "1plus2plus3minus4" -->  "2"
 
 function calculate(str) {
-    // const replaceOperator = str.split('').map(item => { 
-    if (str.includes('plus')) { //! fix if else to find and replace word operator
-      return String(eval(str.split('plus').join('+')))
-    }
-    if (str.includes('minus')) {
-      return String(eval(str.split('minus').join('-')))
-    }
-// })
-    // if (str.includes('multiply')) {
-    //   return  String(eval(str.replaceAll('multiply', 'x')))
-    // }
-    // if (str.includes('divide')) {
-    //   return  String(eval(str.replaceAll('divide', '/')))
-    // }
 
-    return replaceOperator
+    return String(eval(str.split('plus').join('+').split('minus').join('-')))
 }
 console.log(calculate('1plus2plus3minus4'))
 // Input is a string of numbers separated by an operator word.
