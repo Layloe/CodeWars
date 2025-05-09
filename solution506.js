@@ -11,19 +11,20 @@
 
 function makePassword(phrase) {
     const findFirstChar = phrase.split(' ').map(item => { 
-     return   item[0]
-    // if (item[0].includes('i') || item[0].includes('I')) {
-    //    return item[0].replace('1')
-    // }
-    // if (item[0].includes('o') || item[0].includes('O')) {
-    //    return item[0].replace('0')
-    // }
-    // if (item[0].includes('s') || item[0].includes('S')) {
-    //    return item[0].replace('5')
-    // } 
+    
+   //  if (item[0].includes('i') || item[0].includes('I')) {
+   //     return item[0].replace('1')
+   //  }
+   //  if (item[0].includes('o') || item[0].includes('O')) {
+   //     return item[0].replace('0')
+   //  }
+   //  if (item[0].includes('s') || item[0].includes('S')) {
+   //     return item[0].replace('5')
+   //  } 
+      return item[0].replaceAll('i','1').replaceAll('I','1').replaceAll('o','0').replaceAll('O','0').replaceAll('s','5').replaceAll('S','5')
     })
 
-    return findFirstChar 
+    return findFirstChar.join('') 
   }
   console.log(makePassword("Give me liberty or give me death"))
 
