@@ -32,8 +32,9 @@
 // Write function scale(strng, k, v) k and v will be positive integers. If strng == "" return "".
 
 function scale(strng, k, n) {
-    const doubleCharsHor = strng.split('\n').map((item, index) => item.repeat()) // repeat each char in item
-    return doubleCharsHor
+    const doubleCharsHor = strng.split('\n').map((item, index) => item.split('').map(item => item.repeat(k)).join(''))
+    const doubleCharsVert = doubleCharsHor.map(item => (item + '\n').repeat(n)).join('')
+    return doubleCharsVert
 }
 console.log(scale("abcd\nefgh\nijkl\nmnop", 2, 3))
 
