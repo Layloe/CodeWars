@@ -16,14 +16,22 @@
 
 function getStrings(city){
     let results = {}
-    const toArray = city.toLowerCase().split('')
-    for (currItem of toArray) {
-        if (!results[currItem]) {
-          results[currItem] = ''
-        }
-        results[currItem] += '*'
-    }
+  //    const toArray = city.toLowerCase().split('')
+  // for (currItem of toArray) {
+  //     if (!results[currItem]) {
+  //       results[currItem] = ''
+  //     }
+  //     results[currItem] += '*'
+  // }
 
+  // return results
+    const citySplit = city.toLowerCase().split('')
+    for (item of citySplit) {
+      if (!results[item]) {
+        results[item] = ''
+      }
+        results[item] += '*'
+    }
     return results
   }
   console.log(getStrings("Chicago"))
@@ -34,3 +42,22 @@ function getStrings(city){
     // assert.equal(getStrings("Las Vegas"), "l:*,a:**,s:**,v:*,e:*,g:*");
   // Create a mutable variable that will hold results then variable to split the city. Then use a for of loop with if else to check if there is a duplicate char then push results and finally join. 
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
