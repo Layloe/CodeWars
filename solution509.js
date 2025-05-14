@@ -11,14 +11,14 @@
 
 // "You just wanted my autograph didn't you?"
 
+// const ghostBusters = building => building.includes(' ') ? building.split(' ').join('') : "You just wanted my autograph didn't you?"
 function ghostBusters(building) {
     const ifWhiteSpace = building.split(' ').join('')
     if (building.includes(' ')) {
-        return `${ifWhiteSpace}, Nope, there may still be a ghost in the building. Try again.`
+        return ifWhiteSpace
     } else {
         return "You just wanted my autograph didn't you?"
-    }
-    
+    }   
 }
 console.log(ghostBusters("Factor y"))
 // Input is going to be a string with or without whitespace.
