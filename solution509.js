@@ -12,17 +12,13 @@
 // "You just wanted my autograph didn't you?"
 
 function ghostBusters(building) {
-    const ifWhiteSpace = building.split('').map(item => item.includes(' ') ? item.split(' ').join('') :
-    "You just wanted my autograph didn't you?"
-    )
-    //     if (item.includes(' ')) {
-    //         return building.split(' ').join('') + 'Nope, there may still be a ghost in the building. Try again.'
-    //     } else {
-    //         return "You just wanted my autograph didn't you?", 'Nope, as there were no ghosts in the BusStation you need to return a witty retort.'
-    //     }
-    // })
-
-    return ifWhiteSpace
+    const ifWhiteSpace = building.split(' ').join('')
+    if (building.includes(' ')) {
+        return `${ifWhiteSpace}, Nope, there may still be a ghost in the building. Try again.`
+    } else {
+        return "You just wanted my autograph didn't you?"
+    }
+    
 }
 console.log(ghostBusters("Factor y"))
 // Input is going to be a string with or without whitespace.
