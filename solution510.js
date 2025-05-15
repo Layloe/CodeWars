@@ -13,6 +13,7 @@ const assert = require('assert')
 function nthChar(words){
  const findNth = words.map((item, index) => item.charAt(index))
  return findNth.join('')
+//  const findNth = words => words.map((item, index) => item.charAt(item)).join('')
 }
 console.log(nthChar(['yoda', 'best', 'has']))
 // Input is an array of string that contains random words.
