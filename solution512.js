@@ -19,16 +19,15 @@
 // { vegetarian: 2, standard: 1, vegan: 1 }
 
 function orderFood(list) {
-  let preferedMeal = {}
+  let preferredMeal = {}
   for (item of list) {
-    if (!preferedMeal[item.meal]) {
-        preferedMeal[item.meal] = 1
+    if (!preferredMeal[item.meal]) {
+       preferredMeal[item.meal] = 1
+    } else {
+       preferredMeal[item.meal] += 1
     }
-    // if (preferedMeal[item.meal]) {
-    //     preferedMeal[item.meal] += 1
-    // }
   }
-  return preferedMeal
+  return preferredMeal
 }
 console.log(orderFood([
   { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'C', 
