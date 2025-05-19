@@ -1,1 +1,1 @@
-return toString(results)
+arr

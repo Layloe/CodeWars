@@ -18,6 +18,7 @@ function scrollingText(text){
     let rotations = []
     const map = text.split('').map((item, index) => {
         rotations.push(text.slice(index) + text.slice(0, index))
+   
     })
     return rotations
 }
