@@ -5,12 +5,24 @@
 // "GolDeNSanDyWateRyBeaChSuNN"    ==>  3
 // "gOfIshsunesunFiSh"             ==>  4
 // "cItYTowNcARShoW"               ==>  0
-
 function sumOfABeach(beach) {
-  const toLower = [beach.toLowerCase()].filter(item => item !== 'sand' || item !== 'water' || item !== 'fish' || item !== 'sun')
-  return toLower
+
+  const WORDS = ['water', 'sand', 'fish', 'sun']
+  
+  let str = beach.toLowerCase()
+  let count = 0;
+  
+  WORDS.forEach((word) => {
+    
+    while (str.includes(word)) {
+       count += 1
+       str = str.replace(word, '')
+    }
+    
+  }) 
+  return count;
 }
-console.log(sumOfABeach("sunsunsunsun"))
+console.log(sumOfABeach("gOfIshsunesunFiSh"))
 // Input is a string of random letters.
 // OUtput is a number.
 // Example above.
