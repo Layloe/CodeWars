@@ -12,9 +12,8 @@
 
 function eliminateUnsetBits(number) {
     const  onesOnly = number.split('').filter(item => item == '1').join('')
-    // return onesOnly
+
     return parseInt(onesOnly, 2)
-//   Number.toString(2)
 }
 console.log(eliminateUnsetBits("11010101010101"))
 // Input is a string of ones and zeros.
@@ -23,4 +22,4 @@ console.log(eliminateUnsetBits("11010101010101"))
     // assert.strictEqual(eliminateUnsetBits("111"), 7)
     // assert.strictEqual(eliminateUnsetBits("1000000"), 1)
     // assert.strictEqual(eliminateUnsetBits("000"), 0)
-// 
+// Split filter item =='1' then join. Use method parseInt with 2 as the second parameter.
