@@ -50,4 +50,4 @@ console.log(scrabbleScore(' a'))
 // Input is a string that contains words or letters.
 // Output is a number that equals a sum.
 // Example is above.
-// Find a list then split uppercase then map to get value from list[index] and finally reduce/
+// Find a list then split uppercase then map to get value from list[index] and finally reduce. Edge case if white space == 0
