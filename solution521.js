@@ -9,8 +9,12 @@ function alphabetic(s) {
   const test = s.split('').map((item, index, arr) => {
 
     if (alphabet[index] ) {
+      
+        if (alphabet.indexOf(item) > alphabet.indexOf(item) + 1) {
+          return false
+        } 
         console.log(alphabet[index])
-        return item
+        // return item
     }
     
    
