@@ -4,25 +4,23 @@
 // "kata" -> false ('a' comes after 'k')
 // "ant" -> true (all characters are in alphabetical order)
 
+// const alphabetic = s => s === s.split('').sort().join('')
+
 function alphabetic(s) {
   const alphabet = "abcdefghijklmnopqrstuvwxyz"
-  const test = s.split('').map((item, index, arr) => {
+  const test = s.split('').slice(0, -1).map((item, index, arr) => {
 
-    if (alphabet[index] ) {
-      
-        if (alphabet.indexOf(item) > alphabet.indexOf(item) + 1) {
+  if (alphabet.indexOf(item) > alphabet.indexOf(s[index + 1])) {
           return false
-        } 
-        console.log(alphabet[index])
-        // return item
-    }
-    
+        } else {
+         return true
+        }
    
   })
 
-  return test
+  return !test.includes(false)
 }
-console.log(alphabetic('asdf'))
+console.log(alphabetic('door'))
 // Input is a string of letters or numbers.
 // Output is a boolean
 // 
