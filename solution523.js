@@ -9,14 +9,14 @@
 // All inputs will be arrays of numbers. All character codes are valid lower case letters. The input array will not be empty.
 
 function numObj(s){
-    // let objArr = []
-    // for (item of s ) {
-    //     let obj = {}
-    //     obj[item] = String.fromCharCode(item)
-    //     objArr.push(obj)  
-    // }
-    // return objArr
-    return s.map(item => ({[item] : String.fromCharCode(item)}))
+    let objArr = []
+    for (item of s ) {
+        let obj = {}
+        obj[item] = String.fromCharCode(item)
+        objArr.push(obj)  
+    }
+    return objArr
+    // return s.map(item => ({[item] : String.fromCharCode(item)}))
 }
 console.log(numObj([118,117,120]))
 // Input is an array of numbers.
