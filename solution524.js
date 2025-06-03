@@ -9,12 +9,18 @@
 // Names in the full name are separated by exactly one space (' ' ) ; without leading or trailing spaces. Names will always be lowercase, except optionally their first letter.
 
 function initials(n){
-    const nameArr = n.split(' ')
-    const firstName = nameArr[0].toUpperCase().slice(0, 1) + '.'
-    const middleName = nameArr[1].toUpperCase().slice(0, 1) + '.'
-    const lastName = nameArr.at(-1).slice(0, 1).toUpperCase() + nameArr.at(-1).slice(1).toLowerCase()
-    //! pick up last name not grabbing last index
-    return nameArr.length == 3 ? `${firstName}${middleName}${lastName}` : `${firstName}${lastName}`
+    const arr1 = n.split(' ')
+    const nameArr = arr1.map((item, index, arr) => {
+        index !== arr1.length - 1 ? `${item.charAt(0).toUpperCase()}.`
+        : `${item.charAt(0).toUpperCase() + item.slice(1)}`
+        
+    }).join('')
+    // const firstName = nameArr.at(0).toUpperCase().slice(0, 1) + '.'
+    // const middleName = nameArr[1].toUpperCase().slice(0, 1) + '.'
+    // const lastName = nameArr.at(-1).slice(0, 1).toUpperCase() + nameArr.at(-1).slice(1).toLowerCase()
+
+    return nameArr
+    // .length == 3 ? `${firstName}${middleName}${lastName}` : `${firstName}${lastName}`
 }
 console.log(initials('code wars'))
 // Input is going to be a string of a name containing up to three items.
