@@ -12,7 +12,7 @@ function initials(n){
     const nameArr = n.split(' ')
     const firstName = nameArr[0].toUpperCase().slice(0, 1) + '.'
     const middleName = nameArr[1].toUpperCase().slice(0, 1) + '.'
-    const lastName = nameArr[-1].slice(0, 1).toUpperCase() + nameArr[2].slice(1).toLowerCase()
+    const lastName = nameArr.at(-1).slice(0, 1).toUpperCase() + nameArr.at(-1).slice(1).toLowerCase()
     //! pick up last name not grabbing last index
     return nameArr.length == 3 ? `${firstName}${middleName}${lastName}` : `${firstName}${lastName}`
 }
