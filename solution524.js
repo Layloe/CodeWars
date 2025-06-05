@@ -12,8 +12,7 @@ function initials(n){
     const arr1 = n.split(' ')
     const nameArr = arr1.map((item, index, arr) => {
         index !== arr1.length - 1 ? `${item.charAt(0).toUpperCase()}.`
-        : `${item.charAt(0).toUpperCase() + item.slice(1)}`
-        
+        : `${item.charAt(0).toUpperCase() + item.slice(1)}`  
     }).join('')
     // const firstName = nameArr.at(0).toUpperCase().slice(0, 1) + '.'
     // const middleName = nameArr[1].toUpperCase().slice(0, 1) + '.'
