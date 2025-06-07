@@ -20,24 +20,30 @@
 // Input will always be a string.
 // Input will always have the first letter capitalised and the rest lowercase (e.g. Sam).
 // The input can be modified
+const assert = require('assert')
 
 function nicknameGenerator(name){
-    const vowels ='aeiou'
-    const nickGen = vowels.split('').map((item, index) => {
-         console.log(name)
-         if (vowels[index] === name[2] ) {
-           return item.slice(0, 3)
-        } 
-    })
-    return name.slice(0, 3)
+    if (name.length > 3) {
+        return name.slice(0, 3 + 'aeiou'.includes(name[2]))
+    } else {
+        return 'Error: Name too short'
+    }
+    // const vowels ='aeiou'
+    // const nickGen = vowels.split('').map((item, index) => {
+    //      console.log(name)
+    //      if (vowels[index] === name[2]) {
+    //        return vowels.slice(0, 4)
+    //     } 
+    // })
+    // return name.slice(0, 3)
 }
 console.log(nicknameGenerator("Jeannie"))
 // Input is a string of a name/
 // Output is a three to four char string or a err message.
-//   Test.assertEquals(nicknameGenerator("Jimmy"), "Jim");
-//   Test.assertEquals(nicknameGenerator("Samantha"), "Sam");
-//   Test.assertEquals(nicknameGenerator("Sam"), "Error: Name too short");
-//   Test.assertEquals(nicknameGenerator("Kayne"), "Kay", "'y' is not a vowel");
-//   Test.assertEquals(nicknameGenerator("Melissa"), "Mel");
-//   Test.assertEquals(nicknameGenerator("James"), "Jam");
+  assert.assertEquals(nicknameGenerator("Jimmy"), "Jim");
+  assert.assertEquals(nicknameGenerator("Samantha"), "Sam");
+  assert.assertEquals(nicknameGenerator("Sam"), "Error: Name too short");
+  assert.assertEquals(nicknameGenerator("Kayne"), "Kay", "'y' is not a vowel");
+  assert.assertEquals(nicknameGenerator("Melissa"), "Mel");
+  assert.assertEquals(nicknameGenerator("James"), "Jam");
 // Split and map if else for name length message. If index three contains vowel slice 3 else slice 2
