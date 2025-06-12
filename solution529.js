@@ -12,11 +12,13 @@ function heavyMetalUmlauts(boringText) {
     'I': 'Ï',
     'O': 'Ö',
     'U': 'Ü',
+    'Y': 'Ÿ',
     'a': 'ä',
     'e': 'ë',
     'i': 'ï',
     'o': 'ö',
-    'u': 'ü'
+    'u': 'ü',
+    'y': 'ÿ'
 }
     return boringText.split('').map(item => `AEIOUYaeiouy`.includes(item) ? dictionary[item] : item).join('')
 }
