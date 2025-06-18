@@ -7,20 +7,10 @@
 // Write a function, bucketOf(str), that takes a string and determines what will be dumped on your head. If you haven't said anything you shouldn't have, the bucket should be filled with "air". The words should be tested regardless of case.
 
 function bucketOf(str) {
-    const containsStr = str.toLowerCase().split(' ').filter(item =>!'!?\''.includes(item))
-    // .filter(item => {
-    //     item == 'is'
-    //     // if (["water", "wet", "wash"].includes(item)) {
-    //     //     return 'water'
-    //     // }
-    //     // if ('slime'.includes(item)) {
-    //     //     return 'slime'
-    //     // } else {
-    //     //     return 'air'
-    //     // }
-    // })
-    // console.log(containsStr)
-    return containsStr.filter(item => 'water' == item)
+    
+    const containsStr = str.toLowerCase().split('').filter(item => '!?\''.includes(item))
+
+    return containsStr.filter(item => !'water' == item)
 //   "water", "wet", "wash"
 //   "slime"
 //   "air"
