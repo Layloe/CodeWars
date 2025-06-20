@@ -22,4 +22,4 @@ console.log(generate(16))
 //   Test.assertEquals(generate(16).length, 16);
 //   Test.assertEquals(generate(32).length, 32);
 //   Test.assertEquals(generate(64).length, 64);
-// Google how to generate random ones and zeros. 
+// Google how to generate random ones and zeros. Then create a var holding empty string. Use a for loop to add random methods.
