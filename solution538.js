@@ -26,14 +26,18 @@
 
 function isPalindrome(s) {
     const results = []
-    const cleanStr = s.split('').filter(item => {
-       item == /^[a-zA-Z0-9]+$/
-            
+    const cleanStr = s.toLowerCase().split('').filter(item => 'abcdefghijklmnopqrstuvwxyz'.includes(item))
+    console.log(cleanStr)
+    for (item of s) {
+        if (results[item]) {
+            results.push(item)
+        } else {
+            results[item] 
         }
-    )
-    return cleanStr
+    }
+    return results
 }
-console.log(isPalindrome("Was it a car or a cat I saw?"))
+console.log(isPalindrome("tab a cat"))
 // Input is a string that is or isn't a palindrome.
 // Output is a boolean.
 // Example above.
