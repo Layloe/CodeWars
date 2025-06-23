@@ -30,9 +30,9 @@ function isPalindrome(s) {
     console.log(cleanStr)
     for (item of s) {
         if (results[item]) {
-            results.push(item)
+            results[item]
         } else {
-            results[item] 
+            results[item] = 1
         }
     }
     return results

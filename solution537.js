@@ -15,13 +15,14 @@
 // Output: false
 
 function isAnagram(s, t) {
+
     console.log([...t].sort())
-    // let results = []
-    // for (item of s) {
-    //     if (item[t]) {
-    //         item[t]
-    //     }
-    // }
-    return [...s].sort().includes([...t].sort())
+    let results = []
+    for (item of s) {
+        if (item[t]) {
+            item[t]
+        }
+    }
+    return results
 }
 console.log(isAnagram('racecar', 'carrace'))

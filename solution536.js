@@ -14,16 +14,16 @@
 // Output: false
 
 function dup(arr) {
-    // const results = []
-    // for (item of arr) {
-    //     if (results[item]) {
-    //         results[item] 
-    //     } else {
-    //         results[item] 
-    //     }
-    // }
-    // return results
-    return new Set(arr).length < arr.length
+    let results = []
+    for (item of arr) {
+        if (results[item]) {
+            results[item] 
+        } else {
+            results[item] 
+        }
+    }
+    return results
+    
 }
 console.log(dup([1, 2, 3, 3]))
 // Input is an array of numbers.
