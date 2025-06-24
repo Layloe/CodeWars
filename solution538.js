@@ -25,19 +25,19 @@
 // s is made up of only printable ASCII characters.
 
 function isPalindrome(s) {
-    const results = []
-    const cleanStr = s.toLowerCase().split('').filter(item => 'abcdefghijklmnopqrstuvwxyz'.includes(item))
-    console.log(cleanStr)
-    for (item of s) {
-        if (results[item]) {
-            results[item]
-        } else {
-            results[item] = 1
-        }
-    }
-    return results
+    const results = 0
+    const cleanStr = s.toLowerCase().split('').reverse().join('')
+    // console.log(cleanStr)
+    // for (item of s) {
+    //     if (results[item]) {
+    //         results[item]
+    //     } else {
+    //         results[item] = 1
+    //     }
+    // }
+    return s == cleanStr
 }
-console.log(isPalindrome("tab a cat"))
+console.log(isPalindrome("racecar"))
 // Input is a string that is or isn't a palindrome.
 // Output is a boolean.
 // Example above.
