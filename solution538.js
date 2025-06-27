@@ -25,8 +25,13 @@
 // s is made up of only printable ASCII characters.
 
 function isPalindrome(s) {
-    const results = 0
-    const cleanStr = s.toLowerCase().split('').reverse().join('')
+    let results = ''
+    const cleanStr = s.toLowerCase().split('').filter(item => '1234567890abcdefghijklmnopqrstuvwxyz'.includes(item))
+    for (item of s) {
+        if (this.cleanStr)
+    }
+    // const cleanStr = s.toLowerCase().split('').reverse().join('')
+    // return s == cleanStr
     // console.log(cleanStr)
     // for (item of s) {
     //     if (results[item]) {
@@ -35,7 +40,7 @@ function isPalindrome(s) {
     //         results[item] = 1
     //     }
     // }
-    return s == cleanStr
+    
 }
 console.log(isPalindrome("racecar"))
 // Input is a string that is or isn't a palindrome.
