@@ -18,6 +18,11 @@
 
 function findMissingNumber(sequence){
   const sortSeq = sequence.split(' ').sort()
+  const nums = '1234567890' 
+  const testing = sortSeq.map((item, index) => {
+    if (sequence[index] === sequence.length  )
+  })
+
   return sortSeq
 
 }
