@@ -9,12 +9,13 @@
 //         bri    first half (lower-cased)  
 //            AN second half (upper-cased) 
 const assert = require('assert') 
+
 function sillycase(silly) {
     const len = Math.round((silly.length / 2))
 
   return silly.slice(0, len).toLowerCase() + silly.slice(len).toUpperCase()
 }
-console.log(sillycase('brian'))
+console.log(sillycase('codewars'))
 // Input is a string.
 // Output is a string with the first half lowercased and the last half uppercased.
     assert.strictEqual(sillycase('foobar'), "fooBAR");
