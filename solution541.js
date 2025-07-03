@@ -32,4 +32,4 @@ console.log(hiddenWord(637))
     assert.strictEqual(hiddenWord(7415), "debt");
     assert.strictEqual(hiddenWord(49632), "email");
     assert.strictEqual(hiddenWord(942547), "melted");
-// Split and map and use method Object values to find string then join.
+//Change object to strings and swap key value positions then split, map, and  then join.
