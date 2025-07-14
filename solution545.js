@@ -22,4 +22,4 @@ console.log(remove("!Hi!!!", "Hi"))
 // Input is going to be a string with exclamation marks.
 // Output is going to be a string with all exclamation marks removed at the end of the string.
 // Example above.
-// Make a variable that will split and map string. Then use endsWith to slice. 
+// Make a variable that will split and map string. Then use endsWith to slice. while loop it was..
