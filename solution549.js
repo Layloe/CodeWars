@@ -19,4 +19,4 @@ console.log(createArrayOfTiers(421))
 // Input is a number.
 // Output is an array of strings containing the number cut off at each digit.
 // Example above.
-// Split map to push index to empty array.
+// Split map to push index + 1 to empty array.
