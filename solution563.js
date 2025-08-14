@@ -11,10 +11,11 @@ function spot(s1,s2) {
     let results = []
 
     for (item of s1) {
-        if (!s2.includes(item)) {
-            results.push((s1.indexOf(item)))
+          if (!s2.includes(item)) {
+          results.push((s1.indexOf(item)))
         }
     }
+ 
     return results
 }
 console.log(spot('abcdefg', 'abcqetg'))
