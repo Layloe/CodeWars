@@ -20,7 +20,8 @@
 // Explanation: Only one meeting occurs.
 
 function countSalutes(hallway) {
-  
+  const cleanStr = hallway.split('-').join('')
+  return cleanStr
 }
 console.log(countSalutes('<---->---<---<-->'))
 // Input is a string.
@@ -30,4 +31,4 @@ console.log(countSalutes('<---->---<---<-->'))
     // act('>>>>>>>>>>>>>>>>>>>>>----<->', 42);
     // act('<<----<>---<', 2);
     // act('>', 0);
-// Split and map use if else to do the // !time
+// Split and map use if else to do the 
