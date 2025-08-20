@@ -18,15 +18,16 @@
 
 function uncensor(infected, discovered) {
   let results = []
+  let di = 0
   const parseStr = infected.split('').map((item, index) => {
     if (item == '*' || item == ' ') {
-        results.push(discovered[index])
+        results.push(discovered[di++])
     } else {
         results.push(item)
     }
   })
 
-  return results
+  return results.join('')
 }
 console.log(uncensor('*h*s *s v*ry *tr*ng*', 'Tiiesae'))
 // Input has two parameters both are strings.
