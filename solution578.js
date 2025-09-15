@@ -1,0 +1,27 @@
+// In this kata you must take an input string, reverse the order of the words, and reverse the order of the letters within the words.
+
+// But, as a bonus, every test input will end with a punctuation mark (! ? .) and the output should be returned with the mark at the end.
+
+// A few examples should help clarify:
+
+// esrever("hello world.") == "dlrow olleh."
+
+// esrever("Much l33t?") == "t33l hcuM?"
+
+// esrever("tacocat!") == "tacocat!"
+// Quick Note: A string will always be passed in (though it may be empty) so no need for error-checking other types.
+
+function esrever(str) {
+    const reverseWords = str.split(' ').map(item => str[item]) //finish map at item
+
+    return str.split(' ').reverse().join(' ')
+}
+console.log(esreve('an Easy one?'))
+// Input is a string.
+// Output is a reversed string with the words also reversed.
+    //   assert.strictEqual(esrever('an Easy one?'), 'eno ysaE na?')
+    //   assert.strictEqual(esrever('a small lOan OF 1,000,000 $!'), '$ 000,000,1 FO naOl llams a!')
+    //   assert.strictEqual(esrever('<?> &!.".'), '".!& >?<.')
+    //   assert.strictEqual(esrever('b3tTer p4ss thIS 0ne.'), 'en0 SIht ss4p reTt3b.')
+    //   assert.strictEqual(esrever(''), '', "Empty string!" )
+// Split map and reverse then join.
