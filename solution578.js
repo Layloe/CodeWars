@@ -10,18 +10,18 @@
 
 // esrever("tacocat!") == "tacocat!"
 // Quick Note: A string will always be passed in (though it may be empty) so no need for error-checking other types.
+const assert = require('assert')
 
 function esrever(str) {
-    const reverseWords = str.split(' ').map(item => str[item]) //finish map at item
 
-    return str.split(' ').reverse().join(' ')
+    return str.slice(0,-1).split('').reverse().join('') + str.slice(-1)
 }
-console.log(esreve('an Easy one?'))
+console.log(esrever('an Easy one?'))
 // Input is a string.
 // Output is a reversed string with the words also reversed.
-    //   assert.strictEqual(esrever('an Easy one?'), 'eno ysaE na?')
-    //   assert.strictEqual(esrever('a small lOan OF 1,000,000 $!'), '$ 000,000,1 FO naOl llams a!')
-    //   assert.strictEqual(esrever('<?> &!.".'), '".!& >?<.')
-    //   assert.strictEqual(esrever('b3tTer p4ss thIS 0ne.'), 'en0 SIht ss4p reTt3b.')
-    //   assert.strictEqual(esrever(''), '', "Empty string!" )
-// Split map and reverse then join.
+      assert.strictEqual(esrever('an Easy one?'), 'eno ysaE na?')
+      assert.strictEqual(esrever('a small lOan OF 1,000,000 $!'), '$ 000,000,1 FO naOl llams a!')
+      assert.strictEqual(esrever('<?> &!.".'), '".!& >?<.')
+      assert.strictEqual(esrever('b3tTer p4ss thIS 0ne.'), 'en0 SIht ss4p reTt3b.')
+      assert.strictEqual(esrever(''), '', "Empty string!" )
+// Slice last char then split reverse and join and concat str slice -1
