@@ -12,8 +12,9 @@
 // "rrrrr rrrrr"  -->  16    # 10 plates, 2 free
 
 function totalBill(str) {
+    const mafs = str.split(' ').join('').length * 2
 
-  return str.split(' ').join('').length * 2
+  return mafs / 5 > 0 ? //! if divided by five is greater then 0 then * number by 2 and subtract from sum.
 }
 console.log(totalBill('rr rrr'))
 // Input is a string of the letter 'r'.
