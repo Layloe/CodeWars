@@ -1,2 +1,1 @@
-
-  return results.join('') 
+item[0]

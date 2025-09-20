@@ -13,10 +13,15 @@
 
 function totalBill(str) {
     const mafs = str.split(' ').join('').length * 2
+    const difference = mafs % 5 * 2
+    console.log(difference)
+  if (mafs / 5 > 0) {
+    return mafs 
+  }
 
-  return mafs / 5 > 0 ? //! if divided by five is greater then 0 then * number by 2 and subtract from sum.
+  return mafs  //! if divided by five is greater then 0 then * number by 2 and subtract from sum.
 }
-console.log(totalBill('rr rrr'))
+console.log(totalBill('rr rrr rrr rrr'))
 // Input is a string of the letter 'r'.
 // Output is a number.
     // doTest('rr', 4);
