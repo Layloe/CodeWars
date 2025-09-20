@@ -7,10 +7,10 @@
 // For an input String: "hey You, Sort me Already!" the function should return: "You, Sort Already! hey me"
 
 function capitalsFirst(str){
-
-  let results = []
+  let resultsUpper = []
+  let resultsLower = []
   const abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  const upperFirst = str.split(' ').map(item =>  abc[(item[0])] ? results.push(item) : '')
+  const upperFirst = str.split(' ').map(item =>  abc[(item[0])] ? resultsUpper.push(item) : resultsLower.push(item))
 
   return results
 }

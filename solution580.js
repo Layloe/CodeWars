@@ -19,7 +19,7 @@ function totalBill(str) {
     return mafs 
   }
 
-  return mafs  //! if divided by five is greater then 0 then * number by 2 and subtract from sum.
+  return mafs  
 }
 console.log(totalBill('rr rrr rrr rrr'))
 // Input is a string of the letter 'r'.
