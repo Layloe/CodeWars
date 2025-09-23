@@ -7,17 +7,30 @@
 // If the input is an empty list, return an empty list; otherwise the input will always be a valid list of one or more grades.
 
 // Please do vote, rank, and provide any feedback on the kata.
+const assert = require('assert')
 
 function sortGrades(arr){
- //! Time return to psuedocode and map or hash based on index or use a key.
-  return arr.sort()
+   const grades = {
+        'VB': 0, 'V0': 1, 'V0+': 2, 'V1': 3, 'V2': 4, 'V3': 5, 'V4': 6, 'V5': 7, 'V6': 8, 'V7': 9, 'V8': 10, 'V9': 11, 'V10': 12, 'V11': 13, 'V12': 14, 'V13': 15, 'V14': 16, 'V15': 17, 'V16': 18, 'V17': 19
+    }
+
+    return arr.sort((a, b) => (grades[a]) - (grades[b]));
+  // let results = []
+  // const sortStr = arr
+  // .map(item => item.slice(1))
+  // .sort((a,b) => b - a)
+  // .forEach(element => {
+  //  results.push(('V' + element))
+  // });
+ 
+  // return results
 }
-console.log(sortGrades(["V7", "V12", "V1"]))
-// Input is a string.
-// Output is a sorted string.
-    // doTest(["V7", "V12", "V1"], ["V1", "V7", "V12"]);
-    // doTest(["V13", "V14", "VB", "V0"], ["VB", "V0", "V13", "V14"]);
-    // doTest(["V0+", "V0", "V16", "V2", "VB", "V6"], ["VB", "V0", "V0+", "V2", "V6", "V16"]);
-    // doTest(["VB", "VB"], ["VB", "VB"]);
-    // doTest(["V7"], ["V7"]);
-// Make a variable that contains key string. Then 
+console.log(sortGrades(["V0+", "V0", "V16", "V2", "VB", "V6"]))
+// Input is a array of strings.
+// Output is an array of sorted strings.
+    assert.strictEqual(["V7", "V12", "V1"], ["V1", "V7", "V12"]);
+    assert.strictEqual(["V13", "V14", "VB", "V0"], ["VB", "V0", "V13", "V14"]);
+    assert.strictEqual(["V0+", "V0", "V16", "V2", "VB", "V6"], ["VB", "V0", "V0+", "V2", "V6", "V16"]);
+    assert.strictEqual(["VB", "VB"], ["VB", "VB"]);
+    assert.strictEqual(["V7"], ["V7"]);
+// Make a variable that contains key string. Then slice index zero and sort. Then concat "V". Next time use a key or dictionary.
