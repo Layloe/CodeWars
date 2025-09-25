@@ -15,16 +15,20 @@
 // Return an array of strings --> split the string
 // Each user ID should be written in only lowercase characters
 // Remove leading and trailing whitespaces
+const assert = require('assert')
 
 function getUsersIds(str){
-  const //! follow pseudocode
+
+    return str.split(' ').map(item => str.slice(0, 2) !== 'uid' ? item.toLowerCase().trim().split('#').join('').slice(3) : str
+    )
+    
 }
-console.log(getUsersIds("uid12345"), ["12345"])
+console.log(getUsersIds("abc"))
 // Input is a string containing user Id's.
 // Output is an array of the string with removed whitespace, uppercase, and remove 'uid' at the start if included.
-// Test.assertSimilar(getUsersIds("uid12345"), ["12345"]);
-// Test.assertSimilar(getUsersIds("   uidabc  "), ["abc"]);
-// Test.assertSimilar(getUsersIds("#uidswagger"), ["swagger"]);
-// Test.assertSimilar(getUsersIds("uidone, uidtwo"), ["one", "two"]);
-// Test.assertSimilar(getUsersIds("uidCAPSLOCK"), ["capslock"]);
+// assert.strictEqual(getUsersIds("uid12345"), ["12345"]);
+// assert.strictEqual(getUsersIds("   uidabc  "), ["abc"]);
+// assert.strictEqual(getUsersIds("#uidswagger"), ["swagger"]);
+// assert.strictEqual(getUsersIds("uidone, uidtwo"), ["one", "two"]);
+// assert.strictEqual(getUsersIds("uidCAPSLOCK"), ["capslock"]);
 // Trim to lowercase split and filter out all '#'

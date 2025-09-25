@@ -1,1 +1,1 @@
-item[0]
+cleanStr
