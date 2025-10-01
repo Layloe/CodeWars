@@ -1,1 +1,2 @@
-cleanStr
+
+const assert = require(assert)

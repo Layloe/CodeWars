@@ -8,7 +8,7 @@
 function alphabetic(s) {
   const alphabet = 'abcdefghijklmnopqrstuvwxyz'
   const checkStr = s.split('').sort().map((item, index)=> {
-    console.log(alphabet.index + 1)
+    console.log(alphabet.indexOf(item))
     if (alphabet.indexOf(item) < alphabet.indexOf((item + 1)) ) {
         return true
     }
