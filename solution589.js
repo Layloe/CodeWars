@@ -9,13 +9,15 @@
 // Output: false
 const assert = require('assert')
 
-function solution(str, ending){
-  if (ending === '') {
-    return true
-  }
+const solution = (str, ending) => str.endsWith(ending)
+
+// function solution(str, ending){
+//   if (ending === '') {
+//     return true
+//   }
   
-  return str.split('').slice( - ending.length).join('') === ending
-}
+//   return str.split('').slice( - ending.length).join('') === ending
+// }
 console.log(solution('abcde', 'cde'))
 // Input had two params and both are strings.
 // Output is a boolean that returns true if first param ends with second param.
