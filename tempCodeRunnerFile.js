@@ -1,2 +1,2 @@
 
-const assert = require(assert)
+    const searchVow = word.split('').find((item, index) => {

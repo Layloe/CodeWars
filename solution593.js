@@ -17,20 +17,19 @@
 // All strings are unicode strings.
 // There are no grammatical exceptions in the tests.
 
-function dative(word) {
-    const vowels = 'eéiíöőüű'
-    const searchVow = word.split('').find((item, index) => {
-        console.log(vowels.indexOf(word))
-        if (vowels.indexOf(item)) {
+function dative(word) { 
+    const vowels = ['e', 'é', 'i', 'í', 'ö', 'ő', 'ü', 'ű']
+    const searchVow = word.split('').map((item, index) => {
+        if (vowels.includes(item)) {
             return word + 'nek'
         } else {
             return word + 'nak'
         }
     })
 
-    return searchVow
+    return searchVow.slice(0,1).join('')
 }
-console.log(dative("ablak"))
+console.log(dative("tükör"))
 // Input is a string that will contain vowels and hungarian vowels.
 // Output is a string with 'nek' or 'nak' concatenated to it depending on vowel.
     // [input, expected]
