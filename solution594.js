@@ -19,12 +19,15 @@
 //         doTest([50, 4, 6], "Hi everybody", "No mission today")
 
 function missingWord(nums, str) {
-    let results = ''
-    const noWhiteSpace = str.split(' ').join('').split('').map((item, index) => {
-        const sorted = nums.sort()
-        results.push((str.indexOf(sorted))) 
+    let results = []
+    const sorted = nums.sort()
+    const noWhiteSpace = str.split(' ').join('').split('')
+
+        noWhiteSpace.map((item, index) => {
+        return results.push(noWhiteSpace[sorted[index]])
+        
     })
-    return noWhiteSpace
+    return results.join('').toLowerCase()
 }
 console.log(missingWord([0, 3, 5], "I love you"))
 // Input is has two parameters, one is an array the other a string.
@@ -37,4 +40,4 @@ console.log(missingWord([0, 3, 5], "I love you"))
         // doTest([35, 8, 20], "A song can make or ruin your day if you let it get to you", "mug")
         // doTest([20, 3, 27], "I love eating toasted cheese and tuna", "vet")
         // doTest([50, 4, 6], "Hi everybody", "No mission today")
-// Create a mutable variable that will hold results. 
+// Create a mutable variable that will hold results. Had to free style this challenge.
