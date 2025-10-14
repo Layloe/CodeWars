@@ -14,7 +14,11 @@ function removeRotten(bagOfFruits){
         "melone": "rottenMelone",
         "orange": "rottenOrange"
     }       
-    const results = bagOfFruits.map(fruit => fruit.replace(/rotten/gi, ''))
+    const results = bagOfFruits.map(fruit => {
+        if (fruit.includes('rotten')) {
+            return fruit.replace('rotten', '')
+        }
+    })
     return results.map(fruit => fruit.toLowerCase())
 }
 console.log(removeRotten(['apple','rottenBanana','apple']))
