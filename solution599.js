@@ -7,16 +7,15 @@
 const assert = require('assert')
 
 function solution(value){
-    const mafs = 6 - value.length // Look up pad start to get the math right
 
-    return `Value is ${value.padStart(mafs, '0')}`
+   return 'Value is ' + String(value).padStart(5, '0')
 }
-console.log(solution('1204'))
+console.log(solution(109))
 // Input is a string of a numbers.
 // Output is a string of numbers with the length = 5 padded with 0's
-    // assert.strictEqual(solution(5),"Value is 00005")
-    // assert.strictEqual(solution(1204),"Value is 01204")
-    // assert.strictEqual(solution(109),"Value is 00109")
-    // assert.strictEqual(solution(0),"Value is 00000")
+    assert.strictEqual(solution(5),"Value is 00005")
+    assert.strictEqual(solution(1204),"Value is 01204")
+    assert.strictEqual(solution(109),"Value is 00109")
+    assert.strictEqual(solution(0),"Value is 00000")
 // Create a variable that will do take in the math of the length of the param.
 // Then use that var to pad the argument.
