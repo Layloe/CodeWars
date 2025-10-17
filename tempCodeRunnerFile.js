@@ -1,2 +1,1 @@
-
-    const searchVow = word.split('').find((item, index) => {
+//   return str.includes('plus') ? getSumPlus : getSumMinus
