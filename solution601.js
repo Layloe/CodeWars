@@ -9,7 +9,7 @@
 function calculate(str) {
   const getSumPlus = str.split('plus').join('+')
   const getSumMinus = str.split('minus').join('-')
-  console.log(Number(getSumPlus))
+  console.log(getSumPlus)
 //   if (str.includes('plus')) {
 //     return getSumMinus
 //   }
@@ -17,7 +17,7 @@ function calculate(str) {
 //     return getSumMinus
 //   }
 
-  return str.incudes('+') ? getSumPlus : getSumMinus // Finish here with number constructor and parseInt
+  return  parseInt(getSumPlus)// Finish here with number constructor and parseInt
 }
 console.log(calculate("1plus2plus3plus4"))
 // Input is a string.
