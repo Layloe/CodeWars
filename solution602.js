@@ -13,12 +13,12 @@ var list1 = [
 ];
 
 function getFirstPython(list) {
-    const findDev = list.map(item => item.language === 'Python' ? `${item.firstName}, ${item.language}` :null )
-    return findDev// Single out index of where python is found
+    const findDev = list.map(item => item.language === 'Python' ? `${item.firstName}, ${item.country}` : 'There will be no Python developers')
 
+    return findDev.slice(1, -1).join('')
 }
 console.log(getFirstPython(list1))
 // Input is an array of objects.
 // Output is one of two strings the results or 'There will be no Python developers'.
 // Example is above.
-// Use map and key value pairs and if else to 
+// Use map and key value pairs and if else to and `` to insert value.
