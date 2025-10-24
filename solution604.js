@@ -13,8 +13,13 @@ var list1 = [
 ];
 
 function greetDevelopers(list) {
-  // thank you for checking out my kata :)
+  const addGreet = list.forEach(obj => {
+    obj.greeting = `Hi ${obj.firstName}, what do you like the most about ${obj.language}?` 
+    return list
+  })
+  return addGreet
 }
 console.log(greetDevelopers(list1))
 // Input is an array of objects.
 // Output is the same array but with the property of: greeting: `Hi < firstName here >, what do you like the most about < language here >?`
+// Use for each to loop through array and use dot notation with template literals.
