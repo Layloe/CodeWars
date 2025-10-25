@@ -13,13 +13,24 @@ var list1 = [
 ];
 
 function greetDevelopers(list) {
-  const addGreet = list.forEach(obj => {
-    obj.greeting = `Hi ${obj.firstName}, what do you like the most about ${obj.language}?` 
+    list.forEach(obj => {
+      obj.greeting = `Hi ${obj.firstName}, what do you like the most about ${obj.language}?`
     return list
   })
-  return addGreet
+  return list
 }
-console.log(greetDevelopers(list1))
+// console.log(greetDevelopers(list1))
 // Input is an array of objects.
 // Output is the same array but with the property of: greeting: `Hi < firstName here >, what do you like the most about < language here >?`
 // Use for each to loop through array and use dot notation with template literals.
+
+// Add a new property `isActive: true` to every object in the array
+const users = [{ name: "A" }, { name: "B" }];
+// -> [{ name: "A", isActive: true }, { name: "B", isActive: true }]
+function active(newObj) {
+  newObj.forEach(obj => {
+    obj.isActive = true
+    return users
+  });
+}
+console.log(users)
