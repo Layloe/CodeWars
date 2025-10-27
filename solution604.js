@@ -25,12 +25,24 @@ function greetDevelopers(list) {
 // Use for each to loop through array and use dot notation with template literals.
 
 // Add a new property `isActive: true` to every object in the array
-const users = [{ name: "A" }, { name: "B" }];
+
+// const users = [{ name: "A" }, { name: "B" }];
 // -> [{ name: "A", isActive: true }, { name: "B", isActive: true }]
-function active(newObj) {
-  newObj.forEach(obj => {
+function active(newObj) { 
+    newObj.forEach(obj => {
     obj.isActive = true
-    return users
   });
+
+  return newObj
 }
-console.log(users)
+// console.log(active(users))
+
+// Capitalize the first letter of each user’s name
+const users = [{ name: "sofia" }, { name: "lukas" }];
+// -> [{ name: "Sofia" }, { name: "Lukas" }]
+
+function capitalizeNames(list) {
+  list.forEach(item => item.name[0].toUpperCase() + item.name.slice(0,1))
+  return list
+}
+console.log(capitalizeNames(users))
