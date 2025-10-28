@@ -42,7 +42,13 @@ const users = [{ name: "sofia" }, { name: "lukas" }];
 // -> [{ name: "Sofia" }, { name: "Lukas" }]
 
 function capitalizeNames(list) {
-  list.forEach(item => item.name[0].toUpperCase() + item.name.slice(0,1))
+  list.forEach(obj =>
+    obj.name = obj.name[0].toUpperCase() + obj.name.slice(1) 
+  )
   return list
 }
 console.log(capitalizeNames(users))
+
+// Add a greeting property: "Hello, <name>!"
+const people = [{ name: "Eduardo" }, { name: "Jamie" }];
+
