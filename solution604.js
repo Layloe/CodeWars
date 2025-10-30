@@ -52,3 +52,11 @@ console.log(capitalizeNames(users))
 // Add a greeting property: "Hello, <name>!"
 const people = [{ name: "Eduardo" }, { name: "Jamie" }];
 
+function greet(list) {
+  list.forEach(obj =>{
+    obj.greet = `Hello, ${obj.name}`
+  })
+  return list
+}
+console.log(greet(people))
+
