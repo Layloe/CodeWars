@@ -60,3 +60,4 @@ function greet(list) {
 }
 console.log(greet(people))
 
+
