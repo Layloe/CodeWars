@@ -14,17 +14,11 @@ var list1 = [
 // your function should return Victoria, Puerto Rico.
 
 function getFirstPython(list) {
-    const pythonDev = list.find(dev => {
-      return  dev.language === 'Python'
-    //   if (dev.language === 'Python') {
-    //     return  `${dev.firstName}${dev.country}` 
-    //   } else {
-    //     return `There will be no Python developers`
-    //   }
-
-    })
-    return pythonDev.length < 0 ? `${pythonDev.firstName}, ${pythonDev.country}` :
-    'There will be no Python developers'
+    const pythonDev = list.find(dev => dev.language === 'Python')
+    
+    // :
+    // 'There will be no Python developers'
+    return pythonDev ? `${pythonDev.firstName}, ${pythonDev.country}` :'There will be no Python developers'
 }
 console.log(getFirstPython(list1))
 // Input is an array of objects.
