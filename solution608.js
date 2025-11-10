@@ -6,7 +6,7 @@ function countLetters(str) {
     let results = {}
     for ( item of str) {
         if (results[item]) {
-            results[item]
+            results[item]++
         } else {
             results[item] = 1
         }

@@ -15,9 +15,7 @@ var list1 = [
 
 function getFirstPython(list) {
     const pythonDev = list.find(dev => dev.language === 'Python')
-    
-    // :
-    // 'There will be no Python developers'
+
     return pythonDev ? `${pythonDev.firstName}, ${pythonDev.country}` :'There will be no Python developers'
 }
 console.log(getFirstPython(list1))
