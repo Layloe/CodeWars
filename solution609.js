@@ -21,13 +21,15 @@ var list1 = [
  function countLanguages(list) {
     let results = {}
     for (lang of list) {
-        if (results[lang]) {
-            results[lang]++
+        let language = lang.language
+        if (results[language]) {
+            results[language]++
         } else {
-            results[lang] = 1
+            results[language] = 1
         }
-        return results
     }
+        return results
+    
  }
  console.log(countLanguages(list1))
  // Input is a array of objects.
