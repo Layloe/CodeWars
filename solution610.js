@@ -23,18 +23,18 @@ function isSameLanguage(list) {
   let results = {}
   for (item of list) {
     let lang = item.language
-    
     if (results[lang]) {
       results[lang]++
     } else {
       results[lang] = 1
     }
   }
-  
-  return results
+  console.log(Object.values(results))
+  console.log(list.length)
+  return Object.values(results) === list.length
 }
 console.log(isSameLanguage(list1))
 // Input is an array of objects.
 // Output is a boolean that will return true if all dev have the same language.
 // Example above.
-// Loop through objects and check if all languages. Use every to return boolean.
+// Loop through objects and check if all languages. Use every to return boolean or we can hashmap.
