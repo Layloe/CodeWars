@@ -23,6 +23,7 @@ var list1 = [
 
 function findSenior(dev) {
     const oldestDev = Math.max(...dev.map(item => item.age))
+    
     return dev.filter(ages => ages.age == oldestDev)
 }
 console.log(findSenior(list1))
