@@ -20,21 +20,22 @@ var list1 = [
 // The input array and continent names will always be valid and formatted as in the list above for example 'Africa' will always start with upper-case 'A'.
 function allContinents(list) {
     let matches = {}
-    const dictionary = {
-        continent: 'Africa',
-        continent: 'Americas',
-        continent: 'Asia',
-        continent: 'Europe',
-        continent: 'Oceania'
+    const dictionary = [
+         'Africa',
+         'Americas',
+         'Asia',
+         'Europe',
+         'Oceania'
+    ]
+  //  return list.filter(item => item.continent)
+    for (dev of list) {
+      matches[dev.continent] = true
     }
-   return list.filter(item => item.continent)
-    // for (dev of list) {
-    //     if (matches[])
-    // }
 
+    return dictionary.every(continent => matches[continent])
 }
 console.log(allContinents(list1))
 // Input is an array of objects.
 // Output is a boolean depending on matches from lists.
 // Example above.
-// Create a dictionary that includes geographical zones. Then loop through to check against dictionary.
+// Create a dictionary that includes geographical zones.Create a hashmap to find all  country's. Then loop through to check against dictionary.
