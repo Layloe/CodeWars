@@ -19,14 +19,13 @@ var list1 = [
 // The input array will always be valid and formatted as in the example above.
 
 function isSameLanguage(list) {
-    let results = {}
-    // const getLang = list.map(item => results.push(item.language))
-    for (lang of list) {
-        results[lang.language] = true
-    }
-    console.log(results)
+  let results = {}
 
-  return results.every(lang => lang[language])
+  for (lang of list) {
+    results[lang.language] = true
+  }
+
+  return Object.keys(results).length === 1
 }
 console.log(isSameLanguage(list1))
 // Input is and array of objects.
