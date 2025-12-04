@@ -30,15 +30,16 @@ function addUsername(list) {
   const findData = list.map(item => {
     results.push({
       firstName: item.firstName,
-      lastName: item.lastName,
-      age: item.age
+      lastName: item.lastName.slice(0,1),
+      age: (2025 - item.age)
     })
+    
   })
   
-  return results
+  return results.map(item => Object.values(item).join('').toLowerCase(''))
 }
 console.log(addUsername(list1))
 // Input is an array of objects. 
 // Output is first name in lowercase, first letter of last name in lowercase and birth year concatenating.
 // Example above.
-// Create a var to push results to. Then map through array to push first name and first letter of last name. Then decide if I want to do the math of birth year in push or post in return. //! Extract values of results and lowercase to one string for each object
+// Create a var to push results to. Then map through array to push first name and first letter of last name. Then decide if I want to do the math of birth year in push or post in return. //! Look up Date in mdn to get year
