@@ -31,7 +31,7 @@ function addUsername(list) {
     results.push({
       firstName: item.firstName,
       lastName: item.lastName.slice(0,1),
-      age: (2025 - item.age)
+      age: (new Date().getFullYear() - item.age)
     })
     
   })
