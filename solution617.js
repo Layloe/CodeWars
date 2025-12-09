@@ -42,4 +42,4 @@ console.log(addUsername(list1))
 // Input is an array of objects. 
 // Output is first name in lowercase, first letter of last name in lowercase and birth year concatenating.
 // Example above.
-// Create a var to push results to. Then map through array to push first name and first letter of last name. Then decide if I want to do the math of birth year in push or post in return. //! Look up Date in mdn to get year
+// Create a var to push results to. Then map through array to push first name and first letter of last name. Then decide if I want to do the math of birth year in push or post in return.
