@@ -5,6 +5,7 @@
 const assert = require('assert')
 
 function isPalindrome(x) {
+
     return x.toLowerCase().split('').reverse().join('') === x.toLowerCase()
 }
 console.log(isPalindrome('racecar'))
@@ -19,4 +20,4 @@ console.log(isPalindrome('racecar'))
   assert.strictEqual(isPalindrome("Madam"), true);
   assert.strictEqual(isPalindrome("AbBa"), true);
   assert.strictEqual(isPalindrome(""), true);
-// Split reverse and join. Then compare.
+// Argument to lower case, split, reverse, and join. Then parameter to lower case and compare.
