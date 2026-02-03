@@ -7,14 +7,20 @@
 // Please leave feedback for this kata. Cheers!
 const assert = require('assert')
 
-function cookie(x){
-    if (typeof x === 'string') {
-        return "Who ate the last cookie? It was Zach!"
-    } else if (typeof x === 'number') {
-        return "Who ate the last cookie? It was Monica!"
-    } else if (typeof x === 'boolean') {
-        return "Who ate the last cookie? It was the dog!"
-    }
+function cookie(x) {
+    // if (typeof x === 'string') {
+    //     return "Who ate the last cookie? It was Zach!"
+    // } else if (typeof x === 'number') {
+    //     return "Who ate the last cookie? It was Monica!"
+    // } else if (typeof x === 'boolean') {
+    //     return "Who ate the last cookie? It was the dog!"
+    // }
+    return typeof x === 'string' 
+        ?  "Who ate the last cookie? It was Zach!"
+        : typeof x === 'number' 
+        ? "Who ate the last cookie? It was Monica!"
+        : typeof x === 'boolean' 
+        ? "Who ate the last cookie? It was the dog!" : null
      
 }
 console.log(cookie("Ryan"))
