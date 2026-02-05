@@ -15,13 +15,13 @@ function cookie(x) {
     // } else if (typeof x === 'boolean') {
     //     return "Who ate the last cookie? It was the dog!"
     // }
+    
     return typeof x === 'string' 
         ?  "Who ate the last cookie? It was Zach!"
         : typeof x === 'number' 
         ? "Who ate the last cookie? It was Monica!"
-        : typeof x === 'boolean' 
-        ? "Who ate the last cookie? It was the dog!" : null
-     
+        : "Who ate the last cookie? It was the dog!"
+           
 }
 console.log(cookie("Ryan"))
 // Input has multiple types.
