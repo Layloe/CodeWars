@@ -12,15 +12,15 @@ function quarterOf(month) {
     if (month <= 3) {
         return 1
     }
-    if (month < 3 && 3 >= 6) {
+    if (month < 3 && month >= 6) {
         return 2
-    }if (month > 6 &&  6 < 9) {
+    }if (month > 6 &&  month < 9) {
         return 3
     }
 
     return 4
 }
-console.log(quarterOf(3))
+console.log(quarterOf(11))
 // Input is a number.
 // Output is a number 1-4.
     assert.strictEqual(quarterOf(3), 1)
