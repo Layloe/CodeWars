@@ -20,12 +20,12 @@
 
 function humanYearsCatYearsDogYears(humanYears) {
     if (humanYears >= 1 + 15) {
-        
+
     }
 
 
 }
-console.log(humanYearsCatYearsDogYears([10,56,64]))
+console.log(humanYearsCatYearsDogYears(10))
 // Input is a an array of three integers.
 // Output is number sum.
     // Test.assertSimilar(humanYearsCatYearsDogYears(1), [1,15,15]);
