@@ -19,9 +19,8 @@
 // +5 dog years for each year after that
 
 function humanYearsCatYearsDogYears(humanYears) {
-    if (humanYears >= 1 + 15) {
-
-    }
+    const catYears = humanYears === 1 ? 15 : humanYears * 9 + 6
+    const dogYears = humanYears === 1 ? 15 : humanYears
 
 
 }
