@@ -19,7 +19,7 @@ function quarterOf(month) {
 
     return 4
 }
-console.log(quarterOf(11))
+console.log(quarterOf(4))
 // Input is a number.
 // Output is a number 1-4.
     assert.strictEqual(quarterOf(3), 1)
