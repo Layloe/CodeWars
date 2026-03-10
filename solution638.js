@@ -28,17 +28,25 @@
 // 14
 //  −2∗7=−14
 
+const assert = require('assert')
+
 
 function adjacentElementsProduct(arr) {
+    let results = []
+    for (let i = 0; i < arr.length -1; i++) {
+        results.push(arr[i] * arr[i + 1])
+    }
+    
 
+    return Math.max(...results)
 }
 console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]))
 
 // Input is an array of positive and negative numbers.
 // Output is a sum/number.
-    // assert.strictEqual(adjacentElementsProduct([3, 6, -2, -5, 7, 3]), 21);
-    // assert.strictEqual(adjacentElementsProduct([9, 5, 10, 2, 24, -1, -48]), 50);
-    // assert.strictEqual(adjacentElementsProduct([5, 6, -4, 2, 3, 2, -23]), 30);
-    // assert.strictEqual(adjacentElementsProduct([-23, 4, -5, 99, -27, 329, -2, 7, -921]), -14);
-    // assert.strictEqual(adjacentElementsProduct([5, 1, 2, 3, 1, 4]), 6);
-// Filter arr and take to find largest number and get index to also slice next index. Use index to multiply both numbers.   
+    assert.strictEqual(adjacentElementsProduct([3, 6, -2, -5, 7, 3]), 21);
+    assert.strictEqual(adjacentElementsProduct([9, 5, 10, 2, 24, -1, -48]), 50);
+    assert.strictEqual(adjacentElementsProduct([5, 6, -4, 2, 3, 2, -23]), 30);
+    assert.strictEqual(adjacentElementsProduct([-23, 4, -5, 99, -27, 329, -2, 7, -921]), -14);
+    assert.strictEqual(adjacentElementsProduct([5, 1, 2, 3, 1, 4]), 6);
+// Declare empty array variable. Use a for loop to push the sum of item multiplied by index + 1. Use method Math.max to get the greatest number.
