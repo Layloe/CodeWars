@@ -9,17 +9,26 @@
 // "a   **&  cZ"  =>  "10100000000000000000000001"
 // "aaaaaaa79345675"  =>  "10000000000000000000000000"
 // "&%#*"  =>  "00000000000000000000000000"
-
+'abcdefghijklmnopqrstuvwxyz'
 function change(str) {
     const results = []
 
-    str.split('').map((item, index) => {
-        if (item.includes(...'abcdefghijklmnopqrstuvwxyz') || item.includes(...'ABCDEFGHIJKLMNOPQRSTUVWXYZ')) {
-            results.push(1)
+    for (item of str) {
+        if (results[item]) {
+            results[item]
         } else {
-            results.push(0)
+            results[item] = 1
         }
-    })
+    }
+    // str.split('').forEach((item, index) => {
+
+        // if (results[item]) {
+        //     // || item.includes(...'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+        //     results.push(1)
+        // } else {
+        //     results.push(0)
+        // }
+    // })
 
     return results
 }
