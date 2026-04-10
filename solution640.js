@@ -19,16 +19,26 @@
 // and for any array arr: contain_all_rots("", arr) --> true
 
 function containAllRots(string, arr) {
-    let results = {}
-
-    for (string of arr) {
-        if (results[string]) {
-            return results[string]
-        } else {
-            return results[string] = 1
+    for (var i = 0; i < string.length; i++) {
+        if (arr.indexOf(string.slice(i) + string.slice(0, i)) === -1) {
+            return false
         }
     }
-    return results
+    return true
+    // let results = {}
+
+    // for (string of arr) {
+    //     for (char of string) {
+    //         if ()
+    //         return // return here to finish hashmap and to play with it a bit.
+    //     }
+    //     if (results[string]) {
+    //         return results[string]
+    //     } else {
+    //         return results[string] = 1
+    //     }
+    // }
+    // return results
 }
 console.log(containAllRots("bsjq", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"]))
 
