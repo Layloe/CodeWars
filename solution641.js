@@ -8,17 +8,18 @@
 
 // Note:
 // Your points are not included in the array of your class's points. Do not forget them when calculating the average score!
+const assert = require('assert')
 
 function betterThanAverage(classPoints, yourPoints) {
-  const getAverage = classPoints.reduce((acc, curr) => acc + curr, 0)
-  const getLength = classPoints.length
+  const getAverage = classPoints.reduce((acc, curr) => acc + curr, 0) / classPoints.length
+  // const getLength = classPoints.length
 
-  return getAverage 
+  return getAverage < yourPoints
 }
-betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 50)
+console.log(betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 50))
 // Input is an array of numbers and a number as the second parameter.
 // Output is a boolean.
-// assert.strictEqual(betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 50))
-// assert.strictEqual(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21))
+assert.strictEqual(betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 50))
+assert.strictEqual(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21))
 // Create variable that will reduce to get sum of the array. Create a variable that will get the length of the array. Divide to get the average then compare to yourPoints variable.
 
