@@ -12,7 +12,7 @@ const assert = require('assert')
 
 function betterThanAverage(classPoints, yourPoints) {
   const getAverage = classPoints.reduce((acc, curr) => acc + curr, 0) / classPoints.length
-  // const getLength = classPoints.length
+
 
   return getAverage < yourPoints
 }
