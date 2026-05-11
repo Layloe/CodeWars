@@ -22,6 +22,7 @@
 // xyxyxyxy
 // xyxyxyxyxy  <---The effect when you console.log it
 
+const assert = require('assert')
 
 function fiveLine(s) {
     s = s.trim()
@@ -31,7 +32,7 @@ console.log(fiveLine("  a"))
 
 // Input is a string that may contain white space.
 // Output is a string that is repeated on five lines.
-    // assert.strictEqual(fiveLine("  a") , "a\naa\naaa\naaaa\naaaaa");
-    // assert.strictEqual(fiveLine("\txy \n") , "xy\nxyxy\nxyxyxy\nxyxyxyxy\nxyxyxyxyxy");
-    // assert.strictEqual(fiveLine("           Ok               ") , "Ok\nOkOk\nOkOkOk\nOkOkOkOk\nOkOkOkOkOk");
-// Use templete literals with '\n'
+    assert.strictEqual(fiveLine("  a") , "a\naa\naaa\naaaa\naaaaa");
+    assert.strictEqual(fiveLine("\txy \n") , "xy\nxyxy\nxyxyxy\nxyxyxyxy\nxyxyxyxyxy");
+    assert.strictEqual(fiveLine("           Ok               ") , "Ok\nOkOk\nOkOkOk\nOkOkOkOk\nOkOkOkOkOk");
+// Use template literals with '\n'
